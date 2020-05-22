@@ -16,7 +16,7 @@ doBackup() {
 
 	for dot in $doties; do
 		echo "Moving $dot"
-		mv ~/$dotie $olddir
+		mv ~/$dot $olddir
 	done
 
 	echo "Backup completed!"
