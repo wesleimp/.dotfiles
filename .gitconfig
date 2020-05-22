@@ -1,0 +1,15 @@
+[user]
+	name = Weslei Juan Moser Pereira
+	email = wesleimsr@gmail.com
+
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+
+[core]
+	editor = vim
+
+[diff]
+	tool = vimdiff
+
+[github]
+	user = wesleimp
