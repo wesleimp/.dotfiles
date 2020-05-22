@@ -1,20 +1,18 @@
-set number 
 set tabstop=2
 set softtabstop=0 
 set expandtab 
 set shiftwidth=2
 set backspace=2
 set nowrap
-"set completeopt=longest,menuone,preview
+set number 
 set completeopt-=preview
 set previewheight=5
+set cursorline
 
 " omnisharp
 let g:OmniSharp_server_type = 'roslyn'
 let g:OmniSharp_selector_ui = 'ctrlp'
 let g:OmniSharp_server_use_mono = 1
-"join([expand('~'), 'bin', 'OmniSharp'], '/') 
-"'/usr/bin/OmniSharp' 
 let g:OmniSharp_server_path = join([expand('~'), '.omnisharp', 'omnisharp-roslyn', 'OmniSharp.exe'], '/')
 let g:OmniSharp_timeout=5
 
@@ -24,8 +22,6 @@ if has('nvim')
 endif
 let g:deoplete#enable_smart_case = 1
 let g:deoplete#sources = {}
-"let g:deoplete#sources._=['buffer', 'ultisnips', 'file', 'dictionary']
-"let g:deoplete#sources._ = ['neosnippet', 'buffer', 'file', 'dictionary']
 let g:deoplete#sources.cs = ['cs', 'ultisnips', 'buffer']
 let g:deoplete#sources.python = ['jedi', 'ultisnips', 'buffer']
 let g:deoplete#sources.javascript = ['ternjs', 'ultisnips', 'buffer']
@@ -70,33 +66,6 @@ let g:go_gocode_unimported_packages=1
 let g:go_highlight_extra_types=1
 let g:go_highlight_operators=1 
 let g:go_highlight_functions=1
-
-"YouCompleteMe
-"let g:ycm_complete_in_comments=1
-"let g:ycm_confirm_extra_conf=0
-"let g:ycm_collect_identifiers_from_tags_files=1
-"let g:ycm_min_num_of_chars_for_completion=1
-"let g:ycm_cache_omnifunc=1
-"let g:ycm_seed_identifiers_with_syntax=1
-"let g:ycm_auto_start_csharp_server=1
-"let g:ycm_auto_stop_csharp_server=1
-"let g:ycm_key_invoke_completion = '<c-Space>'
-"let g:ycm_semantic_triggers =  {
-"\   'c' : ['->', '.'],
-"\   'objc' : ['->', '.'],
-"\   'ocaml' : ['.', '#'],
-"\   'cpp,objcpp' : ['->', '.', '::'],
-"\   'perl' : ['->'],
-"\   'php' : ['->', '::'],
-"\   'cs,java,javascript,d,python,perl6,scala,vb,elixir,go' : ['.'],
-"\   'vim' : ['re![_a-zA-Z]+[_\w]*\.'],
-"\   'ruby' : ['.', '::'],
-"\   'lua' : ['.', ':'],
-"\   'erlang' : [':'],
-"\   'css' : [':']
-"\ }
-
-
 
 " syntastic
 set statusline+=%#warningmsg#
