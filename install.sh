@@ -1,4 +1,4 @@
-#!usr/bin/env bash
+#!/usr/bin/env bash
 
 dir=~/.dotfiles
 olddir=~/.dotfiles/old
@@ -6,8 +6,8 @@ olddir=~/.dotfiles/old
 doties=".vim .bashrc .gitconfig .globalgitignore .tmux.conf .vimrc .zshrc"
 
 start() {
-	doBackup()
-	doSymlink()
+	doBackup
+	doSymlink
 }
 
 doBackup() {
