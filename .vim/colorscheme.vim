@@ -1,4 +1,4 @@
 syntax on
 colorscheme solarized 
-set background=light
+set background=dark
 set t_Co=256
