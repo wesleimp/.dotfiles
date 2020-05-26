@@ -5,6 +5,7 @@ ZSH_THEME="agnoster"
 plugins=(git ssh-agent docker docker-compose terraform golang zsh-autosuggestions zsh-syntax-highlighting github dotnet)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.cargo/env
 
 # User configuration
 
@@ -31,6 +32,7 @@ export LC_ALL="en_US.utf8"
 # Env variables
 export GOPATH=~/go
 export PATH=$PATH:~/go/bin
+export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:$HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 
