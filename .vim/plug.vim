@@ -25,6 +25,9 @@ Plug 'zchee/deoplete-go', { 'do': 'make' }
 " rust
 Plug 'rust-lang/rust.vim'
 
+" csharp
+Plug 'OmniSharp/omnisharp-vim'
+
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/syntastic'
