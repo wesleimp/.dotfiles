@@ -94,5 +94,5 @@ imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
 imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
 
 "doties
-map <f12> :NERDTree ~/.doties<cr>
+map <f12> :NERDTree ~/.dotfiles<cr>
 nmap <leader><f12> :source $MYVIMRC<cr>

@@ -22,6 +22,9 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'stamblerre/gocode', { 'rtp': 'nvim', 'do': '~/.vim/plugged/gocode/nvim/symlink.sh' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
 
+" rust
+Plug 'rust-lang/rust.vim'
+
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/syntastic'
@@ -58,5 +61,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-signify'
 Plug 'Shougo/unite.vim'
 Plug 'Kocha/vim-unite-tig'
+
+" theme
+Plug 'arcticicestudio/nord-vim'
 
 call plug#end()

@@ -1,4 +1,4 @@
 syntax on
-colorscheme solarized 
-set background=dark
+colorscheme nord 
+" set background=dark
 set t_Co=256
