@@ -8,6 +8,7 @@ set nowrap
 set completeopt-=preview
 set previewheight=5
 set cursorline
+set directory-=.
 
 " omnisharp
 let g:OmniSharp_server_type = 'roslyn'
@@ -102,3 +103,6 @@ let g:gist_clip_command='xclip -selection clipboard'
 let g:gist_detect_filetype=1
 let g:gist_open_browser_after_post=1
 let g:gist_post_private=1
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"

@@ -28,6 +28,12 @@ Plug 'rust-lang/rust.vim'
 " csharp
 Plug 'OmniSharp/omnisharp-vim'
 
+" javascript
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'isRuslan/vim-es6'
+
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/syntastic'
@@ -53,6 +59,8 @@ Plug 'mattn/gist-vim'
 Plug 'dkprice/vim-easygrep'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'yardnsm/vim-import-cost', { 'do': 'npm install' }
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 " presentation
 Plug 'kshenoy/vim-signature'
