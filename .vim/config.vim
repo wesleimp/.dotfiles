@@ -1,45 +1,43 @@
-set tabstop=2
-set number 
-set softtabstop=0 
-set expandtab 
-set shiftwidth=2
-set backspace=2
+" History
+set history=50
+
+" Display
+set ls=2
+set showmode
+set showcmd
+set modeline
+set ruler
+set title
+set nu
+
+" Line wrapping
 set nowrap
-set completeopt-=preview
-set previewheight=5
-set cursorline
-set directory-=.
+set linebreak
+set showbreak=▹
 
-" omnisharp
-let g:OmniSharp_server_type = 'roslyn'
-let g:OmniSharp_selector_ui = 'ctrlp'
-let g:OmniSharp_server_use_mono = 1
-let g:OmniSharp_server_path = join([expand('~'), '.omnisharp', 'omnisharp-roslyn', 'OmniSharp.exe'], '/')
-let g:OmniSharp_timeout=5
+" Auto indent what you can
+set autoindent
 
-" deoplete
-if has('nvim')
-	let g:deoplete#enable_at_startup = 1
-endif
-let g:deoplete#enable_smart_case = 1
-let g:deoplete#sources = {}
-let g:deoplete#sources.cs = ['cs', 'ultisnips', 'buffer']
-let g:deoplete#sources.python = ['jedi', 'ultisnips', 'buffer']
-let g:deoplete#sources.javascript = ['ternjs', 'ultisnips', 'buffer']
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
-let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
-let g:deoplete#omni#input_patterns = {}
-let g:deoplete#omni#input_patterns.cs = ['\w*']
-let g:deoplete#omni#input_patterns.rust = '[(\.)(::)]'
-let g:deoplete#keyword_patterns = {}
+" Searching
+set ignorecase
+set smartcase
+set gdefault
+set hlsearch
+set showmatch
 
-" Shougo/neosnippet
-let g:neosnippet#enable_completed_snippet = 1
-let g:neosnippet#enable_snipmate_compatibility = 1
-let g:neosnippet#snippets_directory=['~/.vim/plugged/vim-snippets/snippets', '~/.vim/snippets']
-let g:neosnippet#disable_runtime_snippets = {
-    \ 'go': 1
-\}
+" Enable jumping into files in a search buffer
+set hidden 
+
+" Make backspace a bit nicer
+set backspace=eol,start,indent
+
+" Indentation
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set shiftround
+set expandtab
+
 
 " nerdtree
 let g:NERDTreeWinSize=20
@@ -47,11 +45,11 @@ let g:NERDTreeWinSize=20
 " tagbar
 let g:tagbar_width=30
 
-" vim-airline
+" Airline config
 set laststatus=2
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#branch#enabled=1
-let g:airline_powerline_fonts=1  "Mesloirline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
 
 " vim-go
 let g:go_fmt_command = "goimports"
@@ -68,17 +66,10 @@ let g:go_highlight_extra_types=1
 let g:go_highlight_operators=1 
 let g:go_highlight_functions=1
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler = "g++"
-let g:syntastic_cpp_compiler_options = " -std=c++14"
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_vue_checkers = ['eslint']
 
@@ -97,12 +88,3 @@ let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" mattn/gist-vim
-let g:gist_clip_command='xclip -selection clipboard'
-let g:gist_detect_filetype=1
-let g:gist_open_browser_after_post=1
-let g:gist_post_private=1
-
-let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-let &t_EI = "\<Esc>]50;CursorShape=0\x7"

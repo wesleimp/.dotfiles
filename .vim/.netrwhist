@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/silvio/.oh-my-zsh'
-let g:netrw_dirhist_2='/home/silvio/.oh-my-zsh/templates'
-let g:netrw_dirhist_3='/home/silvio/.oh-my-zsh'
