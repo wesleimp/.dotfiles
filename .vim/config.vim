@@ -86,8 +86,3 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
-
-" mattn/vim-emmet 
-let g:user_emmet_leader_key=','
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
