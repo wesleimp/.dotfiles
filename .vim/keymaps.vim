@@ -64,35 +64,6 @@ augroup golang
 	autocmd FileType go nmap <buffer> <C-f10> :GoRun %<cr>
 augroup END
 
-augroup omnisharp_commands
-	autocmd!
-  
-	autocmd CursorHold *.cs call OmniSharp#TypeLookupWithoutDocumentation()
-
-	autocmd FileType cs nnoremap <buffer> gd :OmniSharpGotoDefinition<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>fi :OmniSharpFindImplementations<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>fs :OmniSharpFindSymbol<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>fu :OmniSharpFindUsages<CR>
-
-	autocmd FileType cs nnoremap <buffer> <Leader>fm :OmniSharpFindMembers<CR>
-
-	autocmd FileType cs nnoremap <buffer> <Leader>fx :OmniSharpFixUsings<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>tt :OmniSharpTypeLookup<CR>
-	autocmd FileType cs nnoremap <buffer> <Leader>dc :OmniSharpDocumentation<CR>
-	autocmd FileType cs nnoremap <buffer> <C-\> :OmniSharpSignatureHelp<CR>
-	autocmd FileType cs inoremap <buffer> <C-\> <C-o>:OmniSharpSignatureHelp<CR>
-
-	autocmd FileType cs nnoremap <buffer> <C-k> :OmniSharpNavigateUp<CR>
-	autocmd FileType cs nnoremap <buffer> <C-j> :OmniSharpNavigateDown<CR>
-
-augroup END
-
-
-"deoplete
-imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
-imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
-imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
-
 "doties
 map <f12> :NERDTree ~/.dotfiles<cr>
 nmap <leader><f12> :source $MYVIMRC<cr>

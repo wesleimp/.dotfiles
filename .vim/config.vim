@@ -38,6 +38,9 @@ set softtabstop=4
 set shiftround
 set expandtab
 
+" Swap files
+set directory-=.
+
 " nerdtree
 let g:NERDTreeWinSize=20
 

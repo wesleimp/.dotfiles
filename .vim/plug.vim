@@ -23,6 +23,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'isRuslan/vim-es6'
+Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'
