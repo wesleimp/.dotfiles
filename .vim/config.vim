@@ -9,6 +9,9 @@ set modeline
 set ruler
 set title
 set nu
+set encoding=utf8
+set previewheight=5
+set completeopt-=preview
 
 " Line wrapping
 set nowrap
@@ -57,6 +60,23 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#var('omni', 'input_patterns', { 'rust': '[(\.)(::)]', }) 
+call deoplete#custom#option({
+\   'auto_complete_delay': 200,
+\   'smart_case': v:true,
+\   'keyword_patterns': {},
+\})
+
+call deoplete#custom#option('sources', {
+\   'javascript': ['ternjs', 'ultisnips', 'buffer'],
+\   'go': {
+\       'gocode_binary': $GOPATH.'/bin/gocode',
+\       'sort_class': ['package', 'func', 'type', 'var', 'const'],
+\   },
+\})
+
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
@@ -73,6 +93,10 @@ let g:go_highlight_operators=1
 let g:go_highlight_functions=1
 
 " syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
@@ -83,14 +107,3 @@ let g:syntastic_vue_checkers = ['eslint']
 " vim-terraform
 let g:terraform_align=1
 let g:terraform_fmt_on_save=1
-
-" goyo
-function! GoyoBefore()
-	Limelight
-endfunction
-
-function! GoyoAfter()
-	Limelight!
-endfunction
-
-let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]

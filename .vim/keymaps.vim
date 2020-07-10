@@ -44,12 +44,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " fatih/vim-go
 let g:go_snippet_engine = "neosnippet"
 
-"goyo
-nmap <f5> :Goyo<cr>
-
-"Gundo
-nmap <f6> :GundoToggle<cr>
-
 "NERDtree
 nmap <f7> :NERDTreeToggle<cr>
 
@@ -62,6 +56,16 @@ augroup golang
 	autocmd FileType go nmap <buffer> <C-f9> :DlvDebug<cr>
 	autocmd FileType go nmap <buffer> <f10> :GoBuild -i<cr>
 	autocmd FileType go nmap <buffer> <C-f10> :GoRun %<cr>
+augroup END
+
+augroup rust
+    autocmd!
+    autocmd FileType rust nmap <buffer> gd         <Plug>(rust-def)
+    autocmd FileType rust nmap <buffer> gs         <Plug>(rust-def-split)
+    autocmd FileType rust nmap <buffer> gx         <Plug>(rust-def-vertical)
+    autocmd FileType rust nmap <buffer> gt         <Plug>(rust-def-tab)
+    autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
+    autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
 augroup END
 
 "doties

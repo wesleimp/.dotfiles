@@ -2,6 +2,17 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'racer-rust/vim-racer'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
+
 Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
@@ -10,9 +21,9 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
+Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/goyo.vim'
 
 " languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
@@ -34,6 +45,8 @@ Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'arcticicestudio/nord-vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'Shougo/unite.vim'
+Plug 'mhinz/vim-signify'
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
