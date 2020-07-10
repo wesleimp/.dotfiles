@@ -24,10 +24,9 @@ doBackup() {
 
 doSymlink() {
 	echo "Creating symlinks from $dir to ~/"
-	mv $dir
 	
 	for dot in $doties; do
-		echo "Symlink $dot"
+		echo "Symlinking $dot"
 		ln -s $dir/$dot ~/$dot
 	done
 

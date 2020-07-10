@@ -24,12 +24,16 @@ Plug 'mxw/vim-jsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'isRuslan/vim-es6'
 Plug 'elixir-editors/vim-elixir'
+Plug 'hashivim/vim-terraform'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'
 Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'arcticicestudio/nord-vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
