@@ -41,14 +41,16 @@ set softtabstop=4
 set shiftround
 set expandtab
 
-" Swap files
-set directory-=.
-
 " nerdtree
 let g:NERDTreeWinSize=20
 
-" tagbar
-let g:tagbar_width=30
+" fzf.vim
+let g:fzf_layout = { 'left': '50%' }
+let g:fzf_action = {
+\   'ctrl-t': 'tab split',
+\   'ctrl-i': 'split',
+\   'ctrl-v': 'vsplit',
+\}
 
 " Airline config
 set laststatus=2

@@ -30,25 +30,11 @@ if &diff
     map <leader>3 :diffget REMOTE<CR>
 endif
 
-"UltiSnips
-let g:UltiSnipsExpandTrigger = "<c-a>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" Shougo/neosnippet
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
-smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-
-" fatih/vim-go
-let g:go_snippet_engine = "neosnippet"
-
 "NERDtree
-nmap <f7> :NERDTreeToggle<cr>
+nmap <f7> :NERDTreeToggle %<cr>
 
-"tagbar
-nmap <f8> :TagbarToggle<cr> 
+"fzf
+nmap <f8> :Files .<cr> 
 
 augroup golang
 	autocmd!
