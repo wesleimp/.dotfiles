@@ -45,7 +45,7 @@ set expandtab
 let g:NERDTreeWinSize=20
 
 " fzf.vim
-let g:fzf_layout = { 'left': '50%' }
+let g:fzf_layout = { 'down': '50%' }
 let g:fzf_action = {
 \   'ctrl-t': 'tab split',
 \   'ctrl-i': 'split',
