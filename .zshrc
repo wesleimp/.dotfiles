@@ -31,6 +31,7 @@ export LC_ALL="en_US.utf8"
 
 # Env variables
 export GOPATH=~/go
+export GO111MODULE=on
 export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
 export PATH=$PATH:~/go/bin
 export PATH=$PATH:$HOME/.cargo/bin
@@ -51,10 +52,10 @@ alias lg="lazygit"
 
 # Change up a variable number of directories
 # E.g:
-#   cu   -> cd ../
-#   cu 2 -> cd ../../
-#   cu 3 -> cd ../../../
-function cu() {
+#   cdn   -> cdn ../
+#   cdn 2 -> cdn ../../
+#   cdn 3 -> cdn ../../../
+function cdn() {
     local count=$1
     if [ -z "${count}" ]; then
         count=1
@@ -112,3 +113,5 @@ gitC="${txtpur}"
 pointerC="${txtgrn}"
 normalC="${txtwht}"
 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

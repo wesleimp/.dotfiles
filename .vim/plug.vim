@@ -10,7 +10,6 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'racer-rust/vim-racer'
 Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
 
 Plug 'VundleVim/Vundle.vim'
@@ -28,14 +27,15 @@ Plug 'unkiwii/vim-nerdtree-sync'
 " languages
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'zchee/deoplete-go', { 'do': 'make' }
-Plug 'rust-lang/rust.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
+Plug 'tasn/vim-tsx'
 Plug 'leafgarland/typescript-vim'
 Plug 'isRuslan/vim-es6'
 Plug 'hashivim/vim-terraform'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme
 Plug 'flazz/vim-colorschemes'

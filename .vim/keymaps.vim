@@ -31,7 +31,7 @@ if &diff
 endif
 
 "NERDtree
-nmap <f7> :NERDTreeToggle %<cr>
+nmap <f7> :NERDTreeToggle<cr>
 
 "fzf
 nmap <f8> :Files .<cr> 
@@ -53,6 +53,11 @@ augroup rust
     autocmd FileType rust nmap <buffer> <leader>gd <Plug>(rust-doc)
     autocmd FileType rust nmap <buffer> <leader>gD <Plug>(rust-doc-tab)
 augroup END
+
+"deoplete
+imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
+imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
+imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
 
 "doties
 map <f12> :NERDTree ~/.dotfiles<cr>

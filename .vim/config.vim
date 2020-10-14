@@ -12,6 +12,7 @@ set nu
 set encoding=utf8
 set previewheight=5
 set completeopt-=preview
+set termguicolors
 
 " Line wrapping
 set nowrap
@@ -56,11 +57,13 @@ let g:fzf_action = {
 set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='powerlineish'
+let g:airline_theme='dracula'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+
+let g:dracula_colorterm=0
 
 " deoplete
 let g:deoplete#enable_at_startup = 1
@@ -69,15 +72,12 @@ call deoplete#custom#option({
 \   'auto_complete_delay': 200,
 \   'smart_case': v:true,
 \   'keyword_patterns': {},
+\   'max_list': 15,
 \})
 
-call deoplete#custom#option('sources', {
-\   'javascript': ['ternjs', 'ultisnips', 'buffer'],
-\   'go': {
-\       'gocode_binary': $GOPATH.'/bin/gocode',
-\       'sort_class': ['package', 'func', 'type', 'var', 'const'],
-\   },
-\})
+call deoplete#custom#source('javascript', 'javascript', ['ternjs', 'ultisnips', 'buffer'])
+call deoplete#custom#source('go', 'gocode_binary', $GOPATH.'/bin/gocode', )
+call deoplete#custom#source('go', 'sort_class', ['package', 'func', 'type', 'var', 'const'])
 
 " vim-go
 let g:go_fmt_command = "goimports"
