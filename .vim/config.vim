@@ -42,6 +42,10 @@ set softtabstop=4
 set shiftround
 set expandtab
 
+set mouse=a
+
+let mapleader = ","
+
 " nerdtree
 let g:NERDTreeWinSize=20
 
@@ -66,16 +70,7 @@ endif
 let g:dracula_colorterm=0
 
 " deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#var('omni', 'input_patterns', { 'rust': '[(\.)(::)]', }) 
-call deoplete#custom#option({
-\   'auto_complete_delay': 200,
-\   'smart_case': v:true,
-\   'keyword_patterns': {},
-\   'max_list': 15,
-\})
 
-call deoplete#custom#source('javascript', 'javascript', ['ternjs', 'ultisnips', 'buffer'])
 call deoplete#custom#source('go', 'gocode_binary', $GOPATH.'/bin/gocode', )
 call deoplete#custom#source('go', 'sort_class', ['package', 'func', 'type', 'var', 'const'])
 

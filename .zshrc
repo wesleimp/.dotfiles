@@ -1,11 +1,13 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
+ZSH_DISABLE_COMPFIX="true"
 
-plugins=(git ssh-agent docker docker-compose terraform golang zsh-autosuggestions zsh-syntax-highlighting github dotnet)
+plugins=(git ssh-agent docker docker-compose terraform golang zsh-autosuggestions zsh-syntax-highlighting github)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.cargo/env
+source ~/google-cloud-sdk/path.zsh.inc
+source ~/google-cloud-sdk/completion.zsh.inc
 
 # User configuration
 
@@ -30,13 +32,13 @@ export LC_IDENTIFICATION="en_US.utf8"
 export LC_ALL="en_US.utf8"
 
 # Env variables
-export GOPATH=~/go
+#export GOPATH=~/go
 export GO111MODULE=on
-export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
-export PATH=$PATH:~/go/bin
-export PATH=$PATH:$HOME/.cargo/bin
-export PATH=$PATH:$HOME/dotnet
-export DOTNET_ROOT=$HOME/dotnet
+#export PATH=/bin:/usr/bin:/usr/local/bin:${PATH}
+#export PATH=$PATH:~/go/bin
+#export PATH=$PATH:$HOME/.cargo/bin
+#export PATH=$PATH:$HOME/dotnet
+#export DOTNET_ROOT=$HOME/dotnet
 export EDITOR=/usr/bin/vim
 export TERM=xterm-256color
 
@@ -48,7 +50,6 @@ alias bashrc='vim ~/.bashrc'
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias vimrc="vim ~/.vimrc"
-alias lg="lazygit"
 
 # Change up a variable number of directories
 # E.g:
@@ -115,3 +116,9 @@ normalC="${txtwht}"
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/wesleipereira/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/wesleipereira/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/wesleipereira/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/wesleipereira/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
