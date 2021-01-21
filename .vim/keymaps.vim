@@ -23,32 +23,17 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"diff
-if &diff
-    map <leader>1 :diffget LOCAL<CR>
-    map <leader>2 :diffget BASE<CR>
-    map <leader>3 :diffget REMOTE<CR>
-endif
-
 "NERDtree
+nmap <leader><f7> :NERDTreeRefreshRoot<cr>
 nmap <f7> :NERDTreeToggle<cr>
-nmap <leader><f5> :NERDTreeToggle<cr>
 
 "fzf
 nmap <f8> :Files .<cr> 
 
-augroup golang
-	autocmd!
-	autocmd FileType go nmap <buffer> <f9> :DlvToggleBreakpoint<cr>
-	autocmd FileType go nmap <buffer> <C-f9> :DlvDebug<cr>
-	autocmd FileType go nmap <buffer> <f10> :GoBuild -i<cr>
-	autocmd FileType go nmap <buffer> <C-f10> :GoRun %<cr>
+augroup elixir
+    autocmd!
+    autocmd filetype elixir nmap <buffer> <C-f> :MixFormat <cr>
 augroup END
-
-"deoplete
-imap <expr> <tab>   pumvisible() ? "\<c-n>" : "\<tab>"
-imap <expr> <s-tab> pumvisible() ? "\<c-p>" : "\<tab>"
-imap <expr> <cr> pumvisible() ? deoplete#close_popup() : "\<cr>"
 
 "doties
 map <f12> :NERDTree ~/.dotfiles<cr>

@@ -2,16 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-
-Plug 'carlitux/deoplete-ternjs', { 'do': 'sudo npm install -g tern' }
-
 Plug 'VundleVim/Vundle.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim'
@@ -23,18 +13,10 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'unkiwii/vim-nerdtree-sync'
+Plug 'mhinz/vim-mix-format'
 
 " languages
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'zchee/deoplete-go', { 'do': 'make' }
 Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'tasn/vim-tsx'
-Plug 'leafgarland/typescript-vim'
-Plug 'isRuslan/vim-es6'
-Plug 'hashivim/vim-terraform'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme

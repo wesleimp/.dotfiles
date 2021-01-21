@@ -40,11 +40,11 @@ export TERM=xterm-256color
 # Aliases
 alias grep='grep --color=auto'
 alias :q='exit'
-
 alias bashrc='vim ~/.bashrc'
 alias zshconfig='vim ~/.zshrc'
 alias ohmyzsh='vim ~/.oh-my-zsh'
 alias vimrc="vim ~/.vimrc"
+alias v="vim ."
 
 # Change up a variable number of directories
 # E.g:
