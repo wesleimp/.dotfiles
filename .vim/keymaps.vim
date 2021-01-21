@@ -28,6 +28,7 @@ nmap <leader><f7> :NERDTreeRefreshRoot<cr>
 nmap <f7> :NERDTreeToggle<cr>
 
 "fzf
+nmap <silent> <f2> :Rg<cr> 
 nmap <f8> :Files .<cr> 
 
 augroup elixir

@@ -66,8 +66,10 @@ let g:fzf_action = {
 " Airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='dracula'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
