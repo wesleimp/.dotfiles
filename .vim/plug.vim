@@ -11,12 +11,14 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-mix-format'
 
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " languages
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme
-Plug 'flazz/vim-colorschemes'
+Plug 'lifepillar/vim-solarized8'
 Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'dracula/vim', { 'as': 'dracula' }

@@ -27,6 +27,13 @@ map <C-l> <C-W>l
 nmap <leader><f7> :NERDTreeRefreshRoot<cr>
 nmap <f7> :NERDTreeToggle<cr>
 
+"coc-nvim
+" GoTo code navigation.
+nmap <silent> <leader>gd <Plug>(coc-definition)
+nmap <silent> <leader>gy <Plug>(coc-type-definition)
+nmap <silent> <leader>gi <Plug>(coc-implementation)
+nmap <silent> <leader>gr <Plug>(coc-references)
+
 "fzf
 nmap <silent> <f2> :Rg<cr> 
 nmap <f8> :Files .<cr> 

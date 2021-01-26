@@ -1,4 +1,4 @@
 syntax enable
-colorscheme dracula 
-"set background=dark
+colorscheme solarized8
+set background=light
 set t_Co=256
