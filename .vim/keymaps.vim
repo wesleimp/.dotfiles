@@ -23,16 +23,16 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
+"Terminal 
+nmap <f3> :bel term<cr>
+
 "NERDtree
 nmap <leader><f7> :NERDTreeRefreshRoot<cr>
 nmap <f7> :NERDTreeToggle<cr>
 
 "coc-nvim
-" GoTo code navigation.
-nmap <silent> <leader>gd <Plug>(coc-definition)
-nmap <silent> <leader>gy <Plug>(coc-type-definition)
-nmap <silent> <leader>gi <Plug>(coc-implementation)
-nmap <silent> <leader>gr <Plug>(coc-references)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 
 "fzf
 nmap <silent> <f2> :Rg<cr> 
