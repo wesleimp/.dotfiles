@@ -18,7 +18,7 @@ Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme
-Plug 'lifepillar/vim-solarized8'
+Plug 'altercation/vim-colors-solarized'
 Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'dracula/vim', { 'as': 'dracula' }

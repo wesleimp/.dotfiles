@@ -1,9 +1,9 @@
 [user]
-	name = Weslei
+	name = Weslei Juan Moser Pereira
 	email = wesleimsr@gmail.com
 
 [url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 
 [core]
 	editor = vim
@@ -17,8 +17,11 @@
 
 [commit]
 	gpgsign = false
+
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[pull]
+	rebase = false
