@@ -19,6 +19,7 @@ Plug 'elixir-editors/vim-elixir'
 
 " syntax/colorscheme
 Plug 'altercation/vim-colors-solarized'
+Plug 'arcticicestudio/nord-vim'
 Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'dracula/vim', { 'as': 'dracula' }
