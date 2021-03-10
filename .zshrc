@@ -7,10 +7,12 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME="dracula"
 ZSH_DISABLE_COMPFIX="true"
 
-plugins=(git ssh-agent docker docker-compose terraform golang zsh-autosuggestions zsh-syntax-highlighting github)
+DRACULA_DISPLAY_CONTEXT=1
+
+plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -54,6 +56,9 @@ alias ohmyzsh='vim ~/.oh-my-zsh'
 alias vimrc="vim ~/.vimrc"
 alias v="vim ."
 alias p10kconfig="vim ~/.p10k.zsh"
+alias cat="bat"
+alias ls="exa"
+alias sub="subl ."
 
 # Change up a variable number of directories
 # E.g:

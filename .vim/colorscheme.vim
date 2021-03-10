@@ -1,4 +1,4 @@
 syntax enable
-colorscheme nord
+colorscheme dracula
 "set background=light
 set t_Co=256
