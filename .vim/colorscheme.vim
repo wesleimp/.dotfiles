@@ -1,4 +1,4 @@
 syntax enable
-colorscheme dracula
+colorscheme molokai
 "set background=light
 set t_Co=256
