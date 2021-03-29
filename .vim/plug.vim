@@ -15,6 +15,7 @@ Plug 'tpope/vim-endwise'
 " languages
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
+Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " syntax/colorscheme
