@@ -10,17 +10,15 @@ Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-mix-format'
-
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'tpope/vim-endwise'
 
 " languages
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " syntax/colorscheme
 Plug 'scrooloose/syntastic'
-Plug 'w0rp/ale'
-Plug 'Shougo/unite.vim'
 Plug 'mhinz/vim-signify'
 
 " themes

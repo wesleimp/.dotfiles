@@ -3,7 +3,7 @@
 dir=~/.dotfiles
 olddir=~/.dotfiles/old
 
-doties=".vim .bashrc .gitconfig .globalgitignore .tmux.conf .vimrc .zshrc"
+doties=".vim .bashrc .curlrc .gitconfig .globalgitignore .tmux.conf .vimrc .zshrc"
 
 start() {
 	doBackup

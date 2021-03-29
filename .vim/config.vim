@@ -47,7 +47,7 @@ set mouse=a
 set wildmenu
 
 " filetype
-filetype plugin on
+filetype plugin indent on
 
 " misc
 let mapleader = ","
