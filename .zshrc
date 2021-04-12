@@ -58,7 +58,7 @@ alias v="vim ."
 alias p10kconfig="vim ~/.p10k.zsh"
 alias cat="bat"
 alias ls="exa"
-alias sub="subl ."
+alias tree="exa -T"
 
 # Change up a variable number of directories
 # E.g:

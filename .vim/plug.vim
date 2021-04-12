@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-endwise'
+Plug 'RRethy/vim-illuminate'
 
 " languages
 Plug 'pangloss/vim-javascript'
@@ -25,6 +26,7 @@ Plug 'mhinz/vim-signify'
 " themes
 Plug 'tomasr/molokai'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'joshdick/onedark.vim'
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

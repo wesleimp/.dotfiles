@@ -35,7 +35,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 
 "fzf
-nmap <silent> <f2> :Rg<cr> 
+nnoremap <silent> <Leader>f :Rg<CR> 
 nmap <f8> :Files .<cr> 
 
 augroup elixir
