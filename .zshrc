@@ -59,6 +59,7 @@ alias p10kconfig="vim ~/.p10k.zsh"
 alias cat="bat"
 alias ls="exa"
 alias tree="exa -T"
+alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
 
 # Change up a variable number of directories
 # E.g:

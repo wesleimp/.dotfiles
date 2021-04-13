@@ -12,6 +12,7 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-endwise'
 Plug 'RRethy/vim-illuminate'
+Plug 'sakshamgupta05/vim-todo-highlight'
 
 " languages
 Plug 'pangloss/vim-javascript'
