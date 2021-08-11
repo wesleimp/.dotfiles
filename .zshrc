@@ -41,6 +41,8 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 source $HOME/.cargo/env
 
 # User configuration
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 export LESSCHARSET="utf-8"
 export LOCALE="en_US.UTF-8"
