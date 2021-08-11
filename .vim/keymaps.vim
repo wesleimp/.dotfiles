@@ -7,6 +7,7 @@ vnoremap <Tab-j> <Esc>
 onoremap <Tab-j> <Esc>
 inoremap <Tab-j> <Esc>
 
+map , <Leader>
 "tab selection
 map <leader>1 1gt
 map <leader>2 2gt

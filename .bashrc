@@ -5,3 +5,4 @@ alias ls='ls --color=auto'
 alias la='ls -A'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"

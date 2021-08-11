@@ -25,9 +25,9 @@ Plug 'scrooloose/syntastic'
 Plug 'mhinz/vim-signify'
 
 " themes
-Plug 'tomasr/molokai'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

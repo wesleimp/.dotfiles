@@ -46,11 +46,12 @@ set expandtab
 set mouse=a
 set wildmenu
 
+set colorcolumn=80
+
 " filetype
 filetype plugin indent on
 
 " misc
-let mapleader = ","
 let g:format_on_save = 1
 
 " nerdtree
@@ -66,19 +67,17 @@ let g:fzf_action = {
 
 " Airline config
 set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme='powerlineish'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+let g:lightline = {
+\   'colorscheme': 'one',
+\}
+
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
-
-" dracula
-let g:dracula_colorterm=0
-let g:dracula_italic = 0
 
 " syntastic
 set statusline+=%#warningmsg#

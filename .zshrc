@@ -7,17 +7,38 @@ fi
 
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 ZSH_DISABLE_COMPFIX="true"
 
 DRACULA_DISPLAY_CONTEXT=1
 
-plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl)
+SPACESHIP_PROMPT_ORDER=(
+  user          # Username section
+  dir           # Current directory section
+  host          # Hostname section
+  git           # Git section (git_branch + git_status)
+  exec_time     # Execution time
+  line_sep      # Line break
+  vi_mode       # Vi-mode indicator
+  jobs          # Background jobs indicator
+  exit_code     # Exit code section
+  char          # Prompt character
+)
+SPACESHIP_USER_SHOW=always
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_PROMPT_ADD_NEWLINE=false
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SUFFIX=" "
+
+plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl elixir)
 
 source $ZSH/oh-my-zsh.sh
 
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+source $HOME/.cargo/env
 
 # User configuration
 
@@ -60,6 +81,8 @@ alias cat="bat"
 alias ls="exa"
 alias tree="exa -T"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
+alias oss="~/oss"
+alias workspace="~/workspace"
 
 # Change up a variable number of directories
 # E.g:
