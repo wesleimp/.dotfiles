@@ -71,7 +71,7 @@ export EDITOR=/usr/bin/vim
 export TERM=xterm-256color
 
 # Aliases
-alias grep='grep --color=auto'
+alias grep='rg'
 alias :q='exit'
 alias bashrc='vim ~/.bashrc'
 alias zshconfig='vim ~/.zshrc'
