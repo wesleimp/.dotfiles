@@ -15,9 +15,11 @@ Plug 'RRethy/vim-illuminate'
 Plug 'sakshamgupta05/vim-todo-highlight'
 
 " languages
+Plug 'sheerun/vim-polyglot'
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
+Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " syntax/colorscheme
