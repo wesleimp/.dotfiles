@@ -28,12 +28,9 @@ map <C-l> <C-W>l
 nmap <f3> :bel term<cr>
 
 "NERDtree
-nmap <leader><f7> :NERDTreeRefreshRoot<cr>
-nmap <f7> :NERDTreeToggle<cr>
-
-"coc-nvim
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gr <Plug>(coc-references)
+nmap <leader>r :NERDTreeRefreshRoot<cr>
+nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>f :NERDTreeFind<cr>
 
 "fzf
 nmap <silent> <f2> :Rg<cr>

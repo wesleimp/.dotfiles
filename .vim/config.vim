@@ -56,6 +56,7 @@ let g:format_on_save = 1
 
 " nerdtree
 let g:NERDTreeWinSize=30
+let NERDTreeShowHidden=1
 
 " fzf.vim
 let g:fzf_layout = { 'down': '50%' }
