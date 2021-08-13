@@ -13,6 +13,7 @@ Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-endwise'
 Plug 'RRethy/vim-illuminate'
 Plug 'sakshamgupta05/vim-todo-highlight'
+Plug 'jiangmiao/auto-pairs'
 
 " languages
 Plug 'sheerun/vim-polyglot'
