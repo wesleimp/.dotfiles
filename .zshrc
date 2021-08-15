@@ -40,10 +40,6 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/compl
 
 source $HOME/.cargo/env
 
-# User configuration
-export FZF_DEFAULT_COMMAND='fd --type f'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
 export LESSCHARSET="utf-8"
 export LOCALE="en_US.UTF-8"
 export LANG=en_US.UTF-8
@@ -67,17 +63,17 @@ export LC_ALL="en_US.UTF-8"
 # Env variables
 export PATH=$PATH:$HOME/.mix/escripts
 export GO111MODULE=on
-export EDITOR=/usr/bin/vim
+export EDITOR=nvim
 export TERM=xterm-256color
 
 # Aliases
 alias grep='rg'
 alias :q='exit'
 alias bashrc='vim ~/.bashrc'
-alias zshconfig='vim ~/.zshrc'
-alias ohmyzsh='vim ~/.oh-my-zsh'
-alias vimrc="vim ~/.vimrc"
-alias v="vim ."
+alias zshconfig='nvim ~/.zshrc'
+alias ohmyzsh='nvim ~/.oh-my-zsh'
+alias vimrc="nvim ~/.vimrc"
+alias v="nvim ."
 alias p10kconfig="vim ~/.p10k.zsh"
 alias cat="bat"
 alias ls="exa"

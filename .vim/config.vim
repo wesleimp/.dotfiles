@@ -51,12 +51,19 @@ set colorcolumn=80
 " filetype
 filetype plugin indent on
 
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({
+\   'auto_complete_delay': 200,
+\   'smart_case': v:true,
+\   'keyword_patterns': {},
+\   'max_list': 10,
+\})
+
 " misc
 let g:format_on_save = 1
 
 " nerdtree
 let g:NERDTreeWinSize=30
-let NERDTreeShowHidden=1
 
 " fzf.vim
 let g:fzf_layout = { 'down': '50%' }

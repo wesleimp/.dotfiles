@@ -28,17 +28,20 @@ map <C-l> <C-W>l
 nmap <f3> :bel term<cr>
 
 "NERDtree
-nmap <leader>r :NERDTreeRefreshRoot<cr>
-nmap <leader>n :NERDTreeToggle<cr>
-nmap <leader>f :NERDTreeFind<cr>
+nmap <f7> :NERDTreeToggle<cr>
+nmap <leader><f7> :NERDTreeFind<cr>
+
+" deoplete
+imap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<tab>"
+imap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<tab>"
 
 "fzf
-nmap <silent> <f2> :Rg<cr>
-nmap <f8> :Files .<cr> 
+nmap <silent> <C-f> :Rg<cr>
+nmap <C-p> :Files .<cr> 
 
 augroup elixir
     autocmd!
-    autocmd filetype elixir nmap <buffer> <C-f> :MixFormat <cr>
+    autocmd filetype elixir nmap <buffer> <leader>f :Mix format <cr><cr>
 augroup END
 
 "doties

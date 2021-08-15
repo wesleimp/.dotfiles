@@ -9,11 +9,21 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-surround'
-Plug 'mhinz/vim-mix-format'
 Plug 'tpope/vim-endwise'
 Plug 'RRethy/vim-illuminate'
-Plug 'sakshamgupta05/vim-todo-highlight'
 Plug 'jiangmiao/auto-pairs'
+
+" Completetions
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'slashmili/alchemist.vim'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " languages
 Plug 'sheerun/vim-polyglot'
