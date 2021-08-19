@@ -56,7 +56,7 @@ call deoplete#custom#option({
 \   'auto_complete_delay': 200,
 \   'smart_case': v:true,
 \   'keyword_patterns': {},
-\   'max_list': 10,
+\   'max_list': 15,
 \})
 
 " misc
@@ -96,3 +96,6 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'

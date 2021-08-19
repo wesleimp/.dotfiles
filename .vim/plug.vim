@@ -22,8 +22,11 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" Snippets
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+
 Plug 'slashmili/alchemist.vim'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " languages
 Plug 'sheerun/vim-polyglot'

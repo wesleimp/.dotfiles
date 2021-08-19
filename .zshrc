@@ -65,6 +65,7 @@ export PATH=$PATH:$HOME/.mix/escripts
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
+export GOPATH=~/go
 
 # Aliases
 alias grep='rg'

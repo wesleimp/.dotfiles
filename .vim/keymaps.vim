@@ -35,6 +35,10 @@ nmap <leader><f7> :NERDTreeFind<cr>
 imap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<tab>"
 imap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<tab>"
 
+imap <C-o>     <Plug>(neosnippet_expand_or_jump)
+smap <C-o>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-o>     <Plug>(neosnippet_expand_target)
+
 "fzf
 nmap <silent> <C-f> :Rg<cr>
 nmap <C-p> :Files .<cr> 
