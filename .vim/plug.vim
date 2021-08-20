@@ -27,6 +27,8 @@ Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
 Plug 'slashmili/alchemist.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " languages
 Plug 'sheerun/vim-polyglot'
