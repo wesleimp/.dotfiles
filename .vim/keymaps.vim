@@ -27,6 +27,11 @@ map <C-l> <C-W>l
 "Terminal 
 nmap <f3> :bel term<cr>
 
+noremap <leader>y "+y
+noremap <leader>p "+p
+
+nnoremap <silent> <leader><esc> :noh<CR>
+
 "NERDtree
 nmap <f7> :NERDTreeToggle<cr>
 nmap <leader><f7> :NERDTreeFind<cr>
@@ -40,12 +45,12 @@ smap <C-o>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-o>     <Plug>(neosnippet_expand_target)
 
 "fzf
-nmap <silent> <C-f> :Rg<cr>
-nmap <C-p> :Files .<cr> 
+nmap <silent> <leader>g :Rg<cr>
+nmap <leader>f :Files .<cr> 
 
 augroup elixir
     autocmd!
-    autocmd filetype elixir nmap <buffer> <leader>f :Mix format <cr><cr>
+    autocmd filetype elixir nmap <buffer> <C-f> :Mix format <cr><cr>
 augroup END
 
 "doties

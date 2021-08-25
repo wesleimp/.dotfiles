@@ -37,6 +37,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'ziglang/zig.vim'
 
 " syntax/colorscheme
 Plug 'scrooloose/syntastic'
