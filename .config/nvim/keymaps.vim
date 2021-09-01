@@ -36,6 +36,8 @@ nnoremap <silent> <leader><esc> :noh<CR>
 nmap <f7> :NERDTreeToggle<cr>
 nmap <leader><f7> :NERDTreeFind<cr>
 
+nmap <f3> :Goyo<cr>
+
 " deoplete
 imap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<tab>"
 imap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<tab>"
@@ -44,9 +46,10 @@ imap <C-o>     <Plug>(neosnippet_expand_or_jump)
 smap <C-o>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-o>     <Plug>(neosnippet_expand_target)
 
-"fzf
-nmap <silent> <leader>g :Rg<cr>
-nmap <leader>f :Files .<cr> 
+" Telescope
+nnoremap <leader>f :Telescope find_files<cr>
+nnoremap <leader>g :Telescope live_grep<cr>
+nnoremap <leader>b :Telescope buffers<cr>
 
 augroup elixir
     autocmd!

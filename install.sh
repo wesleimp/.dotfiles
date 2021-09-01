@@ -3,7 +3,7 @@
 dir=~/.dotfiles
 olddir=~/.dotfiles/old
 
-doties=".vim .bashrc .curlrc .gitconfig .globalgitignore .inputrc .tmux.conf .vimrc .zshrc Brewfile"
+doties=".config .bashrc .curlrc .gitconfig .globalgitignore .inputrc .tmux.conf .zshrc Brewfile"
 
 start() {
 	doBackup

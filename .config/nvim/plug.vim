@@ -12,6 +12,10 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'RRethy/vim-illuminate'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/goyo.vim'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Completetions
 if has('nvim')
