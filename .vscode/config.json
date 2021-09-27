@@ -1,0 +1,322 @@
+{
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 7,
+  "workbench.activityBar.visible": false,
+
+  // status bar
+  "workbench.colorCustomizations": {
+    "editor.functionForeground": "ff0000",
+  },
+
+  // reduce width of linum col (3 cols really)
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.parameterHints.enabled": false,
+  "editor.suggest.showTypeParameters": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestSelection": "first",
+  "editor.renderWhitespace": "none",
+  "editor.hover.enabled": false,
+  "editor.renderIndentGuides": false,
+  "editor.highlightActiveIndentGuide": false,
+  "editor.minimap.enabled": false,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": false,
+
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "breadcrumbs.enabled": false,
+
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpen",
+    "vscodeWorkspaceSwitcher.switchWorkspace",
+    "workbench.action.togglePanelPosition"
+  ],
+  "terminal.integrated.macOptionClickForcesSelection": true,
+
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.fetchDeps": false,
+  "vim.incsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.hlsearch": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.leader": ",",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "%"
+      ],
+      "commands": [
+        {
+          "command": "editor.emmet.action.matchTag"
+        }
+      ]
+    },
+    // toggle buffer
+    {
+      "before": [
+        "<leader>",
+        "<leader>"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.openPreviousEditorFromHistory"
+        },
+        {
+          "command": "workbench.action.acceptSelectedQuickOpenItem"
+        }
+      ]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "%"
+      ],
+      "commands": [
+        {
+          "command": "editor.emmet.action.matchTag"
+        }
+      ]
+    },
+    {
+      "before": [
+        "Ctrl+j"
+      ],
+      "after": [
+        "Ctrl+d"
+      ]
+    },
+    {
+      "before": [
+        "Ctrl+K"
+      ],
+      "after": [
+        "Ctrl+u"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "=",
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.reindentselectedlines",
+          "args": []
+        }
+      ]
+    },
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "Ctrl+j"
+      ],
+      "after": [
+        "Ctrl+d"
+      ]
+    },
+    {
+      "before": [
+        "Ctrl+K"
+      ],
+      "after": [
+        "Ctrl+u"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "g"
+      ],
+      "after": [
+        "g",
+        "d"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c",
+        "c"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.quickOpen",
+          "args": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility",
+          "args": []
+        },
+        {
+          "command": "workbench.view.explorer",
+          "args": []
+        }
+      ],
+      "when": "workbench.view.explorerFocus"
+    },
+    {
+      "before": [
+        "<leader>",
+        "n",
+        "n"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.toggleSidebarVisibility",
+          "args": []
+        },
+      ],
+      "when": "!workbench.view.explorerFocus"
+    },
+    {
+      "before": [
+        "<leader>",
+        "w"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.closeActiveEditor",
+          "ags": []
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m",
+        "f"
+      ],
+      "after": [],
+      "commands": [
+        {
+          "command": "editor.action.commentLine",
+          "args": []
+        }
+      ]
+    }
+  ],
+  "vim.ignorecase": false,
+  "vim.visualstar": true,
+  "files.associations": {
+    "*.leex": "html-eex"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git": true,
+    "**/tmp/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/*.beam": true,
+    "**/node_modules/**": true,
+    "**/.elixir_ls": true
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/tmp/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/*.beam": true,
+    "**/node_modules": true,
+    "**/.elixir_ls": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/tmp/**": true,
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/*.beam": true,
+    "**/node_modules": true,
+    "**/.elixir_ls": true
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "never",
+  "emmet.includeLanguages": {
+    "HTML (EEx)": "html",
+    "elixir": "html",
+    "html-eex": "html"
+  },
+  "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  }
+}
