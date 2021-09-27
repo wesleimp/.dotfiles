@@ -51,6 +51,7 @@ Plug 'mhinz/vim-signify'
 Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'ryanoasis/vim-devicons'
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

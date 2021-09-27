@@ -1,0 +1,22 @@
+[2021-09-21 15:37:19.945] [sharedprocess] [info] [logs cleanup]: Starting to clean up old logs.
+[2021-09-21 15:37:39.941] [sharedprocess] [info] [code cache cleanup]: Starting to clean up old code cache folders.
+[2021-09-21 15:37:39.941] [sharedprocess] [info] [storage cleanup]: Starting to clean up storage folders.
+[2021-09-21 15:37:49.937] [sharedprocess] [info] [language pack cache cleanup]: Starting to clean up unused language packs.
+[2021-09-21 15:38:46.699] [sharedprocess] [info] Installing extension: vscodevim.vim
+[2021-09-21 15:38:48.343] [sharedprocess] [info] Downloaded extension: vscodevim.vim /home/weslei/.config/Code/CachedExtensionVSIXs/vscodevim.vim-1.21.7
+[2021-09-21 15:38:48.420] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.291d6e21-f41c-4b85-835f-8d7003899772: vscodevim.vim
+[2021-09-21 15:38:48.425] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/vscodevim.vim-1.21.7
+[2021-09-21 15:38:48.427] [sharedprocess] [info] Installation completed. vscodevim.vim
+[2021-09-21 15:38:48.432] [sharedprocess] [info] Extensions installed successfully: vscodevim.vim
+[2021-09-21 15:38:54.549] [sharedprocess] [info] Installing extension: jakebecker.elixir-ls
+[2021-09-21 15:38:56.152] [sharedprocess] [info] Downloaded extension: jakebecker.elixir-ls /home/weslei/.config/Code/CachedExtensionVSIXs/jakebecker.elixir-ls-0.8.1
+[2021-09-21 15:38:56.312] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.1a986746-6e4c-4f2b-9db2-6a854e9abf41: jakebecker.elixir-ls
+[2021-09-21 15:38:56.317] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/jakebecker.elixir-ls-0.8.1
+[2021-09-21 15:38:56.318] [sharedprocess] [info] Installation completed. jakebecker.elixir-ls
+[2021-09-21 15:38:56.320] [sharedprocess] [info] Extensions installed successfully: jakebecker.elixir-ls
+[2021-09-21 15:42:36.364] [sharedprocess] [info] Installing extension: zhuangtongfa.material-theme
+[2021-09-21 15:42:38.437] [sharedprocess] [info] Downloaded extension: zhuangtongfa.material-theme /home/weslei/.config/Code/CachedExtensionVSIXs/zhuangtongfa.material-theme-3.11.3
+[2021-09-21 15:42:38.471] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.f3e9663c-8503-4003-a711-4721614142e2: zhuangtongfa.material-theme
+[2021-09-21 15:42:38.475] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/zhuangtongfa.material-theme-3.11.3
+[2021-09-21 15:42:38.475] [sharedprocess] [info] Installation completed. zhuangtongfa.material-theme
+[2021-09-21 15:42:38.478] [sharedprocess] [info] Extensions installed successfully: zhuangtongfa.material-theme

@@ -1,0 +1,69 @@
+Validating found git in: git
+Using git 2.30.2 from git
+Opening repository for path='/home/weslei/OSS/is_ci' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci/lib' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci/.elixir_ls' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci/.formatter.exs' failed; ex=Error: spawn ENOTDIR
+Opening repository for path='/home/weslei/OSS/is_ci/.gitignore' failed; ex=Error: spawn ENOTDIR
+Opening repository for path='/home/weslei/OSS/is_ci/README.md' failed; ex=Error: spawn ENOTDIR
+Opening repository for path='/home/weslei/OSS/is_ci/lib' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci/mix.exs' failed; ex=Error: spawn ENOTDIR
+Opening repository for path='/home/weslei/OSS/is_ci/test' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}
+Opening repository for path='/home/weslei/OSS/is_ci' failed; ex=Failed to execute git {
+  "exitCode": 128,
+  "gitErrorCode": "NotAGitRepository",
+  "gitCommand": "rev-parse",
+  "stdout": "",
+  "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+}

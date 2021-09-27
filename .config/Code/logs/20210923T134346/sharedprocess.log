@@ -1,0 +1,35 @@
+[2021-09-23 13:43:47.778] [sharedprocess] [info] Deleted from disk zhuangtongfa.material-theme /home/weslei/.vscode/extensions/zhuangtongfa.material-theme-3.11.3
+[2021-09-23 13:43:49.913] [sharedprocess] [info] Installing extension: zhuangtongfa.material-theme
+[2021-09-23 13:43:50.983] [sharedprocess] [info] Downloaded extension: zhuangtongfa.material-theme /home/weslei/.config/Code/CachedExtensionVSIXs/zhuangtongfa.material-theme-3.12.0
+[2021-09-23 13:43:51.034] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.44ca0a80-936e-4e3c-b125-3ed82809d003: zhuangtongfa.material-theme
+[2021-09-23 13:43:51.038] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/zhuangtongfa.material-theme-3.12.0
+[2021-09-23 13:43:51.039] [sharedprocess] [info] Extracting completed. zhuangtongfa.material-theme
+[2021-09-23 13:43:51.043] [sharedprocess] [info] Extension installed successfully: zhuangtongfa.material-theme
+[2021-09-23 13:43:57.498] [sharedprocess] [info] [logs cleanup]: Starting to clean up old logs.
+[2021-09-23 13:44:17.500] [sharedprocess] [info] [code cache cleanup]: Starting to clean up old code cache folders.
+[2021-09-23 13:44:17.501] [sharedprocess] [info] [storage cleanup]: Starting to clean up storage folders.
+[2021-09-23 13:44:27.498] [sharedprocess] [info] [language pack cache cleanup]: Starting to clean up unused language packs.
+[2021-09-23 13:47:48.302] [sharedprocess] [info] Installing extension: emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:47:49.721] [sharedprocess] [info] Downloaded extension: emmanuelbeziat.vscode-great-icons /home/weslei/.config/Code/CachedExtensionVSIXs/emmanuelbeziat.vscode-great-icons-2.1.79
+[2021-09-23 13:47:49.846] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.a99affdd-cd8e-4ac2-bbdf-4da1c813ffc4: emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:47:49.850] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/emmanuelbeziat.vscode-great-icons-2.1.79
+[2021-09-23 13:47:49.850] [sharedprocess] [info] Extracting completed. emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:47:49.855] [sharedprocess] [info] Extension installed successfully: emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:48:18.117] [sharedprocess] [info] Installing extension: equinusocio.vsc-material-theme-icons
+[2021-09-23 13:48:19.718] [sharedprocess] [info] Downloaded extension: equinusocio.vsc-material-theme-icons /home/weslei/.config/Code/CachedExtensionVSIXs/equinusocio.vsc-material-theme-icons-2.2.0
+[2021-09-23 13:48:21.216] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.1aba97ec-dedd-43c2-a49d-9d61318a8fff: equinusocio.vsc-material-theme-icons
+[2021-09-23 13:48:21.220] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/equinusocio.vsc-material-theme-icons-2.2.0
+[2021-09-23 13:48:21.221] [sharedprocess] [info] Extracting completed. equinusocio.vsc-material-theme-icons
+[2021-09-23 13:48:21.224] [sharedprocess] [info] Extension installed successfully: equinusocio.vsc-material-theme-icons
+[2021-09-23 13:48:34.103] [sharedprocess] [info] Installing extension: pkief.material-icon-theme
+[2021-09-23 13:48:35.517] [sharedprocess] [info] Downloaded extension: pkief.material-icon-theme /home/weslei/.config/Code/CachedExtensionVSIXs/pkief.material-icon-theme-4.10.0
+[2021-09-23 13:48:35.791] [sharedprocess] [info] Extracted extension to /home/weslei/.vscode/extensions/.4992e288-106a-445b-b8c3-1f6ab4935cd9: pkief.material-icon-theme
+[2021-09-23 13:48:35.795] [sharedprocess] [info] Renamed to /home/weslei/.vscode/extensions/pkief.material-icon-theme-4.10.0
+[2021-09-23 13:48:35.796] [sharedprocess] [info] Extracting completed. pkief.material-icon-theme
+[2021-09-23 13:48:35.798] [sharedprocess] [info] Extension installed successfully: pkief.material-icon-theme
+[2021-09-23 13:49:30.565] [sharedprocess] [info] Uninstalling extension: emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:49:30.786] [sharedprocess] [info] Detected extension removed from another source emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:49:30.979] [sharedprocess] [info] Successfully uninstalled extension: emmanuelbeziat.vscode-great-icons
+[2021-09-23 13:49:38.485] [sharedprocess] [info] Uninstalling extension: equinusocio.vsc-material-theme-icons
+[2021-09-23 13:49:38.706] [sharedprocess] [info] Detected extension removed from another source equinusocio.vsc-material-theme-icons
+[2021-09-23 13:49:38.916] [sharedprocess] [info] Successfully uninstalled extension: equinusocio.vsc-material-theme-icons

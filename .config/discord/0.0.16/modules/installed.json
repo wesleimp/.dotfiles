@@ -1,0 +1,25 @@
+{
+  "discord_desktop_core": {
+    "installedVersion": 1
+  },
+  "discord_erlpack": {
+    "installedVersion": 1
+  },
+  "discord_spellcheck": {
+    "installedVersion": 1,
+    "updateVersion": 2,
+    "updateZipfile": "/home/weslei/.dotfiles/.config/discord/0.0.16/modules/pending/discord_spellcheck-2.zip"
+  },
+  "discord_utils": {
+    "installedVersion": 1
+  },
+  "discord_voice": {
+    "installedVersion": 1
+  },
+  "discord_game_utils": {
+    "installedVersion": 1
+  },
+  "discord_rpc": {
+    "installedVersion": 1
+  }
+}

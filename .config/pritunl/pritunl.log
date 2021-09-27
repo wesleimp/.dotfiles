@@ -1,0 +1,29 @@
+[2021-9-27 9:33:48][ERROR] ParseError: profile: Failed to load profile uri (Error: getaddrinfo EAI_AGAIN developer-vpns
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'developer-vpns'
+})
+[2021-9-27 9:34:3][ERROR] ParseError: profile: Failed to load profile uri (Error: getaddrinfo ENOTFOUND weslei.pereira_stone.com.br
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'weslei.pereira_stone.com.br'
+})
+[2021-9-27 9:34:39][ERROR] ParseError: profile: Failed to load profile uri (Error: getaddrinfo EAI_AGAIN developer-vpns
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) {
+  errno: -3001,
+  code: 'EAI_AGAIN',
+  syscall: 'getaddrinfo',
+  hostname: 'developer-vpns'
+})
+[2021-9-27 9:34:49][ERROR] ParseError: profile: Failed to load profile uri (Error: getaddrinfo ENOTFOUND weslei.pereira_stone.com.br
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:67:26) {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'weslei.pereira_stone.com.br'
+})
+[2021-9-27 9:35:23][WARN] profile: Failed to sync config

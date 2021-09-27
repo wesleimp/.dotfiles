@@ -1,9 +1,6 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 export ZSH=$HOME/.oh-my-zsh
 
@@ -28,17 +25,12 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_CHAR_SYMBOL="❯"
+SPACESHIP_CHAR_SYMBOL="🦆"
 SPACESHIP_CHAR_SUFFIX=" "
 
-plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl elixir)
+plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl elixir asdf)
 
 source $ZSH/oh-my-zsh.sh
-
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
-
-source $HOME/.cargo/env
 
 export LESSCHARSET="utf-8"
 export LOCALE="en_US.UTF-8"
@@ -102,6 +94,10 @@ function cdn() {
     cd $path
 }
 
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
