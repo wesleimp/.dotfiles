@@ -1,3 +1,3 @@
-# .dotfiles :fish:
+# .dotfiles :duck:
 
 My personal doties
