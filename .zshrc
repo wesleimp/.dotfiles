@@ -29,7 +29,19 @@ SPACESHIP_PROMPT_SEPARATE_LINE=true
 SPACESHIP_CHAR_SYMBOL="🦆"
 SPACESHIP_CHAR_SUFFIX=" "
 
-plugins=(git ssh-agent docker docker-compose golang zsh-autosuggestions zsh-syntax-highlighting github kubectl elixir asdf)
+plugins=(
+    git 
+    ssh-agent 
+    docker 
+    docker-compose 
+    golang 
+    zsh-autosuggestions 
+    zsh-syntax-highlighting 
+    github 
+    kubectl 
+    elixir 
+    asdf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -59,6 +71,7 @@ export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
 export GOPATH=~/go
+export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
 # Aliases
 alias grep='rg'
@@ -102,5 +115,4 @@ autoload -Uz compinit && compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi

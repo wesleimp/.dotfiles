@@ -101,3 +101,9 @@ let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
 let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --hidden --column --line-number --no-heading --color=always --smart-case -g "!.git" -- '.shellescape(<q-args>), 1,
+  \   fzf#vim#with_preview(), <bang>0)
+

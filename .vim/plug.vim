@@ -2,21 +2,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-Plug 'VundleVim/Vundle.vim'
-Plug 'godlygeek/tabular'
-Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-endwise'
-Plug 'RRethy/vim-illuminate'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/goyo.vim'
-
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
 " Completetions
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -29,6 +14,19 @@ endif
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
+
+Plug 'VundleVim/Vundle.vim'
+Plug 'godlygeek/tabular'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'RRethy/vim-illuminate'
+Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/goyo.vim'
 
 Plug 'slashmili/alchemist.vim'
 Plug 'racer-rust/vim-racer'
@@ -48,9 +46,7 @@ Plug 'scrooloose/syntastic'
 Plug 'mhinz/vim-signify'
 
 " themes
-Plug 'arcticicestudio/nord-vim'
 Plug 'joshdick/onedark.vim'
-Plug 'itchyny/lightline.vim'
 Plug 'ryanoasis/vim-devicons'
 
 " misc

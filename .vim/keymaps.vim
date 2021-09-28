@@ -47,9 +47,8 @@ smap <C-o>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-o>     <Plug>(neosnippet_expand_target)
 
 " Telescope
-nnoremap <leader>f :Telescope find_files<cr>
-nnoremap <leader>g :Telescope live_grep<cr>
-nnoremap <leader>b :Telescope buffers<cr>
+nnoremap <leader>f :Files .<cr>
+nnoremap <leader>g :Rg<cr>
 
 augroup elixir
     autocmd!
