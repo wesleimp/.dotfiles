@@ -27,6 +27,7 @@ Plug 'tpope/vim-endwise'
 Plug 'RRethy/vim-illuminate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
+Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 
 " languages
 Plug 'sheerun/vim-polyglot'
