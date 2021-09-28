@@ -28,18 +28,11 @@ Plug 'RRethy/vim-illuminate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 
-Plug 'slashmili/alchemist.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-
 " languages
 Plug 'sheerun/vim-polyglot'
-Plug 'pangloss/vim-javascript'
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
-Plug 'rust-lang/rust.vim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'ziglang/zig.vim'
+Plug 'slashmili/alchemist.vim'
 
 " syntax/colorscheme
 Plug 'scrooloose/syntastic'
