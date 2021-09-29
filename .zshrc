@@ -67,16 +67,19 @@ export LC_ALL="en_US.UTF-8"
 
 # Env variables
 export PATH=$PATH:$HOME/.mix/escripts
+export PATH=$PATH:$HOME/.local/bin
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
 export GOPATH=~/go
-export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export TERMINAL="alacritty"
+export BROWSER="firefox"
 
 # Aliases
 alias grep='rg'
 alias :q='exit'
-alias bashrc='vim ~/.bashrc'
+alias bashrc='nvim ~/.bashrc'
 alias zshconfig='nvim ~/.zshrc'
 alias ohmyzsh='nvim ~/.oh-my-zsh'
 alias vimrc="nvim ~/.vimrc"
@@ -88,6 +91,9 @@ alias tree="exa -T --git-ignore"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
 alias oss="~/oss"
 alias workspace="~/workspace"
+
+alias kn="kubens"
+alias kx="kubectx"
 
 # Change up a variable number of directories
 # E.g:
