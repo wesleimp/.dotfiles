@@ -46,9 +46,16 @@ imap <C-o>     <Plug>(neosnippet_expand_or_jump)
 smap <C-o>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-o>     <Plug>(neosnippet_expand_target)
 
-" Telescope
+" fzf
 nnoremap <leader>f :Files .<cr>
 nnoremap <leader>g :Rg<cr>
+
+" ale
+noremap <leader>ad :ALEGoToDefinition<CR>
+noremap <leader>ar :ALEFindReferences<CR>
+nnoremap <leader>af :ALEFix<cr>
+nnoremap ]r :ALENextWrap<CR>
+nnoremap [r :ALEPreviousWrap<CR>
 
 augroup elixir
     autocmd!

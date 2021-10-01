@@ -31,7 +31,7 @@ set hlsearch
 set showmatch
 
 " Enable jumping into files in a search buffer
-set hidden 
+set hidden
 
 " Make backspace a bit nicer
 set backspace=eol,start,indent
@@ -50,14 +50,6 @@ set colorcolumn=80
 
 " filetype
 filetype plugin indent on
-
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\   'auto_complete_delay': 200,
-\   'smart_case': v:true,
-\   'keyword_patterns': {},
-\   'max_list': 15,
-\})
 
 " misc
 let g:format_on_save = 1
@@ -100,10 +92,31 @@ let g:syntastic_check_on_wq = 0
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 
-let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#option({
+\   'auto_complete_delay': 200,
+\   'smart_case': v:true,
+\   'keyword_patterns': {},
+\   'max_list': 15,
+\})
 
 command! -bang -nargs=* Rg
-  \ call fzf#vim#grep(
-  \   'rg --hidden --column --line-number --no-heading --color=always --smart-case -g "!.git" -- '.shellescape(<q-args>), 1,
-  \   fzf#vim#with_preview(), <bang>0)
+\ call fzf#vim#grep(
+\   'rg --hidden --column --line-number --no-heading --color=always --smart-case -g "!.git" -- '.shellescape(<q-args>), 1,
+\   fzf#vim#with_preview(), <bang>0)
 
+let g:ale_linters = { 'elixir': ['credo', 'dialyxir', 'elixir-ls'] }
+let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'elixir': ['mix_format'] }
+let g:ale_elixir_elixir_ls_release= $HOME . '/.elixir-ls/release'
+
+let g:ale_completion_enabled = 1
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
+let g:ale_sign_info = 'ⓘ'
+highlight ALEErrorSign ctermbg=NONE ctermfg=red
+highlight ALEWarningSign ctermbg=NONE ctermfg=yellow
+let g:ale_linters_explicit = 1
+let g:ale_lint_on_save = 1
+let g:ale_fix_on_save = 1

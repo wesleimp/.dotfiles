@@ -2,14 +2,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-" Completetions
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 " Snippets
 Plug 'Shougo/neosnippet.vim'
@@ -28,6 +21,8 @@ Plug 'RRethy/vim-illuminate'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/goyo.vim'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+Plug 'dense-analysis/ale'
+Plug 'matze/vim-move'
 
 " languages
 Plug 'sheerun/vim-polyglot'
