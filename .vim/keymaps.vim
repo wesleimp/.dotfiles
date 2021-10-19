@@ -1,6 +1,12 @@
 "line selection without identation
 nnoremap vv ^vg_
 
+" disable arrow keys :-)
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 "escapehell
 nnoremap <Tab-j> <Esc>
 vnoremap <Tab-j> <Esc>
@@ -8,6 +14,13 @@ onoremap <Tab-j> <Esc>
 inoremap <Tab-j> <Esc>
 
 map , <Leader>
+
+" remap :W, :Q etc if you press the shift key for too long
+cabbrev Q quit
+cabbrev W write
+cabbrev WQ wq
+cabbrev Wq wq
+
 "tab selection
 map <leader>1 1gt
 map <leader>2 2gt
@@ -24,7 +37,7 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 
-"Terminal 
+"Terminal
 nmap <f3> :bel term<cr>
 
 noremap <leader>y "+y
@@ -38,29 +51,27 @@ nmap <leader><f7> :NERDTreeFind<cr>
 
 nmap <f3> :Goyo<cr>
 
-" deoplete
-imap <expr> <c-j> pumvisible() ? "\<c-n>" : "\<tab>"
-imap <expr> <c-k> pumvisible() ? "\<c-p>" : "\<tab>"
-
 imap <C-o>     <Plug>(neosnippet_expand_or_jump)
 smap <C-o>     <Plug>(neosnippet_expand_or_jump)
 xmap <C-o>     <Plug>(neosnippet_expand_target)
 
 " fzf
-nnoremap <leader>f :Files .<cr>
-nnoremap <leader>g :Rg<cr>
+nnoremap <C-p> :Files .<cr>
+nnoremap <C-f> :Rg<cr>
 
 " ale
-noremap <leader>ad :ALEGoToDefinition<CR>
-noremap <leader>ar :ALEFindReferences<CR>
-nnoremap <leader>af :ALEFix<cr>
+noremap <leader>d :ALEGoToDefinition<CR>
+noremap <leader>r :ALEFindReferences<CR>
+nnoremap <leader>h :ALEHover<cr>
+nnoremap <leader>f :ALEFix<cr>
 nnoremap ]r :ALENextWrap<CR>
 nnoremap [r :ALEPreviousWrap<CR>
 
-augroup elixir
-    autocmd!
-    autocmd filetype elixir nmap <buffer> <C-f> :Mix format <cr><cr>
-augroup END
+" Align with respect to = or : with <Leader>= and <Leader>:
+nmap <Leader>= :Tabularize /=<CR>
+vmap <Leader>= :Tabularize /=<CR>
+nmap <Leader>: :Tabularize /:\zs<CR>
+vmap <Leader>: :Tabularize /:\zs<CR>
 
 "doties
 map <f12> :NERDTree ~/.dotfiles<cr>

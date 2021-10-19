@@ -23,6 +23,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 Plug 'dense-analysis/ale'
 Plug 'matze/vim-move'
+Plug 'mattn/emmet-vim'
 
 " languages
 Plug 'sheerun/vim-polyglot'
