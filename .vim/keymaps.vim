@@ -15,11 +15,18 @@ inoremap <Tab-j> <Esc>
 
 map , <Leader>
 
+" Buffer navigation
+map <leader>gn :bn<cr>
+map <leader>gp :bp<cr>
+map <leader>dd :bd<cr>
+
 " remap :W, :Q etc if you press the shift key for too long
 cabbrev Q quit
 cabbrev W write
 cabbrev WQ wq
 cabbrev Wq wq
+cabbrev QA qa
+cabbrev Qa qa
 
 "tab selection
 map <leader>1 1gt
@@ -40,20 +47,24 @@ map <C-l> <C-W>l
 "Terminal
 nmap <f3> :bel term<cr>
 
+" Register copy/paster
 noremap <leader>y "+y
 noremap <leader>p "+p
 
+" No highlight after search
 nnoremap <silent> <leader><esc> :noh<CR>
 
 "NERDtree
 nmap <f7> :NERDTreeToggle<cr>
 nmap <leader><f7> :NERDTreeFind<cr>
 
+" Focus mode
 nmap <f3> :Goyo<cr>
 
-imap <C-o>     <Plug>(neosnippet_expand_or_jump)
-smap <C-o>     <Plug>(neosnippet_expand_or_jump)
-xmap <C-o>     <Plug>(neosnippet_expand_target)
+" Expand snippet
+imap <C-o> <Plug>(neosnippet_expand_or_jump)
+smap <C-o> <Plug>(neosnippet_expand_or_jump)
+xmap <C-o> <Plug>(neosnippet_expand_target)
 
 " fzf
 nnoremap <C-p> :Files .<cr>
