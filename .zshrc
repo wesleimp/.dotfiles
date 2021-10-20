@@ -30,16 +30,16 @@ SPACESHIP_CHAR_SYMBOL="🦆"
 SPACESHIP_CHAR_SUFFIX=" "
 
 plugins=(
-    git 
-    ssh-agent 
-    docker 
-    docker-compose 
-    golang 
-    zsh-autosuggestions 
-    zsh-syntax-highlighting 
-    github 
-    kubectl 
-    elixir 
+    git
+    ssh-agent
+    docker
+    docker-compose
+    golang
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    github
+    kubectl
+    elixir
     asdf
 )
 
@@ -76,6 +76,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 
+source $HOME/.cargo/env
+
 # Aliases
 alias grep='rg'
 alias :q='exit'
@@ -85,7 +87,7 @@ alias ohmyzsh='nvim ~/.oh-my-zsh'
 alias vimrc="nvim ~/.vimrc"
 alias v="nvim ."
 alias nv="nvim"
-alias cat="bat"
+alias cat="bat --plain"
 alias ls="exa"
 alias tree="exa -T --git-ignore"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
@@ -94,25 +96,6 @@ alias workspace="~/workspace"
 
 alias kn="kubens"
 alias kx="kubectx"
-
-# Change up a variable number of directories
-# E.g:
-#   cdn   -> cdn ../
-#   cdn 2 -> cdn ../../
-#   cdn 3 -> cdn ../../../
-function cdn() {
-    local count=$1
-    if [ -z "${count}" ]; then
-        count=1
-    fi
-
-    local path=""
-    for i in {1..${count}}; do
-        path="${path}../"
-    done
-
-    cd $path
-}
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

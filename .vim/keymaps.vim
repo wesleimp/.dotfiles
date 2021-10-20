@@ -58,6 +58,7 @@ xmap <C-o>     <Plug>(neosnippet_expand_target)
 " fzf
 nnoremap <C-p> :Files .<cr>
 nnoremap <C-f> :Rg<cr>
+nnoremap <C-b> :Buffers<cr>
 
 " ale
 noremap <leader>d :ALEGoToDefinition<CR>

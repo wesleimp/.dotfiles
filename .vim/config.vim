@@ -13,6 +13,9 @@ set encoding=utf8
 set previewheight=5
 set completeopt-=preview
 set termguicolors
+set cursorline
+highlight clear CursorLine
+highlight CursorLineNR ctermbg=gray
 
 " Line wrapping
 set nowrap
