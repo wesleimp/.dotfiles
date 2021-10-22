@@ -1,5 +1,3 @@
 /.vim/bundle*
 /.vim/plugged*
 /old/*
-/.config/**
-!/.config/nvim
