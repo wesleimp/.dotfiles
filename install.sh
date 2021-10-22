@@ -3,7 +3,7 @@
 dir=~/.dotfiles
 olddir=~/.dotfiles/old
 
-doties=".vim .bashrc .curlrc .gitconfig .globalgitignore .inputrc .tmux.conf .zshrc Brewfile .vimrc"
+doties=".bashrc .curlrc .gitconfig .globalgitignore .inputrc .tmux.conf .zshrc Brewfile .config/nvim"
 
 start() {
 	doBackup
@@ -24,7 +24,7 @@ doBackup() {
 
 doSymlink() {
 	echo "Creating symlinks from $dir to ~/"
-	
+
 	for dot in $doties; do
 		echo "Symlinking $dot"
 		ln -s $dir/$dot ~/$dot
