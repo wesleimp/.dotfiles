@@ -30,11 +30,16 @@ Plug 'matze/vim-move'
 Plug 'mattn/emmet-vim'
 Plug 'ncm2/float-preview.nvim'
 
-" languages
+" ========= languages =================
 Plug 'sheerun/vim-polyglot'
+
+" elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'slashmili/alchemist.vim'
+
+" golang
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " syntax/colorscheme
 Plug 'scrooloose/syntastic'
@@ -164,7 +169,6 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol="\uf05e:"
 let g:airline#extensions#ale#warning_symbol="\uf071:"
 let g:airline#extensions#ale#checking_symbol="\uf110"
-
 let g:lightline = {
 \   'colorscheme': 'one',
 \}
@@ -177,16 +181,27 @@ endif
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" completetions
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
+" vim-go
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_auto_type_info = 1
+let g:go_gocode_autobuild = 1
+let g:go_gocode_propose_builtins = 1
+let g:go_test_show_name=1
+let g:go_updatetime=500
+let g:go_gocode_unimported_packages=1
+let g:go_highlight_extra_types=1
+let g:go_highlight_operators=1
+let g:go_highlight_functions=1
 
+" deoplete
 let g:deoplete#enable_at_startup = 1
 call deoplete#custom#option({
 \   'auto_complete_delay': 200,
@@ -204,7 +219,8 @@ command! -bang -nargs=* Rg
 " language server config
 let g:ale_linters = {
 \   'elixir': ['credo', 'dialyxir', 'elixir-ls'],
-\   'rust': ['rls', 'rustc']
+\   'rust': ['rls', 'rustc'],
+\   'go': ['gopls']
 \}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
