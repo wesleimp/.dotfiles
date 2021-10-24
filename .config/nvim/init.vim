@@ -48,6 +48,7 @@ Plug 'mhinz/vim-signify'
 " themes
 Plug 'joshdick/onedark.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " misc
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -121,6 +122,7 @@ au FileType markdown setl sw=2 ts=2
 au FileType javascript setl sw=2 ts=2
 au FileType yaml setl sw=2 ts=2
 au FileType json setl sw=2 ts=2
+au FileType go setl sw=4 ts=4
 
 " Colorscheme
 if (has("nvim"))
@@ -140,7 +142,7 @@ endif
 " ====================================================
 
 syntax on
-colorscheme onedark
+colorscheme dracula
 set background=dark
 set t_Co=256
 
@@ -230,7 +232,7 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'rust': ['rustfmt']
 \}
-let g:ale_elixir_elixir_ls_release= $HOME . '/.elixir-ls/release'
+let g:ale_elixir_elixir_ls_release = $HOME . '/.elixir-ls/release'
 
 let g:ale_completion_enabled=1
 let g:ale_lint_on_enter=0
