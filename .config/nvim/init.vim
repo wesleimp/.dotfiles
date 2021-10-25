@@ -76,9 +76,9 @@ set completeopt-=preview
 
 " Cursor highlight
 set cursorline
+highlight Normal ctermbg=None
 highlight clear CursorLine
 highlight CursorLineNR ctermbg=gray
-highlight Normal ctermbg=None
 
 " Line wrapping
 set nowrap
@@ -141,11 +141,6 @@ endif
 " Plugins configurations
 " ====================================================
 
-syntax on
-colorscheme dracula
-set background=dark
-set t_Co=256
-
 " misc
 let g:format_on_save = 1
 
@@ -163,7 +158,7 @@ let g:fzf_action = {
 " Airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
@@ -171,9 +166,7 @@ let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#ale#error_symbol="\uf05e:"
 let g:airline#extensions#ale#warning_symbol="\uf071:"
 let g:airline#extensions#ale#checking_symbol="\uf110"
-let g:lightline = {
-\   'colorscheme': 'one',
-\}
+" let g:lightline = { 'colorscheme': 'one' }
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -271,7 +264,20 @@ endfunction
 
 let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
 
+" dracula
+let g:dracula_italic=0
+let g:dracula_colorterm=0
+
+"" =============================================
+" Colorscheme
 " =============================================
+
+syntax on
+colorscheme dracula
+set background=dark
+set t_Co=256
+
+"" =============================================
 " Keymaps
 " =============================================
 
