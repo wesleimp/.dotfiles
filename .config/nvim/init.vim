@@ -5,8 +5,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-
 " Snippets
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
@@ -38,11 +36,13 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'slashmili/alchemist.vim'
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " syntax/colorscheme
-Plug 'scrooloose/syntastic'
 Plug 'mhinz/vim-signify'
 
 " themes
@@ -72,7 +72,7 @@ set title
 set nu
 set encoding=utf8
 set previewheight=5
-set completeopt-=preview
+set completeopt=menu,menuone,noselect,noinsert
 
 " Cursor highlight
 set cursorline
@@ -172,15 +172,6 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " vim-go
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
@@ -195,15 +186,6 @@ let g:go_gocode_unimported_packages=1
 let g:go_highlight_extra_types=1
 let g:go_highlight_operators=1
 let g:go_highlight_functions=1
-
-" deoplete
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-\   'auto_complete_delay': 200,
-\   'smart_case': v:true,
-\   'keyword_patterns': {},
-\   'max_list': 15,
-\})
 
 " show hidden files except .git when fzf grep
 command! -bang -nargs=* Rg
@@ -252,6 +234,8 @@ autocmd FileType html,css EmmetInstall
 
 " Float preview
 let g:float_preview#docked = 0
+let g:float_preview#max_width = 150
+let g:float_preview#max_height = 150
 
 " goyo
 function! GoyoBefore()
