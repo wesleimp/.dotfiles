@@ -183,27 +183,24 @@ let g:go_highlight_extra_types=1
 let g:go_highlight_operators=1
 let g:go_highlight_functions=1
 
+" fzf
 " show hidden files except .git when fzf grep
 command! -bang -nargs=* Rg
 \ call fzf#vim#grep(
 \   'rg --hidden --column --line-number --no-heading --color=always --smart-case -g "!.git" -- '.shellescape(<q-args>), 1,
 \   fzf#vim#with_preview(), <bang>0)
 
+" ale
 " language server config
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'elixir': ['mix_format'],
-\   'javascript': ['prettier', 'eslint'],
-\   'typescript': ['eslint'],
-\   'css': ['prettier'],
-\   'rust': ['rustfmt']
+\   'rust': ['rustfmt'],
+\   'go': ['gofmt']
 \}
 
 let g:ale_disable_lsp=1
 let g:ale_fix_on_save=1
-let g:ale_sign_error='✘'
-let g:ale_sign_warning='⚠'
-let g:ale_sign_info='ⓘ'
 highlight ALEWarning ctermbg=none cterm=reverse
 highlight ALEError ctermbg=none cterm=reverse
 highlight ALEInfo ctermbg=none cterm=reverse
