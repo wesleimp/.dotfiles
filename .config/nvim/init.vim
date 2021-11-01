@@ -9,43 +9,40 @@ Plug 'junegunn/vim-plug'
 Plug 'Shougo/neosnippet.vim'
 Plug 'Shougo/neosnippet-snippets'
 
-" General plugins
-Plug 'godlygeek/tabular'
+" Code completition
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Presentation
+Plug 'scrooloose/nerdtree'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'scrooloose/nerdtree'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'RRethy/vim-illuminate'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'Yggdroot/indentLine'
+
+" General plugins
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
-Plug 'RRethy/vim-illuminate'
 Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
-Plug 'dense-analysis/ale'
 Plug 'matze/vim-move'
 Plug 'mattn/emmet-vim'
-Plug 'ncm2/float-preview.nvim'
 
-" ========= languages =================
+" Languages
 Plug 'sheerun/vim-polyglot'
-
-" elixir
 Plug 'elixir-editors/vim-elixir'
 Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'slashmili/alchemist.vim'
-
-" Rust
 Plug 'rust-lang/rust.vim'
-
-" golang
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" syntax/colorscheme
-Plug 'mhinz/vim-signify'
-
 " themes
+Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -68,7 +65,8 @@ set showcmd
 set modeline
 set ruler
 set title
-set nu
+set number
+set relativenumber
 set encoding=utf8
 set previewheight=5
 set completeopt=menu,menuone,noselect,noinsert
@@ -145,6 +143,7 @@ let g:format_on_save = 1
 
 " nerdtree
 let g:NERDTreeWinSize=30
+let g:NERDTreeShowHidden=1
 
 " fzf.vim
 let g:fzf_layout = { 'down': '50%' }
@@ -161,11 +160,9 @@ let g:airline_theme = 'dracula'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#ale#error_symbol="\uf05e:"
-let g:airline#extensions#ale#warning_symbol="\uf071:"
-let g:airline#extensions#ale#checking_symbol="\uf110"
-" let g:lightline = { 'colorscheme': 'one' }
+let g:airline#extensions#coc#enabled = 1
+let g:airline#extensions#coc#error_symbol="\uf05e:"
+let g:airline#extensions#coc#warning_symbol="\uf071:"
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -193,11 +190,6 @@ command! -bang -nargs=* Rg
 \   fzf#vim#with_preview(), <bang>0)
 
 " language server config
-let g:ale_linters = {
-\   'elixir': ['credo', 'dialyxir', 'elixir-ls'],
-\   'rust': ['rls', 'rustc'],
-\   'go': ['gopls']
-\}
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'elixir': ['mix_format'],
@@ -206,16 +198,12 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'rust': ['rustfmt']
 \}
-let g:ale_elixir_elixir_ls_release = $HOME . '/.elixir-ls/release'
 
-let g:ale_completion_enabled=1
-let g:ale_lint_on_enter=0
+let g:ale_disable_lsp=1
+let g:ale_fix_on_save=1
 let g:ale_sign_error='✘'
 let g:ale_sign_warning='⚠'
 let g:ale_sign_info='ⓘ'
-let g:ale_linters_explicit=1
-let g:ale_lint_on_save=1
-let g:ale_fix_on_save=1
 highlight ALEWarning ctermbg=none cterm=reverse
 highlight ALEError ctermbg=none cterm=reverse
 highlight ALEInfo ctermbg=none cterm=reverse
@@ -227,11 +215,6 @@ highlight ALEInfoSign ctermbg=NONE ctermfg=blue
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-
-" Float preview
-let g:float_preview#docked = 0
-let g:float_preview#max_width = 150
-let g:float_preview#max_height = 150
 
 " goyo
 function! GoyoBefore()
@@ -247,6 +230,9 @@ let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
 " dracula
 let g:dracula_italic=0
 let g:dracula_colorterm=0
+
+" indentLIne
+let g:indentLine_char = '│'
 
 "" =============================================
 " Colorscheme
@@ -342,22 +328,47 @@ nmap <f7> :call NERDTreeToggleFind()<cr>
 nmap <f3> :Goyo<cr>
 
 " Expand snippet
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-xmap <C-k> <Plug>(neosnippet_expand_target)
+imap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
+smap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
+xmap <Tab><Tab> <Plug>(neosnippet_expand_target)
 
 " fzf
 nnoremap <C-p> :Files .<cr>
 nnoremap <C-f> :Rg<cr>
 nnoremap <C-b> :Buffers<cr>
 
-" ale
-noremap <leader>d :ALEGoToDefinition<CR>
-noremap <leader>r :ALEFindReferences<CR>
-nnoremap <leader>h :ALEHover<cr>
-nnoremap <leader>f :ALEFix<cr>
-nnoremap ]r :ALENextWrap<CR>
-nnoremap [r :ALEPreviousWrap<CR>
+" coc-nvim
+" Use <c-space> to trigger completion.
+if has('nvim')
+  inoremap <silent><expr> <c-space> coc#refresh()
+else
+  inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
 
 " Align with respect to = or : with <Leader>= and <Leader>:
 nmap <Leader>= :Tabularize /=<CR>
