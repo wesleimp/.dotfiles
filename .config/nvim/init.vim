@@ -382,6 +382,20 @@ if has('nvim')
   vnoremap <nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#nvim_scroll(0, 1) : "\<C-b>"
 endif
 
+augroup ex_files
+    autocmd!
+
+    autocmd FileType elixir nnoremap T :call <SID>run_test()<CR>
+augroup end
+
+function! s:run_test()
+    let bufn = bufname('%')
+    let line = get(getpos('.'), 1, 0)
+    if (expand('%:e') == "exs" && line > 0)
+        execute '!mix test ' . bufn . ':' . line
+    endif
+endfunction
+
 " Align with respect to = or : with <Leader>= and <Leader>:
 nmap <Leader>= :Tabularize /=<CR>
 vmap <Leader>= :Tabularize /=<CR>
