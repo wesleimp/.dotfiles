@@ -385,14 +385,13 @@ endif
 augroup ex_files
     autocmd!
 
-    autocmd FileType elixir nnoremap T :call <SID>run_test()<CR>
+    autocmd FileType elixir nnoremap <leader>mt :call <SID>mix_test()<CR>
 augroup end
 
-function! s:run_test()
-    let bufn = bufname('%')
-    let line = get(getpos('.'), 1, 0)
-    if (expand('%:e') == "exs" && line > 0)
-        execute '!mix test ' . bufn . ':' . line
+function! s:mix_test()
+    let ln = line('.')
+    if (expand('%:e') == "exs" && ln > 0)
+        execute '!mix test %:' . ln
     endif
 endfunction
 
