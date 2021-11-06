@@ -118,6 +118,7 @@ filetype plugin indent on
 au FileType html setl sw=2 ts=2
 au FileType markdown setl sw=2 ts=2
 au FileType javascript setl sw=2 ts=2
+au FileType vue setl sw=2 ts=2
 au FileType yaml setl sw=2 ts=2
 au FileType json setl sw=2 ts=2
 au FileType go setl sw=4 ts=4
@@ -212,7 +213,10 @@ highlight ALEInfoSign ctermbg=NONE ctermfg=blue
 " Emmet
 let g:user_emmet_leader_key=','
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+autocmd FileType html,css,vue EmmetInstall
+
+" visual multi
+let g:VM_leader = ","
 
 " goyo
 function! GoyoBefore()
@@ -285,15 +289,15 @@ map <leader>6 6gt
 map <leader>7 7gt
 map <leader>9 9gt
 
+"pane size
+map <C-Left> :tabp<cr>
+map <C-Right> :tabn<cr>
+
 "pane switching
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-"pane size
-map <C-Left> <C-W><
-map <C-Right> <C-W>>
 
 "numeric operations
 map + <C-a>
