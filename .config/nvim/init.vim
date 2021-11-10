@@ -314,7 +314,7 @@ function! NERDTreeToggleFind()
     endif
 endfunction
 
-nmap <leader>t :call NERDTreeToggleFind()<cr>
+nmap <leader>T :call NERDTreeToggleFind()<cr>
 
 " Focus mode
 nmap <f3> :Goyo<cr>
@@ -376,14 +376,23 @@ if has('nvim')
   vnoremap <nowait><expr> <C-k> coc#float#has_scroll() ? coc#float#nvim_scroll(0, 1) : "\<C-k>"
 endif
 
+" Elixir
 augroup ex_files
     autocmd!
 
-    autocmd FileType elixir nnoremap <leader>mt :call <SID>mix_test()<CR>
+    autocmd FileType elixir nnoremap <leader>mt :Mix test<CR>
+    autocmd FileType elixir nnoremap <leader>tf :call <SID>mix_test_file()<CR>
+    autocmd FileType elixir nnoremap <leader>tl :call <SID>mix_test_line()<CR>
     autocmd FileType elixir nnoremap <leader>mf :Mix format<CR>
 augroup end
 
-function! s:mix_test()
+function! s:mix_test_file()
+    if (expand('%:e') == "exs")
+        execute '!mix test %'
+    endif
+endfunction
+
+function! s:mix_test_line()
     let ln = line('.')
     if (expand('%:e') == "exs" && ln > 0)
         execute '!mix test %:' . ln

@@ -1,1 +1,2 @@
-sudo apt install -y $(< pkglist.txt)
+sudo apt update
+sudo apt install -y < pkglist.txt
