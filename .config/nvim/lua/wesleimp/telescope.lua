@@ -27,14 +27,14 @@ require("telescope").setup({
         }
     },
     extensions = {
-        fzf = {
+        fzy = {
             override_generic_sorter = false,  -- override the generic sorter
             override_file_sorter = true,     -- override the file sorter
         }
     },
 })
 
-require('telescope').load_extension('fzf')
+require('telescope').load_extension('fzy_native')
 
 local M = {}
 M.search_dotfiles = function()
