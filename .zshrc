@@ -75,6 +75,7 @@ export GOPATH=~/go
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="alacritty"
 export BROWSER="firefox"
+export DOTFILES=$HOME/.dotfiles
 
 source $HOME/.cargo/env
 

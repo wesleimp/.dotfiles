@@ -1,3 +1,6 @@
+" disable help
+map <f1> <NOP>
+
 "line selection without identation
 nnoremap vv ^vg_
 
@@ -149,6 +152,7 @@ endfunction
 " NERDTree
 " ------------------------------------------------
 nmap <leader>T :call NERDTreeToggleFind()<cr>
+nmap <f2> :call NERDTreeToggleFind()<cr>
 
 function! NERDTreeToggleFind()
     if exists("g:NERDTree") && g:NERDTree.IsOpen()
@@ -169,6 +173,12 @@ lua require("wesleimp")
 nnoremap <C-p> :lua require('telescope.builtin').find_files()<cr>
 nnoremap <C-f> :lua require('telescope.builtin').live_grep()<cr>
 nnoremap <C-b> :lua require('telescope.builtin').buffers()<cr>
+
+nnoremap <leader>fs :lua require('telescope.builtin').grep_string({search = vim.fn.expand("<cword>")})<CR>
+nnoremap <leader>gs :lua require('telescope.builtin').git_status()<cr>
+nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<cr>
+
+map <f12> :lua require('wesleimp.telescope').search_dotfiles()<cr>
 
 " ------------------------------------------------
 " Misc

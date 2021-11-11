@@ -7,6 +7,10 @@ let g:VM_leader = ","
 " NERDTree
 let g:NERDTreeWinSize=30
 let g:NERDTreeShowHidden=1
+let g:NERDTreeIgnore = [
+\    '\.git[[dir]]', '\node_modules[[dir]]',
+\    '\.elixir_ls[[dir]]',
+\]
 
 " -----------------------------------------
 " Airline config

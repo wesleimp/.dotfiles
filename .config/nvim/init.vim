@@ -67,7 +67,3 @@ syntax on
 colorscheme gruvbox
 set background=dark
 set t_Co=256
-
-" Doties
-map <f12> :NERDTree ~/.dotfiles<cr>
-nmap <leader><f12> :source $MYVIMRC<cr>
