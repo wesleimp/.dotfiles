@@ -5,9 +5,7 @@ set wildignore+=**/coverage/*
 set wildignore+=**/node_modules/*
 set wildignore+=**/.git/*
 
-" =============================================
-" Plugins
-" =============================================
+" plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'junegunn/vim-plug'
@@ -61,63 +59,14 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
 
+" lua config
 lua require('wesleimp')
 
-" =============================================
-" Colorscheme
-" =============================================
-
+" colorscheme
 syntax on
 colorscheme gruvbox
 set background=dark
 set t_Co=256
-
-
-" ====================================================
-" Plugins configurations
-" ====================================================
-
-" misc
-let g:format_on_save = 1
-
-" visual multi
-let g:VM_leader = ","
-
-"line selection without identation
-nnoremap vv ^vg_
-
-"numeric operations
-map + <C-a>
-map - <C-x>
-
-" remap :W, :Q etc if you press the shift key for too long
-cabbrev Q quit
-cabbrev W write
-cabbrev WQ wq
-cabbrev Wq wq
-cabbrev QA qa
-cabbrev Qa qa
-
-" Register copy/paster
-noremap <leader>y "+y
-noremap <leader>p "+p
-
-" No highlight after search
-nnoremap <silent> <leader><esc> :noh<CR>
-
-" Focus mode
-nmap <f3> :Goyo<cr>
-
-" Expand snippet
-imap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
-smap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
-xmap <Tab><Tab> <Plug>(neosnippet_expand_target)
-
-" Align with respect to = or : with <Leader>= and <Leader>:
-nmap <Leader>= :Tabularize /=<CR>
-vmap <Leader>= :Tabularize /=<CR>
-nmap <Leader>: :Tabularize /:\zs<CR>
-vmap <Leader>: :Tabularize /:\zs<CR>
 
 " Doties
 map <f12> :NERDTree ~/.dotfiles<cr>
