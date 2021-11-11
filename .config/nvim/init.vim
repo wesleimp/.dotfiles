@@ -44,13 +44,16 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " themes
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'kyazdani42/nvim-web-devicons'
 Plug 'morhetz/gruvbox'
 
 " misc
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
 call plug#end()
+
+lua require('wesleimp')
 
 " =============================================
 " General config
@@ -143,14 +146,6 @@ let g:format_on_save = 1
 let g:NERDTreeWinSize=30
 let g:NERDTreeShowHidden=1
 
-" fzf.vim
-let g:fzf_layout = { 'down': '50%' }
-let g:fzf_action = {
-\   'ctrl-t': 'tab split',
-\   'ctrl-i': 'split',
-\   'ctrl-v': 'vsplit',
-\}
-
 " Airline config
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -180,13 +175,6 @@ let g:go_gocode_unimported_packages=1
 let g:go_highlight_extra_types=1
 let g:go_highlight_operators=1
 let g:go_highlight_functions=1
-
-" fzf
-" show hidden files except .git when fzf grep
-command! -bang -nargs=* Rg
-\ call fzf#vim#grep(
-\   'rg --hidden --column --line-number --no-heading --color=always --smart-case -g "!.git" -- '.shellescape(<q-args>), 1,
-\   fzf#vim#with_preview(), <bang>0)
 
 " ale
 " language server config
@@ -324,10 +312,10 @@ imap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
 smap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
 xmap <Tab><Tab> <Plug>(neosnippet_expand_target)
 
-" fzf
-nnoremap <C-p> :Files .<cr>
-nnoremap <C-f> :Rg<cr>
-nnoremap <C-b> :Buffers<cr>
+" Telescope
+nnoremap <C-p> <cmd>Telescope find_files<cr>
+nnoremap <C-f> <cmd>Telescope live_grep<cr>
+nnoremap <C-b> <cmd>Telescope buffers<cr>
 
 " coc-nvim
 " Use <c-space> to trigger completion.
