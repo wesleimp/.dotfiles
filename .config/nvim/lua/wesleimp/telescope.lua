@@ -42,7 +42,6 @@ require("telescope").setup({
             }
         },
         buffers = {
-            prompt_position = "top",
             previewer = false
         }
     },
