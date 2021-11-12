@@ -17,9 +17,9 @@ let g:NERDTreeIgnore = [
 " -----------------------------------------
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'gruvbox'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_buffers = 0
-let g:airline#extensions#tabline#formatter = 'unique_tail'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#show_buffers = 0
+" let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#coc#error_symbol="\uf05e:"
 let g:airline#extensions#coc#warning_symbol="\uf071:"
@@ -59,6 +59,7 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
+
 " --------------------------------------
 " vim-go
 " --------------------------------------

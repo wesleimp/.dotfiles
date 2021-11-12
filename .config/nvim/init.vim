@@ -7,7 +7,6 @@ set wildignore+=**/.git/*
 
 " plugins
 call plug#begin('~/.vim/plugged')
-
 Plug 'junegunn/vim-plug'
 
 " Snippets
@@ -51,12 +50,14 @@ Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
+Plug 'akinsho/bufferline.nvim'
 
 " misc
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
+Plug 'akinsho/toggleterm.nvim'
 call plug#end()
 
 " lua config

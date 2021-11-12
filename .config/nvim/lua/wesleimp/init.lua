@@ -1,4 +1,6 @@
+require("wesleimp.bufferline")
 require("wesleimp.telescope")
+require("wesleimp.toggleterm")
 
 P = function(v)
   print(vim.inspect(v))

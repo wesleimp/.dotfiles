@@ -55,18 +55,17 @@ map <leader>gp :bp<cr>
 map <leader>dd :bd<cr>
 
 "tab selection
-map <leader>1 1gt
-map <leader>2 2gt
-map <leader>3 3gt
-map <leader>4 4gt
-map <leader>5 5gt
-map <leader>6 6gt
-map <leader>7 7gt
-map <leader>9 9gt
+map <leader>1 :BufferLineGoToBuffer 1<cr>
+map <leader>2 :BufferLineGoToBuffer 2<cr>
+map <leader>3 :BufferLineGoToBuffer 3<cr>
+map <leader>4 :BufferLineGoToBuffer 4<cr>
+map <leader>5 :BufferLineGoToBuffer 5<cr>
+map <leader>6 :BufferLineGoToBuffer 6<cr>
+map <leader>7 :BufferLineGoToBuffer 7<cr>
+map <leader>9 :BufferLineGoToBuffer 9<cr>
 
-"pane size
-map <C-Left> :tabp<cr>
-map <C-Right> :tabn<cr>
+map <C-Left> :BufferLineCyclePrev<cr>
+map <C-Right> :BufferLineCycleNext<cr>
 
 "pane switching
 map <C-j> <C-W>j
@@ -177,6 +176,7 @@ nnoremap <C-b> :lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string({search = vim.fn.expand("<cword>")})<CR>
 nnoremap <leader>gs :lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<cr>
+nnoremap <leader>gc :lua require('telescope.builtin').git_commits()<cr>
 
 map <f12> :lua require('wesleimp.telescope').search_dotfiles()<cr>
 
