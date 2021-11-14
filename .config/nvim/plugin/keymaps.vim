@@ -177,6 +177,7 @@ nnoremap <leader>fs :lua require('telescope.builtin').grep_string({search = vim.
 nnoremap <leader>gs :lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>gc :lua require('telescope.builtin').git_commits()<cr>
+nnoremap <leader>tt :TodoTelescope<cr>
 
 map <f12> :lua require('wesleimp.telescope').search_dotfiles()<cr>
 

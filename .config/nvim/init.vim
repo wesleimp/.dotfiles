@@ -58,6 +58,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'akinsho/toggleterm.nvim'
+Plug 'folke/todo-comments.nvim'
 call plug#end()
 
 " lua config

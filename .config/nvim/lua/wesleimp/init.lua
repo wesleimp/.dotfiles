@@ -1,5 +1,6 @@
 require("wesleimp.bufferline")
 require("wesleimp.telescope")
+require("wesleimp.todo")
 require("wesleimp.toggleterm")
 
 P = function(v)
