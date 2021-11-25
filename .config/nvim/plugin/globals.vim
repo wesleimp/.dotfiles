@@ -8,7 +8,7 @@ let g:VM_leader = ","
 let g:NERDTreeWinSize=30
 let g:NERDTreeShowHidden=1
 let g:NERDTreeIgnore = [
-\    '\.git[[dir]]', '\node_modules[[dir]]',
+\    '\.git$[[dir]]', '\node_modules[[dir]]',
 \    '\.elixir_ls[[dir]]',
 \]
 
@@ -16,13 +16,12 @@ let g:NERDTreeIgnore = [
 " Airline config
 " -----------------------------------------
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#show_buffers = 0
-" let g:airline#extensions#tabline#formatter = 'unique_tail'
+let g:airline_theme = 'dracula'
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#coc#error_symbol="\uf05e:"
 let g:airline#extensions#coc#warning_symbol="\uf071:"
+let g:airline#extensions#fugitiveline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 1
 
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
@@ -59,20 +58,3 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function("GoyoBefore"), function("GoyoAfter")]
-
-" --------------------------------------
-" vim-go
-" --------------------------------------
-let g:go_fmt_command = "goimports"
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_auto_type_info = 1
-let g:go_gocode_autobuild = 1
-let g:go_gocode_propose_builtins = 1
-let g:go_test_show_name=1
-let g:go_updatetime=500
-let g:go_gocode_unimported_packages=1
-let g:go_highlight_extra_types=1
-let g:go_highlight_operators=1
-let g:go_highlight_functions=1

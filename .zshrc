@@ -26,7 +26,7 @@ SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_PROMPT_ADD_NEWLINE=false
 SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_CHAR_SYMBOL="🦆"
+SPACESHIP_CHAR_SYMBOL="🍺"
 SPACESHIP_CHAR_SUFFIX=" "
 
 plugins=(
@@ -68,6 +68,7 @@ export LC_ALL="en_US.UTF-8"
 # Env variables
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$GOPATH/bin
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
@@ -92,9 +93,9 @@ alias cat="bat --plain"
 alias ls="exa"
 alias tree="exa -T --git-ignore"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
-alias oss="~/oss"
+alias oss="~/OSS"
 alias workspace="~/workspace"
-
+alias dotfiles="nvim $DOTFILES"
 alias kn="kubens"
 alias kx="kubectx"
 

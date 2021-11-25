@@ -27,9 +27,9 @@ nnoremap <silent> <leader><esc> :noh<CR>
 nmap <f3> :Goyo<cr>
 
 " Expand snippet
-imap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
-smap <Tab><Tab> <Plug>(neosnippet_expand_or_jump)
-xmap <Tab><Tab> <Plug>(neosnippet_expand_target)
+imap <C-l> <Plug>(neosnippet_expand_or_jump)
+smap <C-l> <Plug>(neosnippet_expand_or_jump)
+xmap <C-l> <Plug>(neosnippet_expand_target)
 
 " ------------------------------------------------
 " Navigation
@@ -49,6 +49,9 @@ inoremap <Tab-j> <Esc>
 
 map , <Leader>
 
+" ------------------------------------------------
+" BufferLine
+" ------------------------------------------------
 " Buffer navigation
 map <leader>gn :bn<cr>
 map <leader>gp :bp<cr>
@@ -63,9 +66,6 @@ map <leader>5 :BufferLineGoToBuffer 5<cr>
 map <leader>6 :BufferLineGoToBuffer 6<cr>
 map <leader>7 :BufferLineGoToBuffer 7<cr>
 map <leader>9 :BufferLineGoToBuffer 9<cr>
-
-map <C-Left> :BufferLineCyclePrev<cr>
-map <C-Right> :BufferLineCycleNext<cr>
 
 "pane switching
 map <C-j> <C-W>j
@@ -173,6 +173,7 @@ nnoremap <C-p> :lua require('telescope.builtin').find_files()<cr>
 nnoremap <C-f> :lua require('telescope.builtin').live_grep()<cr>
 nnoremap <C-b> :lua require('telescope.builtin').buffers()<cr>
 
+nnoremap <leader>pp :lua require('telescope').extensions.project.project({ display_type = "full" })<cr>
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string({search = vim.fn.expand("<cword>")})<CR>
 nnoremap <leader>gs :lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<cr>
@@ -180,6 +181,7 @@ nnoremap <leader>gc :lua require('telescope.builtin').git_commits()<cr>
 nnoremap <leader>tt :TodoTelescope<cr>
 
 map <f12> :lua require('wesleimp.telescope').search_dotfiles()<cr>
+
 
 " ------------------------------------------------
 " Misc

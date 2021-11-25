@@ -13,6 +13,7 @@ set relativenumber
 set encoding=utf8
 set previewheight=5
 set completeopt=menu,menuone,noselect,noinsert
+set guifont
 
 " Cursor highlight
 set cursorline
@@ -73,3 +74,5 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
+
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')

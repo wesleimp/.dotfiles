@@ -1,3 +1,4 @@
+local telescope = require("telescope")
 local previewers = require("telescope.previewers")
 local actions = require("telescope.actions")
 local themes = require("telescope.themes")
@@ -13,7 +14,7 @@ local function dropdown(opts)
     }))
 end
 
-require("telescope").setup({
+telescope.setup({
     defaults = {
         prompt_prefix = "  ",
         selection_caret = ' ',
@@ -90,11 +91,20 @@ require("telescope").setup({
         fzy = {
             override_generic_sorter = false,  -- override the generic sorter
             override_file_sorter = true,     -- override the file sorter
+        },
+        project = {
+            base_dirs = {
+                "~/OSS",
+                "~/workspace",
+                "~/.dotfiles",
+            },
+            hidden_files = true,
         }
     },
 })
 
-require('telescope').load_extension('fzy_native')
+telescope.load_extension('fzy_native')
+telescope.load_extension('project')
 
 local M = {}
 M.search_dotfiles = function()
