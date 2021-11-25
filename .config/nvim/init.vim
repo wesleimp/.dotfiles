@@ -47,7 +47,6 @@ Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
-Plug 'dracula/vim', {'as': 'dracula'}
 Plug 'akinsho/bufferline.nvim'
 
 " misc
@@ -66,6 +65,6 @@ lua require('wesleimp')
 
 " colorscheme
 syntax on
-colorscheme dracula
+colorscheme gruvbox
 set background=dark
 set t_Co=256

@@ -16,7 +16,7 @@ let g:NERDTreeIgnore = [
 " Airline config
 " -----------------------------------------
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dracula'
+let g:airline_theme = 'gruvbox'
 let g:airline#extensions#coc#enabled = 1
 let g:airline#extensions#coc#error_symbol="\uf05e:"
 let g:airline#extensions#coc#warning_symbol="\uf071:"
