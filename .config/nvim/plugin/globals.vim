@@ -5,6 +5,9 @@ let g:format_on_save = 1
 let g:VM_leader = ","
 
 " NERDTree
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeWinSize=30
 let g:NERDTreeShowHidden=1
 let g:NERDTreeIgnore = [

@@ -58,6 +58,7 @@ Plug 'nvim-telescope/telescope-project.nvim'
 
 Plug 'akinsho/toggleterm.nvim'
 Plug 'folke/todo-comments.nvim'
+Plug 'vim-test/vim-test'
 call plug#end()
 
 " lua config
@@ -68,3 +69,6 @@ syntax on
 colorscheme gruvbox
 set background=dark
 set t_Co=256
+
+" Override the NerdTree directory color
+hi! link Directory GruvboxBlue

@@ -31,6 +31,7 @@ alias ggpull="git pull origin HEAD"
 alias ggpush="git push origin HEAD"
 alias gl="git pull"
 alias gp="git push"
+alias gco="git checkout"
 
 # Go
 alias got="go test"

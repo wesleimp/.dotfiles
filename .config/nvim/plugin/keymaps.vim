@@ -123,29 +123,12 @@ if has('nvim')
 endif
 
 " ------------------------------------------------
-" vim-elixir
+" vim-test
 " ------------------------------------------------
-augroup ex_files
-    autocmd!
-
-    autocmd FileType elixir nnoremap <leader>mt :Mix test<CR>
-    autocmd FileType elixir nnoremap <leader>tf :call <SID>mix_test_file()<CR>
-    autocmd FileType elixir nnoremap <leader>tl :call <SID>mix_test_line()<CR>
-    autocmd FileType elixir nnoremap <leader>mf :Mix format<CR>
-augroup end
-
-function! s:mix_test_file()
-    if (expand('%:e') == "exs")
-        execute '!mix test %'
-    endif
-endfunction
-
-function! s:mix_test_line()
-    let ln = line('.')
-    if (expand('%:e') == "exs" && ln > 0)
-        execute '!mix test %:' . ln
-    endif
-endfunction
+nmap <silent> <Leader>tt :w\|:TestSuite<CR>
+nmap <silent> <Leader>tf :w\|:TestFile<CR>
+nmap <silent> <Leader>tn :w\|:TestNearest<CR>
+nmap <silent> <Leader>tl :w\|:TestLast<CR>
 
 " ------------------------------------------------
 " NERDTree
@@ -178,7 +161,6 @@ nnoremap <leader>fs :lua require('telescope.builtin').grep_string({search = vim.
 nnoremap <leader>gs :lua require('telescope.builtin').git_status()<cr>
 nnoremap <leader>gb :lua require('telescope.builtin').git_branches()<cr>
 nnoremap <leader>gc :lua require('telescope.builtin').git_commits()<cr>
-nnoremap <leader>tt :TodoTelescope<cr>
 
 map <f12> :lua require('wesleimp.telescope').search_dotfiles()<cr>
 
