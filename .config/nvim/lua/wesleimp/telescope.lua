@@ -53,11 +53,11 @@ telescope.setup({
         },
         find_files = {
             hidden = true,
-            file_ignore_patterns = { '.git$/' },
+            file_ignore_patterns = { '.git/' },
             previewer = false,
         },
         live_grep = {
-            file_ignore_patterns = { '.git$/' },
+            file_ignore_patterns = { '.git/' },
         },
         buffers = dropdown({
             sort_mru = true,

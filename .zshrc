@@ -4,6 +4,7 @@
 
 export ZSH=$HOME/.oh-my-zsh
 
+source ~/.aliases
 ZSH_THEME="spaceship"
 ZSH_DISABLE_COMPFIX="true"
 
@@ -30,16 +31,9 @@ SPACESHIP_CHAR_SYMBOL="🍺"
 SPACESHIP_CHAR_SUFFIX=" "
 
 plugins=(
-    git
     ssh-agent
-    docker
-    docker-compose
-    golang
     zsh-autosuggestions
     zsh-syntax-highlighting
-    github
-    kubectl
-    elixir
     asdf
 )
 
@@ -79,25 +73,6 @@ export BROWSER="firefox"
 export DOTFILES=$HOME/.dotfiles
 
 source $HOME/.cargo/env
-
-# Aliases
-alias grep='rg'
-alias :q='exit'
-alias bashrc='nvim ~/.bashrc'
-alias zshconfig='nvim ~/.zshrc'
-alias ohmyzsh='nvim ~/.oh-my-zsh'
-alias vimrc="nvim ~/.vimrc"
-alias v="nvim ."
-alias nv="nvim"
-alias cat="bat --plain"
-alias ls="exa"
-alias tree="exa -T --git-ignore"
-alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
-alias oss="~/OSS"
-alias workspace="~/workspace"
-alias dotfiles="nvim $DOTFILES"
-alias kn="kubens"
-alias kx="kubectx"
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

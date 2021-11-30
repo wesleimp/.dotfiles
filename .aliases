@@ -1,0 +1,58 @@
+# Misc
+alias bashrc='nvim ~/.bashrc'
+alias zshconfig='nvim ~/.zshrc'
+alias ohmyzsh='nvim ~/.oh-my-zsh'
+alias vimrc="nvim ~/.vimrc"
+alias dotfiles="nvim $DOTFILES"
+
+alias grep='rg'
+alias :q='exit'
+alias v="nvim ."
+alias nv="nvim"
+alias cat="bat --plain"
+alias ls="exa"
+alias tree="exa -T --git-ignore"
+alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
+
+alias oss="~/OSS"
+alias workspace="~/workspace"
+
+# Kubernetes
+alias k="kubectl"
+alias kn="kubens"
+alias kx="kubectx"
+
+# Git
+alias g="git"
+alias gc="git commit"
+alias gcm="git commit -m"
+alias gaa="git add --all"
+alias ggpull="git pull origin HEAD"
+alias ggpush="git push origin HEAD"
+alias gl="git pull"
+alias gp="git push"
+
+# Go
+alias got="go test"
+alias gob="go build"
+alias gof="go fmt"
+
+# Elixir
+alias m="mix"
+alias mt="mix test"
+alias mc="mix compile"
+alias mf="mix format"
+alias md="mix deps.get"
+alias mdc="mix deps.compile"
+alias mps="mix phx.server"
+alias mpn="mix phx.new"
+alias mec="mix ecto.create"
+alias mec="mix ecto.migrate"
+alias megm="mix ecto.gen.migration"
+alias i="iex"
+alias ism="iex -S mix"
+alias ips="iex -S mix phx.server"
+
+# Docker
+alias d="docker"
+alias dc="docker compose"
