@@ -4,7 +4,6 @@
 
 export ZSH=$HOME/.oh-my-zsh
 
-source ~/.aliases
 ZSH_THEME="spaceship"
 ZSH_DISABLE_COMPFIX="true"
 
@@ -73,6 +72,7 @@ export BROWSER="firefox"
 export DOTFILES=$HOME/.dotfiles
 
 source $HOME/.cargo/env
+source ~/.aliases
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

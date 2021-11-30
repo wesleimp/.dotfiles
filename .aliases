@@ -34,6 +34,7 @@ alias gp="git push"
 
 # Go
 alias got="go test"
+alias gor="go run"
 alias gob="go build"
 alias gof="go fmt"
 
