@@ -32,6 +32,9 @@ alias ggpush="git push origin HEAD"
 alias gl="git pull"
 alias gp="git push"
 alias gco="git checkout"
+alias gr="git reset"
+alias gb="git branch"
+alias gs="git status"
 
 # Go
 alias got="go test"
