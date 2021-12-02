@@ -1,3 +1,5 @@
 /.vim/bundle*
 /.vim/plugged*
 /old/*
+
+dist/
