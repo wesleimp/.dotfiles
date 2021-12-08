@@ -22,20 +22,6 @@ alias k="kubectl"
 alias kn="kubens"
 alias kx="kubectx"
 
-# Git
-alias g="git"
-alias gc="git commit"
-alias gcm="git commit -m"
-alias gaa="git add --all"
-alias ggpull="git pull origin HEAD"
-alias ggpush="git push origin HEAD"
-alias gl="git pull"
-alias gp="git push"
-alias gco="git checkout"
-alias gr="git reset"
-alias gb="git branch"
-alias gs="git status"
-
 # Go
 alias got="go test"
 alias gor="go run"

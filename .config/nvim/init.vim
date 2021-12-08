@@ -48,6 +48,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
 Plug 'akinsho/bufferline.nvim'
+Plug 'karb94/neoscroll.nvim'
 
 " misc
 Plug 'nvim-lua/popup.nvim'

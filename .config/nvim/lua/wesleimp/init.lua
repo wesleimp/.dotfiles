@@ -1,7 +1,7 @@
 require("wesleimp.bufferline")
 require("wesleimp.telescope")
 require("wesleimp.todo")
-require("wesleimp.toggleterm")
+require("neoscroll").setup()
 
 P = function(v)
   print(vim.inspect(v))

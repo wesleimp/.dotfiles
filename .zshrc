@@ -30,6 +30,7 @@ SPACESHIP_CHAR_SYMBOL="🍺"
 SPACESHIP_CHAR_SUFFIX=" "
 
 plugins=(
+    git
     ssh-agent
     zsh-autosuggestions
     zsh-syntax-highlighting
