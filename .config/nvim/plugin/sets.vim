@@ -14,10 +14,13 @@ set encoding=utf8
 set previewheight=5
 set completeopt=menu,menuone,noselect,noinsert
 set guifont
+set guicursor
+set termguicolors
 
 " Cursor highlight
 set cursorline
-highlight Normal ctermbg=None
+highlight Normal cterm=italic,bold ctermbg=None
+highlight Bar cterm=italic,bold
 highlight CursorLineNR ctermbg=gray
 
 " Line wrapping
@@ -65,14 +68,5 @@ autocmd FileType vue setl sw=2 ts=2
 autocmd FileType yaml setl sw=2 ts=2
 autocmd FileType json setl sw=2 ts=2
 autocmd FileType go setl sw=4 ts=4
-
-if (empty($TMUX))
-  if (has("nvim"))
-    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-  endif
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-endif
 
 autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
