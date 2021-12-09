@@ -64,12 +64,3 @@ call plug#end()
 
 " lua config
 lua require('wesleimp')
-
-" colorscheme
-syntax on
-colorscheme gruvbox
-set background=dark
-set t_Co=256
-
-" Override the NerdTree directory color
-hi! link Directory GruvboxBlue

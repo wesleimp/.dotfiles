@@ -19,9 +19,6 @@ set termguicolors
 
 " Cursor highlight
 set cursorline
-highlight Normal cterm=italic,bold ctermbg=None
-highlight Bar cterm=italic,bold
-highlight CursorLineNR ctermbg=gray
 
 " Line wrapping
 set nowrap
