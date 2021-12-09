@@ -8,6 +8,7 @@
 # i3 config file (v4)
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
 
 set $mod Mod4
 set $alt Mod1
@@ -98,9 +99,6 @@ bindsym $mod+Shift+space floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
-#bindsym $mod+d focus child
-
 # switch to workspace
 bindsym $mod+1 workspace 1
 bindsym $mod+2 workspace 2
@@ -124,31 +122,6 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-
-# switch to workspace
-#_ bindsym $mod+Shift+equal workspace 1
-#_ bindsym $mod+racketleft workspace 2
-#_ bindsym $mod+Shift+bracketleft workspace 3
-#_ bindsym $mod+Shift+9 workspace 4
-#_ bindsym $mod+Shift+7 workspace 5
-#_ bindsym $mod+equal workspace 6
-#_ bindsym $mod+Shift+0 workspace 7
-#_ bindsym $mod+Shift+bracketright workspace 8
-#_ bindsym $mod+bracketright workspace 9
-#_ bindsym $mod+Shift+8 workspace 10
-#_
-#_ # move focused container to workspace
-#_ bindsym $mod+1 move container to workspace 1
-#_ bindsym $mod+2 move container to workspace 2
-#_ bindsym $mod+3 move container to workspace 3
-#_ bindsym $mod+4 move container to workspace 4
-#_ bindsym $mod+5 move container to workspace 5
-#_ bindsym $mod+6 move container to workspace 6
-#_ bindsym $mod+7 move container to workspace 7
-#_ bindsym $mod+8 move container to workspace 8
-#_ bindsym $mod+9 move container to workspace 9
-#_ bindsym $mod+0 move container to workspace 10
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -195,24 +168,20 @@ bar {
 # ------------------------------------------
 exec --no-startup-id nm-applet
 
-bindsym $mod+Shift+s exec --no-startup-id ~/dotfiles/bin/monitor
-bindsym $mod+Shift+n exec --no-startup-id ~/dotfiles/bin/resolution
-
-# FKeys
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 6 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 6 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 6 toggle # mute sound
 #
 # # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Alsa audio controls.
-bindsym $mod+Shift+comma exec ~/.config/i3/scripts/alsa restore
-bindsym $mod+semicolon exec ~/.config/i3/scripts/alsa down Headphone
-bindsym $mod+comma exec ~/.config/i3/scripts/alsa up Headphone
-bindsym $mod+m move workspace to output left
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
 
 # Suspend
 bindsym $mod+Shift+period exec systemctl suspend
