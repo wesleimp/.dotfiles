@@ -1,6 +1,11 @@
 " disable help
 map <f1> <NOP>
 
+nnoremap Y yg$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
 "line selection without identation
 nnoremap vv ^vg_
 
