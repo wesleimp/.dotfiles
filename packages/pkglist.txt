@@ -11,6 +11,9 @@ fzf
 git
 golang
 htop
+i3
+i3status
+rofi
 jq
 neovim
 nodejs

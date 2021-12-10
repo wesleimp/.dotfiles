@@ -1,36 +1,52 @@
 #!/usr/bin/env bash
 
 dir=~/.dotfiles
-olddir=~/.dotfiles/old
 
-doties=".aliases .bashrc .curlrc .gitconfig .globalgitignore .inputrc .tmux.conf .zshrc Brewfile .config/nvim .config/kitty"
+doties=(
+    # files
+    .alacritty.yml
+    .aliases
+    .bashrc
+    .curlrc
+    .gitconfig
+    .globalgitignore
+    .inputrc
+    .tmux-cht-command
+    .tmux-cht-languages
+    .tmux.conf
+    .zshrc
+    Brewfile
 
-start() {
-	doBackup
-	doSymlink
-}
+    # dirs
+    .config/i3
+    .config/i3status
+    .config/kitty
+    .config/nvim
+    .config/rofi
+)
 
-doBackup() {
-	echo "Backuping files to $olddir"
-	mkdir -p $olddir
+bins=(
+    bin/tmux-cht.sh
+    bin/tmux-sessionizer
+)
 
-	for dot in $doties; do
-		echo "Moving $dot"
-		mv ~/$dot $olddir
-	done
+echo "Creating symlinks from $dir to ~/"
+echo
 
-	echo "Backup completed!"
-}
+# config files
+echo "Symlinking config files:"
+for dot in $doties; do
+    echo "==> symlinking $dot"
+    ln -s $dir/$dot ~/$dot
+done
+echo
 
-doSymlink() {
-	echo "Creating symlinks from $dir to ~/"
+# bin files
+echo "Symlinking bin files"
+for bin in $bins; do
+    echo "==> symlinking $bin"
+    ln -s $dir/$bin ~/.local/$bin
+done
 
-	for dot in $doties; do
-		echo "Symlinking $dot"
-		ln -s $dir/$dot ~/$dot
-	done
-
-	echo "Symlink completed!"
-}
-
-start
+echo
+echo "Symlink done"
