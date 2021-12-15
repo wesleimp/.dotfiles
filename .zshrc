@@ -6,9 +6,6 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="spaceship"
 ZSH_DISABLE_COMPFIX="true"
-
-DRACULA_DISPLAY_CONTEXT=1
-
 SPACESHIP_PROMPT_ORDER=(
   user          # Username section
   dir           # Current directory section
@@ -25,9 +22,7 @@ SPACESHIP_USER_SHOW=always
 SPACESHIP_DIR_TRUNC_REPO=false
 SPACESHIP_DIR_TRUNC=0
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=true
-SPACESHIP_CHAR_SYMBOL="🍺"
-SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_PROMPT_SEPARATE_LINE=false
 
 plugins=(
     git

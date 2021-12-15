@@ -22,8 +22,8 @@ cabbrev QA qa
 cabbrev Qa qa
 
 " Register copy/paster
-noremap <leader>y "+y
-noremap <leader>p "+p
+noremap <leader>y "+y<esc>
+noremap <leader>p "+p<esc>
 
 " No highlight after search
 nnoremap <silent> <leader><esc> :noh<CR>
@@ -52,31 +52,33 @@ vnoremap <Tab-j> <Esc>
 onoremap <Tab-j> <Esc>
 inoremap <Tab-j> <Esc>
 
-map , <Leader>
+map <space> <leader>
 
 " ------------------------------------------------
-" BufferLine
+" Buffer
 " ------------------------------------------------
 " Buffer navigation
 map <leader>gn :bn<cr>
 map <leader>gp :bp<cr>
 map <leader>dd :bd<cr>
 
-"tab selection
-map <leader>1 :BufferLineGoToBuffer 1<cr>
-map <leader>2 :BufferLineGoToBuffer 2<cr>
-map <leader>3 :BufferLineGoToBuffer 3<cr>
-map <leader>4 :BufferLineGoToBuffer 4<cr>
-map <leader>5 :BufferLineGoToBuffer 5<cr>
-map <leader>6 :BufferLineGoToBuffer 6<cr>
-map <leader>7 :BufferLineGoToBuffer 7<cr>
-map <leader>9 :BufferLineGoToBuffer 9<cr>
-
 "pane switching
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+
+" ------------------------------------------------
+" Harpoon
+" ------------------------------------------------
+nnoremap <silent><leader>a :lua require("harpoon.mark").add_file()<CR>
+nnoremap <silent><C-m> :lua require("harpoon.ui").toggle_quick_menu()<CR>
+nnoremap <silent><leader>tc :lua require("harpoon.cmd-ui").toggle_quick_menu()<CR>
+
+nnoremap <silent><leader>1 :lua require("harpoon.ui").nav_file(1)<CR>
+nnoremap <silent><leader>2 :lua require("harpoon.ui").nav_file(2)<CR>
+nnoremap <silent><leader>3 :lua require("harpoon.ui").nav_file(3)<CR>
+nnoremap <silent><leader>4 :lua require("harpoon.ui").nav_file(4)<CR>
 
 " ------------------------------------------
 " Coc
@@ -138,7 +140,7 @@ nmap <silent> <Leader>tl :w\|:TestLast<CR>
 " ------------------------------------------------
 " NERDTree
 " ------------------------------------------------
-nmap <leader>T :call NERDTreeToggleFind()<cr>
+nmap <leader>tr :call NERDTreeToggleFind()<cr>
 nmap <f2> :call NERDTreeToggleFind()<cr>
 
 function! NERDTreeToggleFind()

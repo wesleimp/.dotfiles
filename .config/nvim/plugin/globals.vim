@@ -10,25 +10,11 @@ let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeCaseSensitiveSort = 1
 let g:NERDTreeWinSize=30
 let g:NERDTreeShowHidden=1
+let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeIgnore = [
 \    '\.git$[[dir]]', '\node_modules[[dir]]',
 \    '\.elixir_ls[[dir]]',
 \]
-
-" -----------------------------------------
-" Airline config
-" -----------------------------------------
-let g:airline_powerline_fonts = 1
-let g:airline_theme = 'gruvbox'
-let g:airline#extensions#coc#enabled = 1
-let g:airline#extensions#coc#error_symbol="\uf05e:"
-let g:airline#extensions#coc#warning_symbol="\uf071:"
-let g:airline#extensions#fugitiveline#enabled = 1
-let g:airline#extensions#whitespace#enabled = 1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
-endif
 
 " -----------------------------------------
 " ale

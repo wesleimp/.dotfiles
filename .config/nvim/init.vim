@@ -19,7 +19,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Presentation
 Plug 'scrooloose/nerdtree'
-Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'RRethy/vim-illuminate'
@@ -36,6 +35,7 @@ Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
 Plug 'matze/vim-move'
+Plug 'mbbill/undotree'
 
 " Languages
 Plug 'sheerun/vim-polyglot'
@@ -47,7 +47,6 @@ Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
-Plug 'akinsho/bufferline.nvim'
 Plug 'karb94/neoscroll.nvim'
 
 " misc
@@ -56,9 +55,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
+Plug 'ThePrimeagen/harpoon'
 
-Plug 'akinsho/toggleterm.nvim'
-Plug 'folke/todo-comments.nvim'
 Plug 'vim-test/vim-test'
 call plug#end()
 
