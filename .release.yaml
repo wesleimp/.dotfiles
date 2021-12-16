@@ -1,0 +1,14 @@
+project_name: doties
+
+release:
+  github:
+    owner: "wesleimp"
+    repo: ".dotfiles"
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - 'auto update'

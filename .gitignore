@@ -2,4 +2,4 @@
 /.vim/plugged*
 /old/*
 
-dist/
+rel/
