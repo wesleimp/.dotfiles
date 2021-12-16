@@ -4,6 +4,8 @@ let g:format_on_save = 1
 " visual multi
 let g:VM_leader = ","
 
+let g:indentLine_conceallevel = 0
+
 " NERDTree
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
