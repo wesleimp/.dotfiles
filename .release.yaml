@@ -1,4 +1,4 @@
-project_name: doties
+name: doties
 
 release:
   github:
@@ -11,4 +11,4 @@ changelog:
     exclude:
       - '^docs:'
       - '^test:'
-      - 'auto update'
+      - 'Auto update'

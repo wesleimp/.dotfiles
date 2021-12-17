@@ -12,7 +12,7 @@ set number
 set relativenumber
 set encoding=utf8
 set previewheight=5
-set completeopt=menu,menuone,noselect,noinsert
+set completeopt=menu,menuone,noselect
 set guifont
 set guicursor
 set termguicolors
@@ -66,4 +66,4 @@ autocmd FileType yaml setl sw=2 ts=2
 autocmd FileType json setl sw=2 ts=2
 autocmd FileType go setl sw=4 ts=4
 
-autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre * lua vim.lsp.buf.formatting()

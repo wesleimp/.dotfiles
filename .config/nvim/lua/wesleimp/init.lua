@@ -1,5 +1,7 @@
 require("wesleimp.telescope")
 require("wesleimp.harpoon")
+require("wesleimp.lsp")
+    require("wesleimp.utils")
 require("neoscroll").setup()
 
 P = function(v)
