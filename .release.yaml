@@ -6,6 +6,7 @@ release:
     repo: ".dotfiles"
 
 changelog:
+  from: remote
   sort: asc
   filters:
     exclude:
