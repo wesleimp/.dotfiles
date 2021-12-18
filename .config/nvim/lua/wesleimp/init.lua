@@ -1,7 +1,5 @@
 require("wesleimp.telescope")
-require("wesleimp.harpoon")
 require("wesleimp.lsp")
-require("wesleimp.utils")
 require("wesleimp.lualine")
 
 require("neoscroll").setup()
