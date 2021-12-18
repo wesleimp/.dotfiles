@@ -83,13 +83,6 @@ nnoremap <silent><leader>4 :lua require("harpoon.ui").nav_file(4)<CR>
 " ------------------------------------------
 " LSP
 " ------------------------------------------
-" Use <c-space> to trigger completion.
-" if has('nvim')
-"   inoremap <silent><expr> <c-space> coc#refresh()
-" else
-"   inoremap <silent><expr> <c-@> coc#refresh()
-" endif
-
 nnoremap <silent>[g :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <silent>]g :lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <leader>sd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.util.show_line_diagnostics()<CR>
@@ -132,7 +125,7 @@ lua require("wesleimp")
 
 " Telescope
 nnoremap <C-p> :lua require('telescope.builtin').find_files()<cr>
-nnoremap <C-f> :lua require('telescope.builtin').live_grep()<cr>
+nnoremap <C-f> :lua require('telescope.builtin').live_grep({ hidden = true })<cr>
 nnoremap <C-b> :lua require('telescope.builtin').buffers()<cr>
 
 nnoremap <leader>pp :lua require('telescope').extensions.project.project({ display_type = "full" })<cr>

@@ -6,10 +6,10 @@ local themes = require("telescope.themes")
 local function dropdown(opts)
     return themes.get_dropdown(vim.tbl_deep_extend('force', opts or {}, {
         borderchars = {
-            { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-            prompt = { '─', '│', ' ', '│', '┌', '┐', '│', '│' },
-            results = { '─', '│', '─', '│', '├', '┤', '┘', '└' },
-            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+            { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
+            prompt = {"─", "│", " ", "│", '┌', '┐', "│", "│"},
+            results = {"─", "│", "─", "│", "├", "┤", "┘", "└"},
+            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
         },
     }))
 end
@@ -25,7 +25,7 @@ telescope.setup({
         borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
         path_display = { 'absolute', 'truncate' },
         layout_strategy = 'flex',
-            layout_config = {
+        layout_config = {
             horizontal = {
                 preview_width = 0.45,
             },

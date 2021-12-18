@@ -31,6 +31,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
+Plug 'nvim-lualine/lualine.nvim'
 
 " General plugins
 Plug 'godlygeek/tabular'
@@ -61,6 +62,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'ThePrimeagen/harpoon'
+Plug 'sbdchd/neoformat'
 
 Plug 'vim-test/vim-test'
 call plug#end()

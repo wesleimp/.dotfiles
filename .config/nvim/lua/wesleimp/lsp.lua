@@ -28,7 +28,6 @@ cmp.setup({
 		["<C-Space>"] = cmp.mapping.complete(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
 	},
-
     formatting = {
         format = function(entry, vim_item)
             vim_item.kind = lspkind.presets.default[vim_item.kind]
@@ -36,7 +35,6 @@ cmp.setup({
             return vim_item
         end
     },
-
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
@@ -66,7 +64,7 @@ require("lspconfig").gopls.setup(config({
 }))
 
 require'lspconfig'.elixirls.setup({
-    cmd = { "/home/weslei/elixir-ls/release/language_server.sh" }
+    cmd = { vim.fn.expand("~/elixir-ls/release/language_server.sh") }
 })
 
 require("symbols-outline").setup({
