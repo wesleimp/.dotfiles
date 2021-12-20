@@ -1,12 +1,7 @@
-" ignore files
-set wildignore+=*deps/*
-set wildignore+=*_build/*
-set wildignore+=**/coverage/*
-set wildignore+=**/node_modules/*
-set wildignore+=**/.git/*
+local Plug = vim.fn["plug#"]
 
-" plugins
-call plug#begin('~/.vim/plugged')
+--plugins
+vim.call("plug#begin", "~/.vim/plugged")
 Plug 'junegunn/vim-plug'
 
 Plug 'neovim/nvim-lspconfig'
@@ -19,44 +14,40 @@ Plug 'onsails/lspkind-nvim'
 Plug 'nvim-lua/lsp_extensions.nvim'
 Plug 'simrat39/symbols-outline.nvim'
 
-" Snippets
+--Snippets
 Plug 'L3MON4D3/LuaSnip'
 Plug 'rafamadriz/friendly-snippets'
 
-" Presentation
-Plug 'scrooloose/nerdtree'
+-- Presentation
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'RRethy/vim-illuminate'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'nvim-lualine/lualine.nvim'
 
-" General plugins
+--General plugins
 Plug 'godlygeek/tabular'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mg979/vim-visual-multi', { 'branch': 'master' }
+Plug('mg979/vim-visual-multi', { branch = 'master' })
 Plug 'matze/vim-move'
 Plug 'mbbill/undotree'
 
-" Languages
+--Languages
 Plug 'sheerun/vim-polyglot'
-Plug 'vim-erlang/vim-erlang-runtime'
 Plug 'rust-lang/rust.vim'
 
-" themes
+--themes
 Plug 'mhinz/vim-signify'
 Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'gruvbox-community/gruvbox'
 Plug 'karb94/neoscroll.nvim'
 
-" misc
+--misc
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -65,7 +56,11 @@ Plug 'nvim-telescope/telescope-project.nvim'
 Plug 'sbdchd/neoformat'
 
 Plug 'vim-test/vim-test'
-call plug#end()
+vim.call("plug#end")
 
-" lua config
-lua require('wesleimp')
+-- Config plugins
+require("plugins.telescope")
+require("plugins.lsp")
+require("plugins.lualine")
+require("plugins.nvim-tree")
+require("neoscroll").setup()

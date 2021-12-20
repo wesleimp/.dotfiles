@@ -3,13 +3,15 @@ local previewers = require("telescope.previewers")
 local actions = require("telescope.actions")
 local themes = require("telescope.themes")
 
+local bchars = {"─", "│", "─", "│", "┌", "┐", "┘", "└"}
+
 local function dropdown(opts)
     return themes.get_dropdown(vim.tbl_deep_extend('force', opts or {}, {
         borderchars = {
-            { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
-            prompt = {"─", "│", " ", "│", '┌', '┐', "│", "│"},
-            results = {"─", "│", "─", "│", "├", "┤", "┘", "└"},
-            preview = { '─', '│', '─', '│', '┌', '┐', '┘', '└'},
+            bchars,
+            prompt = bchars,
+            results = bchars,
+            preview = bchars,
         },
     }))
 end
@@ -22,7 +24,7 @@ telescope.setup({
         grep_previewer = previewers.vim_buffer_vimgrep.new,
         qflist_previewer = previewers.vim_buffer_qflist.new,
 
-        borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
+        borderchars = bchars,
         path_display = { 'absolute', 'truncate' },
         layout_strategy = 'flex',
         layout_config = {
