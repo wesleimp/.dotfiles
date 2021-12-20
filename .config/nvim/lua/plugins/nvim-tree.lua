@@ -8,6 +8,7 @@ vim.api.nvim_set_keymap('n', '<leader>tr', ':NvimTreeRefresh<CR>', {
   silent = true
 })
 
+vim.g.nvim_tree_quit_on_open = 1
 require('nvim-tree').setup({
   disable_netrw = false,
   update_focused_file = {
