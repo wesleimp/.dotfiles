@@ -1,15 +1,15 @@
-vim.api.nvim_set_keymap('n', '<F2>', ':NvimTreeToggle<CR>', {
+vim.api.nvim_set_keymap("n", "<F2>", ":NvimTreeToggle<CR>", {
   noremap = true,
-  silent = true
+  silent = true,
 })
 
-vim.api.nvim_set_keymap('n', '<leader>tr', ':NvimTreeRefresh<CR>', {
+vim.api.nvim_set_keymap("n", "<leader>tr", ":NvimTreeRefresh<CR>", {
   noremap = true,
-  silent = true
+  silent = true,
 })
 
 vim.g.nvim_tree_quit_on_open = 1
-require('nvim-tree').setup({
+require("nvim-tree").setup({
   disable_netrw = false,
   update_focused_file = {
     enable = true,
@@ -18,17 +18,20 @@ require('nvim-tree').setup({
     enable = false,
   },
   git = {
-    enable = false
+    enable = false,
   },
   filters = {
-    custom = { '.git', 'node_modules' }
+    custom = { ".git", "node_modules" },
   },
   view = {
     auto_resize = true,
     width = 35,
     mappings = {
       list = {
-        { key = { 's' }, cb = ':lua require"nvim-tree".on_keypress("vsplit")<CR>' },
+        {
+          key = { "s" },
+          cb = ':lua require"nvim-tree".on_keypress("vsplit")<CR>',
+        },
       },
     },
   },

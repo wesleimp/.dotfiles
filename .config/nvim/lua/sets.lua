@@ -50,18 +50,20 @@ opt.tabstop = 4
 opt.shiftround = true
 opt.expandtab = true
 
-opt.mouse= "a"
+opt.mouse = "a"
 opt.colorcolumn = "80"
 opt.laststatus = 2
 
 opt.wildmenu = true
-opt.wildignore:append("*deps/*,*_build/*,**/coverage/*,**/node_modules/*,**/.git/*")
+opt.wildignore:append(
+  "*deps/*,*_build/*,**/coverage/*,**/node_modules/*,**/.git/*"
+)
 
 -- filetype
-vim.cmd "filetype plugin indent on"
+vim.cmd("filetype plugin indent on")
 
 -- Special indentation for some files
-vim.cmd [[
+vim.cmd([[
 autocmd FileType html setl sw=2 ts=2
 autocmd FileType markdown setl sw=2 ts=2
 autocmd FileType javascript setl sw=2 ts=2
@@ -69,6 +71,6 @@ autocmd FileType vue setl sw=2 ts=2
 autocmd FileType yaml setl sw=2 ts=2
 autocmd FileType json setl sw=2 ts=2
 autocmd FileType go setl sw=4 ts=4
-]]
+]])
 
-vim.cmd "autocmd BufWritePre * lua vim.lsp.buf.formatting()"
+vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting()")
