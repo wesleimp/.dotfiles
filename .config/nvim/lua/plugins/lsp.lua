@@ -138,6 +138,9 @@ local on_attach = function(_, bufnr)
   buf_set_keymap("n", "K", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
 end
 
+------------------------------------------------------------
+-- Language servers
+------------------------------------------------------------
 local function config(_config)
   return vim.tbl_deep_extend("force", {
     on_attach = on_attach,
@@ -165,6 +168,32 @@ require("lspconfig").elixirls.setup({
   cmd = { vim.fn.expand("~/elixir-ls/release/language_server.sh") },
 })
 
+local sumneko_root_path = vim.fn.expand("~/lua-language-server")
+local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
+require("lspconfig").sumneko_lua.setup(config({
+  cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+        path = vim.split(package.path, ";"),
+      },
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = {
+          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
+        },
+      },
+    },
+  },
+}))
+
+------------------------------------------------------------
+-- Snippets
+------------------------------------------------------------
 local snippets_paths = function()
   local plugins = { "friendly-snippets" }
   local paths = {}

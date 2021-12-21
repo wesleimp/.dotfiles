@@ -78,3 +78,5 @@ autoload -Uz compinit && compinit
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+
+alias luamake=/home/weslei/lua-language-server/3rd/luamake/luamake

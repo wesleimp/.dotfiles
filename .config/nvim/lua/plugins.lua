@@ -12,7 +12,6 @@ Plug("saadparwaiz1/cmp_luasnip")
 
 Plug("onsails/lspkind-nvim")
 Plug("nvim-lua/lsp_extensions.nvim")
-Plug("simrat39/symbols-outline.nvim")
 
 --Snippets
 Plug("L3MON4D3/LuaSnip")
