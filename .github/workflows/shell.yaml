@@ -1,4 +1,4 @@
-name: Shell: linting and style checking
+name: "shell: linting and style checking"
 
 on: [push, pull_request]
 

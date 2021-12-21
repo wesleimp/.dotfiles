@@ -1,4 +1,4 @@
-name: Lua: linting and style checking
+name: "lua: linting and style checking"
 
 on: [push, pull_request]
 
