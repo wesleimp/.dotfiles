@@ -17,13 +17,17 @@ Plug("nvim-lua/lsp_extensions.nvim")
 Plug("L3MON4D3/LuaSnip")
 Plug("rafamadriz/friendly-snippets")
 
+-- Syntax
+Plug("nvim-treesitter/nvim-treesitter")
+Plug("nvim-treesitter/nvim-treesitter-textobjects")
+
 -- Presentation
 Plug("kyazdani42/nvim-tree.lua")
-Plug("vim-airline/vim-airline-themes")
 Plug("RRethy/vim-illuminate")
 Plug("Yggdroot/indentLine")
 Plug("tpope/vim-fugitive")
 Plug("nvim-lualine/lualine.nvim")
+Plug("lewis6991/gitsigns.nvim")
 
 --General plugins
 Plug("godlygeek/tabular")
@@ -35,13 +39,7 @@ Plug("mg979/vim-visual-multi", { branch = "master" })
 Plug("matze/vim-move")
 Plug("mbbill/undotree")
 
---Languages
-Plug("sheerun/vim-polyglot")
-Plug("rust-lang/rust.vim")
-
 --themes
-Plug("mhinz/vim-signify")
-Plug("ryanoasis/vim-devicons")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("gruvbox-community/gruvbox")
 Plug("karb94/neoscroll.nvim")
@@ -62,4 +60,6 @@ require("plugins.telescope")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.nvim-tree")
+require("plugins.treesitter")
 require("neoscroll").setup()
+require("gitsigns").setup()
