@@ -150,9 +150,10 @@ local function config(_config)
   }, _config or {})
 end
 
-require("lspconfig").tsserver.setup(config())
-require("lspconfig").cssls.setup(config())
-require("lspconfig").gopls.setup(config({
+local lspconfig = require("lspconfig")
+lspconfig.tsserver.setup(config())
+lspconfig.cssls.setup(config())
+lspconfig.gopls.setup(config({
   cmd = { "gopls", "serve" },
   settings = {
     gopls = {
@@ -164,13 +165,15 @@ require("lspconfig").gopls.setup(config({
   },
 }))
 
-require("lspconfig").elixirls.setup({
+lspconfig.elixirls.setup({
   cmd = { vim.fn.expand("~/elixir-ls/release/language_server.sh") },
 })
 
+lspconfig.rls.setup(config())
+
 local sumneko_root_path = vim.fn.expand("~/lua-language-server")
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
-require("lspconfig").sumneko_lua.setup(config({
+lspconfig.sumneko_lua.setup(config({
   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   settings = {
     Lua = {
