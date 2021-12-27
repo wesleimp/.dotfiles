@@ -1,22 +1,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: Fira Mono Nerd Font
+    family: Fira Code Nerd Font
     style: Regular
 
   # Bold font face
   bold:
-    family: Fira Mono Nerd Font
+    family: Fira Code Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: Fira Mono Nerd Font
+    family: Fira Code Nerd Font
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Fira Mono Nerd Font
+    family: Fira Code Nerd Font
     style: Bold Italic
 
   size: 12

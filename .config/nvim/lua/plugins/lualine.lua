@@ -2,6 +2,7 @@ local function lsp_progress(_, is_active)
   if not is_active then
     return
   end
+
   local messages = vim.lsp.util.get_progress_messages()
   if #messages == 0 then
     return ""
@@ -20,14 +21,10 @@ local function lsp_progress(_, is_active)
   local spinners = {
     "⠋",
     "⠙",
-    "⠹",
     "⠸",
-    "⠼",
     "⠴",
     "⠦",
-    "⠧",
     "⠇",
-    "⠏",
   }
   local ms = vim.loop.hrtime() / 1000000
   local frame = math.floor(ms / 120) % #spinners
