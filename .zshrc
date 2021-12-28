@@ -63,7 +63,7 @@ export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export TERMINAL="alacritty"
+export TERMINAL="kitty"
 export BROWSER="firefox"
 export DOTFILES=$HOME/.dotfiles
 

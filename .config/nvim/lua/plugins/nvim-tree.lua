@@ -11,7 +11,7 @@ vim.api.nvim_set_keymap("n", "<leader>tr", ":NvimTreeRefresh<CR>", {
 vim.g.nvim_tree_quit_on_open = 1
 
 vim.g.nvim_tree_icons = {
-  default = '',
+  default = "",
 }
 
 require("nvim-tree").setup({
