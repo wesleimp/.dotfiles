@@ -13,3 +13,6 @@ changelog:
       - '^docs:'
       - '^test:'
       - 'Auto update'
+  footer: |
+  ---
+  Generated with [release-cli](https://github.com/release-cli/release)
