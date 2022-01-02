@@ -58,6 +58,8 @@ vmap("<Tab-j>", "<Esc>", { noremap = true })
 omap("<Tab-j>", "<Esc>", { noremap = true })
 imap("<Tab-j>", "<Esc>", { noremap = true })
 
+nmap("<leader>n", ":tabn<cr>", { noremap = true })
+nmap("<leader>N", ":tabp<cr>", { noremap = true })
 --------------------------------------------------
 --Buffer
 --------------------------------------------------
