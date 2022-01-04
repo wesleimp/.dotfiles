@@ -10,10 +10,11 @@ local source_mapping = {
   nvim_lsp = "[LSP]",
   nvim_lua = "[Lua]",
   path = "[Path]",
+  luasnip = "[LuaSnip]",
 }
 
 local lspkind = require("lspkind")
-require("lspkind").init({
+lspkind.init({
   with_text = true,
 })
 
@@ -41,10 +42,10 @@ cmp.setup({
       select = true,
     }),
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
+      if luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
+      elseif cmp.visible() then
+        cmp.select_next_item()
       elseif has_words_before() then
         cmp.complete()
       else
@@ -72,6 +73,7 @@ cmp.setup({
     { name = "nvim_lsp" },
     { name = "luasnip" },
     { name = "buffer" },
+    { name = "path" },
   }),
 })
 
@@ -169,7 +171,7 @@ lspconfig.elixirls.setup({
   cmd = { vim.fn.expand("~/elixir-ls/release/language_server.sh") },
 })
 
-lspconfig.rls.setup(config())
+lspconfig.rust_analyzer.setup(config())
 
 local sumneko_root_path = vim.fn.expand("~/lua-language-server")
 local sumneko_binary = sumneko_root_path .. "/bin/lua-language-server"
