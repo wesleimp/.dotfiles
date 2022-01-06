@@ -106,6 +106,7 @@ telescope.setup({
 
 telescope.load_extension("fzy_native")
 telescope.load_extension("project")
+telescope.load_extension("tmux")
 
 local M = {}
 M.search_dotfiles = function()

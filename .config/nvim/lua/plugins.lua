@@ -24,7 +24,6 @@ Plug("nvim-treesitter/nvim-treesitter-textobjects")
 -- Presentation
 Plug("kyazdani42/nvim-tree.lua")
 Plug("RRethy/vim-illuminate")
-Plug("Yggdroot/indentLine")
 Plug("tpope/vim-fugitive")
 Plug("nvim-lualine/lualine.nvim")
 Plug("lewis6991/gitsigns.nvim")
@@ -40,20 +39,23 @@ Plug("mg979/vim-visual-multi", { branch = "master" })
 Plug("matze/vim-move")
 Plug("mbbill/undotree")
 
---themes
+-- Themes
 Plug("kyazdani42/nvim-web-devicons")
 Plug("gruvbox-community/gruvbox")
 Plug("karb94/neoscroll.nvim")
 
---misc
+-- Misc
 Plug("nvim-lua/popup.nvim")
 Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-fzy-native.nvim")
 Plug("nvim-telescope/telescope-project.nvim")
-Plug("sbdchd/neoformat")
+Plug("camgraff/telescope-tmux.nvim")
 
+Plug("sbdchd/neoformat")
+Plug("christoomey/vim-tmux-navigator")
 Plug("vim-test/vim-test")
+
 vim.call("plug#end")
 
 -- Config plugins

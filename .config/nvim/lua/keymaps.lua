@@ -14,7 +14,6 @@ vim.g.mapleader = " "
 -- map <space> <leader>
 
 --disable help
-
 nmap("<F1>", "")
 imap("<F1>", "")
 
@@ -60,6 +59,12 @@ imap("<Tab-j>", "<Esc>", { noremap = true })
 
 nmap("<leader>n", ":tabn<cr>", { noremap = true })
 nmap("<leader>N", ":tabp<cr>", { noremap = true })
+
+nmap("<leader>J", ":TmuxNavigateDown<cr>", { noremap = true, silent = true })
+nmap("<leader>K", ":TmuxNavigateUp<cr>", { noremap = true, silent = true })
+nmap("<leader>H", ":TmuxNavigateLeft<cr>", { noremap = true, silent = true })
+nmap("<leader>L", ":TmuxNavigateRight<cr>", { noremap = true, silent = true })
+
 --------------------------------------------------
 --Buffer
 --------------------------------------------------
@@ -105,19 +110,11 @@ nmap(
   ":lua require('telescope.builtin').grep_string({search = vim.fn.expand('<cword>')})<CR>",
   { noremap = true }
 )
+
+-- TMUX
 nmap(
-  "<leader>gs",
-  ":lua require('telescope.builtin').git_status()<cr>",
-  { noremap = true }
-)
-nmap(
-  "<leader>gb",
-  ":lua require('telescope.builtin').git_branches()<cr>",
-  { noremap = true }
-)
-nmap(
-  "<leader>gc",
-  ":lua require('telescope.builtin').git_commits()<cr>",
+  "<C-s>",
+  ":Telescope tmux sessions<cr>",
   { noremap = true }
 )
 
