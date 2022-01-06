@@ -14,5 +14,5 @@ changelog:
       - '^test:'
       - 'Auto update'
   footer: |
-  ---
-  Generated with [release-cli](https://github.com/release-cli/release)
+    ---
+    Generated with [release-cli](https://github.com/release-cli/release)
