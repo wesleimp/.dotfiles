@@ -51,6 +51,7 @@ Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-fzy-native.nvim")
 Plug("nvim-telescope/telescope-project.nvim")
 Plug("camgraff/telescope-tmux.nvim")
+Plug("ThePrimeagen/harpoon")
 
 Plug("sbdchd/neoformat")
 Plug("christoomey/vim-tmux-navigator")
