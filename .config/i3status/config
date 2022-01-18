@@ -8,14 +8,15 @@
 
 general {
         colors = true
-        interval = 5
+        color_good = "#98971a"
+        color_bad = "#cc241d"
+        color_degraded = "#fabd2f"
+        interval = 2
 }
 
 order += "volume master"
-order += "disk /"
 order += "wireless _first_"
 order += "battery all"
-order += "load"
 order += "tztime local"
 
 volume master {
@@ -36,13 +37,5 @@ battery all {
 }
 
 tztime local {
-        format = "%Y-%m-%d %H:%M"
-}
-
-load {
-        format = "%1min %5min %15min"
-}
-
-disk "/" {
-        format = "HDD: %avail"
+        format = "%d/%m/%Y - %H:%M %p "
 }

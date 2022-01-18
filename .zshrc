@@ -76,3 +76,9 @@ autoload -Uz compinit && compinit
 if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
 
 alias luamake=/home/weslei/lua-language-server/3rd/luamake/luamake
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
