@@ -2,7 +2,7 @@
 
 hdmi_connected=$(xrandr | grep ' connected' | grep 'HDMI' | awk '{print $1}')
 
-if [[ ! -z "$hdmi_connected" ]]; then
+if [[ -n "$hdmi_connected" ]]; then
     echo "HDMI found, switching it up"
     xrandr --output HDMI-1 --primary --output eDP-1 --off
 fi
