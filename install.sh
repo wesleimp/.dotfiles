@@ -18,11 +18,12 @@ doties=(
     Brewfile
 
     # dirs
+    .config/compton
     .config/i3
-    .config/i3status
     .config/kitty
     .config/nvim
     .config/rofi
+    .config/polybar
 )
 
 bins=(

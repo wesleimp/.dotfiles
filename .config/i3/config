@@ -1,6 +1,8 @@
 exec --no-startup-id ~/dotfiles/bin/monitor
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id compton --config ~/.config/compton/config -b
+exec --no-startup-id xfce4-power-manager
 
 set $mod Mod4
 set $alt Mod1
@@ -171,31 +173,35 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-client.focused          #665c54 #665c54 #eddbb2 #2e9ef4 #d79921
-client.focused_inactive #282828 #5f676a #ffffff #484e50 #5f676a
-client.unfocused        #3c3836 #3c3836 #a89984 #292d2e #222222
-client.urgent           #cc241d #cc241d #ebdbb2 #cc241d #cc241d
-client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
+# client.focused          #665c54 #665c54 #eddbb2 #2e9ef4 #d79921
+# client.focused_inactive #282828 #5f676a #ffffff #484e50 #5f676a
+# client.unfocused        #3c3836 #3c3836 #a89984 #292d2e #222222
+# client.urgent           #cc241d #cc241d #ebdbb2 #cc241d #cc241d
+# client.placeholder      #000000 #0c0c0c #ffffff #000000 #0c0c0c
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-    status_command i3status
-    tray_output none
-    font pango:Fira Code Nerd Font 10
-    workspace_buttons yes
-    separator_symbol "|"
-    colors {
-        background #3c3836
-        statusline #ebdbb2
-        separator  #666666
+# bar {
+#     i3bar_command i3bar
+#     status_command i3status
+#     output primary
+#     tray_output primary
+#     font pango:Fira Code Nerd Font 10
+#     workspace_buttons yes
+#     separator_symbol "|"
+#     colors {
+#         background #3c3836
+#         statusline #ebdbb2
+#         separator  #666666
 
-        focused_workspace  #458588 #458588 #ebdbb2
-        active_workspace   #83a598 #83a598 #ebdbb2
-        inactive_workspace #504945 #504945 #ebdbb2
-        urgent_workspace   #cc241d #cc241d #504945
-    }
-}
+#         focused_workspace  #458588 #458588 #ebdbb2
+#         active_workspace   #83a598 #83a598 #ebdbb2
+#         inactive_workspace #504945 #504945 #ebdbb2
+#         urgent_workspace   #cc241d #cc241d #504945
+#     }
+# }
+
+bindsym $mod+m bar mode toggle
 
 # ------------------------------------------
 # CUSTOM KEYS START
