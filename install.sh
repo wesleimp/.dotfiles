@@ -18,7 +18,7 @@ doties=(
     Brewfile
 
     # dirs
-    .config/compton
+    .config/picom
     .config/i3
     .config/kitty
     .config/nvim

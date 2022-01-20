@@ -15,24 +15,20 @@ width  = 100%
 height = 26
 bottom = true
 monitor = HDMI-1
-fixed-center = false
+fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
-
-; Padding
 padding-left  = 0
 padding-right = 0
 
-; Margin of modules
 module-margin-left  = 0
 module-margin-right = 0
 
-; Font
 font-0 = FiraCode Nerd Font:size=10;2
 
 ; Modlues
-modules-left   = i3
-modules-right  = sep battery sep pulseaudio sep wireless-network sep date
+modules-left   = i3 
+modules-right  = xwindow sep battery sep pulseaudio sep wireless-network date
 
 ; Cursor actions
 cursor-click  = pointer
@@ -44,10 +40,15 @@ content = |
 content-foreground = ${colors.foreground}
 content-background =  ${colors.background}
 
+[module/xwindow]
+type = internal/xwindow
+label = %{T5}%title%
+label-padding-left = 1
+
 [module/i3]
 type = internal/i3
 enable-click = true
-enable-scroll = false
+enable-scroll = true
 index-sort = true
 fuzzy-match = true
 
@@ -81,7 +82,26 @@ time = %H:%M
 ; Label
 label            = %date% - %time%h
 label-foreground = ${colors.foreground}
+label-background = ${colors.blue}
 label-padding    = 1
+
+[module/filesystem]
+type = internal/fs
+interval = 25
+mount-0 = /
+label-mounted = %{T3} %{T5}HDD: %percentage_used%%   %{T-}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix-foreground = ${colors.foreground-alt}
+label = %{T3} %{T5}CPU: %percentage:2%%%{T-}
+
+[module/memory]
+type = internal/memory
+interval = 2
+format-prefix-foreground = ${colors.foreground-alt}
+label = %{T3}%{T5} MEM: %gb_used%   %{T-}
 
 [module/battery]
 type = internal/battery
@@ -169,8 +189,13 @@ ramp-coreload-6 = ▇
 ramp-coreload-7 = █
 
 [settings]
-screenchange-reload     = true
+screenchange-reload     = false
+compositing-background = over
+compositing-foreground = over
+compositing-overline = over
+compositing-underline = over
+compositing-border = over
 
 [global/wm]
-margin-top    = 10
-margin-bottom = 10
+margin-top    = 5
+margin-bottom = 5
