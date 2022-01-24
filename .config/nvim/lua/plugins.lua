@@ -1,6 +1,6 @@
 local Plug = vim.fn["plug#"]
 
---plugins
+-- plugins
 vim.call("plug#begin", "~/.vim/plugged")
 Plug("junegunn/vim-plug")
 
@@ -13,7 +13,7 @@ Plug("saadparwaiz1/cmp_luasnip")
 Plug("onsails/lspkind-nvim")
 Plug("nvim-lua/lsp_extensions.nvim")
 
---Snippets
+-- Snippets
 Plug("L3MON4D3/LuaSnip")
 Plug("rafamadriz/friendly-snippets")
 
@@ -29,13 +29,13 @@ Plug("nvim-lualine/lualine.nvim")
 Plug("lewis6991/gitsigns.nvim")
 Plug("alvarosevilla95/luatab.nvim")
 
---General plugins
+-- General plugins
 Plug("godlygeek/tabular")
 Plug("tpope/vim-commentary")
 Plug("tpope/vim-surround")
 Plug("tpope/vim-endwise")
 Plug("jiangmiao/auto-pairs")
-Plug("mg979/vim-visual-multi", { branch = "master" })
+Plug("mg979/vim-visual-multi", {branch = "master"})
 Plug("matze/vim-move")
 Plug("mbbill/undotree")
 
@@ -43,6 +43,7 @@ Plug("mbbill/undotree")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("gruvbox-community/gruvbox")
 Plug("karb94/neoscroll.nvim")
+Plug("startup-nvim/startup.nvim")
 
 -- Misc
 Plug("nvim-lua/popup.nvim")
@@ -64,6 +65,7 @@ require("plugins.telescope")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.luatab")
+require("plugins.startup-nvim")
 require("plugins.nvim-tree")
 require("plugins.treesitter")
 require("neoscroll").setup()

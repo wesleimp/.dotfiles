@@ -73,4 +73,4 @@ autocmd FileType json setl sw=2 ts=2
 autocmd FileType go setl sw=4 ts=4
 ]])
 
-vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting()")
+vim.cmd("autocmd BufWritePre * :Neoformat")
