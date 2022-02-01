@@ -3,7 +3,7 @@ local previewers = require("telescope.previewers")
 local actions = require("telescope.actions")
 local themes = require("telescope.themes")
 
-local bchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" }
+local bchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" }
 
 local function dropdown(opts)
   return themes.get_dropdown(vim.tbl_deep_extend("force", opts or {}, {
@@ -18,21 +18,27 @@ end
 
 telescope.setup({
   defaults = {
-    selection_caret = " ",
+    prompt_prefix = "❯ ",
+    selection_caret = "❯ ",
+
     color_devicons = true,
+    selection_strategy = "reset",
+    sorting_strategy = "descending",
+    scroll_strategy = "cycle",
 
     grep_previewer = previewers.vim_buffer_vimgrep.new,
     qflist_previewer = previewers.vim_buffer_qflist.new,
+    file_previewer = previewers.vim_buffer_cat.new,
 
     borderchars = bchars,
     path_display = { "absolute", "truncate" },
-    layout_strategy = "flex",
+    layout_strategy = "horizontal",
     layout_config = {
-      horizontal = {
-        preview_width = 0.45,
-      },
+      prompt_position = "top",
+
+      horizontal = { preview_width = 0.45 },
     },
-    winblend = 3,
+    winblend = 0,
     mappings = {
       i = {
         ["<C-w>"] = actions.send_selected_to_qflist,
@@ -49,17 +55,13 @@ telescope.setup({
     },
   },
   pickers = {
-    colorscheme = {
-      enable_preview = true,
-    },
+    colorscheme = { enable_preview = true },
     find_files = {
       hidden = true,
       file_ignore_patterns = { ".git/" },
       previewer = false,
     },
-    live_grep = {
-      file_ignore_patterns = { ".git/" },
-    },
+    live_grep = { file_ignore_patterns = { ".git/" } },
     buffers = dropdown({
       sort_mru = true,
       sort_lastused = true,
@@ -74,18 +76,10 @@ telescope.setup({
     }),
     git_branches = dropdown(),
     git_bcommits = {
-      layout_config = {
-        horizontal = {
-          preview_width = 0.55,
-        },
-      },
+      layout_config = { horizontal = { preview_width = 0.55 } },
     },
     git_commits = {
-      layout_config = {
-        horizontal = {
-          preview_width = 0.55,
-        },
-      },
+      layout_config = { horizontal = { preview_width = 0.55 } },
     },
   },
   extensions = {
@@ -94,11 +88,7 @@ telescope.setup({
       override_file_sorter = true, -- override the file sorter
     },
     project = {
-      base_dirs = {
-        "~/OSS",
-        "~/workspace",
-        "~/.dotfiles",
-      },
+      base_dirs = { "~/OSS", "~/workspace", "~/.dotfiles" },
       hidden_files = true,
     },
   },
