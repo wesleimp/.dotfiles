@@ -1,4 +1,4 @@
-exec_always --no-startup-id ~/dotfiles/bin/monitor
+exec_always --no-startup-id ~/.dotfiles/bin/monitor
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
@@ -12,7 +12,12 @@ font pango:Fira Code Nerd Font 10
 
 for_window [urgent=latest] focus
 for_window [class="^.*"] border pixel 2
-for_window [class="^.*"] title_window_icon on
+
+# enable window icons for all windows
+for_window [all] title_window_icon on
+
+# enable window icons for all windows with extra horizontal padding
+for_window [all] title_window_icon padding 3px
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

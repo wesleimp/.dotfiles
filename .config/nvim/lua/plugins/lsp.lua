@@ -14,9 +14,7 @@ local source_mapping = {
 }
 
 local lspkind = require("lspkind")
-lspkind.init({
-  with_text = true,
-})
+lspkind.init({ with_text = true })
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -157,12 +155,7 @@ lspconfig.cssls.setup(config())
 lspconfig.gopls.setup(config({
   cmd = { "gopls", "serve" },
   settings = {
-    gopls = {
-      analyses = {
-        unusedparams = true,
-      },
-      staticcheck = true,
-    },
+    gopls = { analyses = { unusedparams = true }, staticcheck = true },
   },
 }))
 
@@ -178,13 +171,8 @@ lspconfig.sumneko_lua.setup(config({
   cmd = { sumneko_binary, "-E", sumneko_root_path .. "/main.lua" },
   settings = {
     Lua = {
-      runtime = {
-        version = "LuaJIT",
-        path = vim.split(package.path, ";"),
-      },
-      diagnostics = {
-        globals = { "vim" },
-      },
+      runtime = { version = "LuaJIT", path = vim.split(package.path, ";") },
+      diagnostics = { globals = { "vim" } },
       workspace = {
         library = {
           [vim.fn.expand("$VIMRUNTIME/lua")] = true,

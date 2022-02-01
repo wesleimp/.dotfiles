@@ -112,24 +112,44 @@ nmap(
 )
 
 -- TMUX
-nmap(
-  "<C-s>",
-  ":Telescope tmux sessions<cr>",
-  { noremap = true }
-)
+nmap("<C-s>", ":Telescope tmux sessions<cr>", { noremap = true })
 
 map("<f12>", ":lua require('plugins.telescope').search_dotfiles()<cr>")
 
 --------------------------------------------------
 -- Harpoon
 --------------------------------------------------
-nmap("<C-m>", ":lua require('harpoon.ui').toggle_quick_menu()<CR>", { noremap = true, silent = true })
-nmap("<leader>ha", ":lua require('harpoon.mark').add_file()<CR>", { noremap = true, silent = true })
+nmap(
+  "<C-m>",
+  ":lua require('harpoon.ui').toggle_quick_menu()<CR>",
+  { noremap = true, silent = true }
+)
+nmap(
+  "<leader>ha",
+  ":lua require('harpoon.mark').add_file()<CR>",
+  { noremap = true, silent = true }
+)
 
-nmap("<leader>1", ":lua require('harpoon.ui').nav_file(1)<CR>", { noremap = true, silent = true })
-nmap("<leader>2", ":lua require('harpoon.ui').nav_file(2)<CR>", { noremap = true, silent = true })
-nmap("<leader>3", ":lua require('harpoon.ui').nav_file(3)<CR>", { noremap = true, silent = true })
-nmap("<leader>4", ":lua require('harpoon.ui').nav_file(4)<CR>", { noremap = true, silent = true })
+nmap(
+  "<leader>1",
+  ":lua require('harpoon.ui').nav_file(1)<CR>",
+  { noremap = true, silent = true }
+)
+nmap(
+  "<leader>2",
+  ":lua require('harpoon.ui').nav_file(2)<CR>",
+  { noremap = true, silent = true }
+)
+nmap(
+  "<leader>3",
+  ":lua require('harpoon.ui').nav_file(3)<CR>",
+  { noremap = true, silent = true }
+)
+nmap(
+  "<leader>4",
+  ":lua require('harpoon.ui').nav_file(4)<CR>",
+  { noremap = true, silent = true }
+)
 
 --------------------------------------------------
 -- Misc
