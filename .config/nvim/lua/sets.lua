@@ -18,7 +18,7 @@ opt.completeopt = "menu,menuone,noselect"
 opt.guifont = ""
 opt.termguicolors = true
 opt.list = true
-vim.opt.listchars:append("eol:↴")
+vim.opt.listchars:append("eol:↲")
 
 -- Cursor highlight
 opt.cursorline = true
