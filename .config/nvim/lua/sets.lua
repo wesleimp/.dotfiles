@@ -17,6 +17,8 @@ opt.previewheight = 5
 opt.completeopt = "menu,menuone,noselect"
 opt.guifont = ""
 opt.termguicolors = true
+opt.list = true
+vim.opt.listchars:append("eol:↴")
 
 -- Cursor highlight
 opt.cursorline = true
@@ -24,7 +26,7 @@ opt.cursorline = true
 -- Line wrapping
 opt.wrap = false
 opt.linebreak = true
-opt.showbreak = "▹"
+opt.showbreak = "❯"
 
 -- Auto indent what you can
 opt.autoindent = true
@@ -53,7 +55,6 @@ opt.expandtab = true
 opt.mouse = "a"
 opt.colorcolumn = "80"
 opt.laststatus = 2
-
 opt.wildmenu = true
 opt.wildignore:append(
   "*deps/*,*_build/*,**/coverage/*,**/node_modules/*,**/.git/*"
@@ -70,6 +71,9 @@ autocmd FileType javascript setl sw=2 ts=2
 autocmd FileType vue setl sw=2 ts=2
 autocmd FileType yaml setl sw=2 ts=2
 autocmd FileType json setl sw=2 ts=2
-autocmd FileType lua setl sw=2 ts=2
 autocmd FileType go setl sw=4 ts=4
+autocmd FileType lua setl sw=2 ts=2
+autocmd FileType elixir setl sw=2 ts=2
 ]])
+
+vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting()")

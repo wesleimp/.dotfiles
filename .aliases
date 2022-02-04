@@ -11,7 +11,7 @@ alias v="nvim ."
 alias nv="nvim"
 alias cat="bat --plain"
 alias ls="exa"
-alias tree="exa -T --git-ignore"
+alias tree="exa -T"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
 
 alias oss="~/OSS"

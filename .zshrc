@@ -55,6 +55,7 @@ export GOPATH=~/go
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$PATH/.mix
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
