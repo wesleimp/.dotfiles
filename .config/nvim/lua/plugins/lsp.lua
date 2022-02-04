@@ -183,6 +183,15 @@ lspconfig.sumneko_lua.setup(config({
   },
 }))
 
+lspconfig.omnisharp.setup({
+  cmd = {
+    vim.fn.expand("~/.local/omnisharp/run"),
+    "--languageserver",
+    "--hostPID",
+    tostring(vim.fn.getpid()),
+  },
+})
+
 ------------------------------------------------------------
 -- Snippets
 ------------------------------------------------------------
