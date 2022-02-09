@@ -75,5 +75,3 @@ autocmd FileType go setl sw=4 ts=4
 autocmd FileType lua setl sw=2 ts=2
 autocmd FileType elixir setl sw=2 ts=2
 ]])
-
-vim.cmd("autocmd BufWritePre * lua vim.lsp.buf.formatting()")

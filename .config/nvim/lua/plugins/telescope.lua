@@ -57,12 +57,16 @@ telescope.setup({
   pickers = {
     colorscheme = { enable_preview = true },
     find_files = {
+      theme = "ivy",
       hidden = true,
       file_ignore_patterns = { ".git/" },
       previewer = false,
     },
-    live_grep = { file_ignore_patterns = { ".git/" } },
-    buffers = dropdown({
+    live_grep = {
+      theme = "ivy",
+      file_ignore_patterns = { ".git/" },
+    },
+    buffers = {
       sort_mru = true,
       sort_lastused = true,
       show_all_buffers = true,
@@ -73,7 +77,7 @@ telescope.setup({
         i = { ["<c-x>"] = "delete_buffer" },
         n = { ["<c-x>"] = "delete_buffer" },
       },
-    }),
+    },
     git_branches = dropdown(),
     git_bcommits = {
       layout_config = { horizontal = { preview_width = 0.55 } },
