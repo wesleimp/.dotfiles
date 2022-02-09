@@ -116,6 +116,9 @@ nmap("<C-s>", ":Telescope tmux sessions<cr>", { noremap = true })
 
 map("<f12>", ":lua require('plugins.telescope').search_dotfiles()<cr>")
 
+-- File browser
+map("<C-t>", ":lua require('plugins.telescope').file_browser()<cr>")
+
 --------------------------------------------------
 -- Harpoon
 --------------------------------------------------

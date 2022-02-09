@@ -15,9 +15,13 @@ vim.g.nvim_tree_icons = {
 }
 
 require("nvim-tree").setup({
-  disable_netrw = false,
+  disable_netrw = true,
   update_focused_file = {
     enable = true,
+  },
+  update_to_buf_dir = {
+    enable = true,
+    auto_open = false,
   },
   diagnostics = {
     enable = false,

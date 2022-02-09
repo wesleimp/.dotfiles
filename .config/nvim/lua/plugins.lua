@@ -53,6 +53,7 @@ Plug("nvim-lua/plenary.nvim")
 Plug("nvim-telescope/telescope.nvim")
 Plug("nvim-telescope/telescope-fzy-native.nvim")
 Plug("nvim-telescope/telescope-project.nvim")
+Plug("nvim-telescope/telescope-file-browser.nvim")
 Plug("camgraff/telescope-tmux.nvim")
 Plug("ThePrimeagen/harpoon")
 
