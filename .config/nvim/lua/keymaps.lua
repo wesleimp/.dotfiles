@@ -3,7 +3,6 @@ local function _map(mode)
     vim.api.nvim_set_keymap(mode, lhs, rhs, opt or {})
   end
 end
-
 local map = _map("")
 local nmap = _map("n")
 local vmap = _map("v")

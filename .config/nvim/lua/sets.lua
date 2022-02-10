@@ -5,8 +5,9 @@ opt.history = 50
 
 -- Display
 opt.ls = 2
-opt.showmode = true
+opt.showmode = false
 opt.showcmd = true
+opt.cmdheight = 1
 opt.modeline = true
 opt.ruler = true
 opt.title = true
@@ -18,7 +19,8 @@ opt.completeopt = "menu,menuone,noselect"
 opt.guifont = ""
 opt.termguicolors = true
 opt.list = true
-vim.opt.listchars:append("eol:↲")
+opt.listchars:append("eol:↲")
+opt.scrolloff = 10
 
 -- Cursor highlight
 opt.cursorline = true
