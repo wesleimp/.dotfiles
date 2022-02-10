@@ -19,10 +19,6 @@ require("nvim-tree").setup({
   update_focused_file = {
     enable = true,
   },
-  update_to_buf_dir = {
-    enable = true,
-    auto_open = false,
-  },
   diagnostics = {
     enable = false,
   },

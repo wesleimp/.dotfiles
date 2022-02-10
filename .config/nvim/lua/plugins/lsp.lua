@@ -14,7 +14,7 @@ local source_mapping = {
 }
 
 local lspkind = require("lspkind")
-lspkind.init({ with_text = true })
+lspkind.init({ mode = "text" })
 
 local has_words_before = function()
   local line, col = unpack(vim.api.nvim_win_get_cursor(0))

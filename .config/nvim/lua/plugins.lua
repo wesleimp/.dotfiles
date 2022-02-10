@@ -1,67 +1,67 @@
-local Plug = vim.fn["plug#"]
+vim.cmd([[packadd packer.nvim]])
 
 -- plugins
-vim.call("plug#begin", "~/.vim/plugged")
-Plug("junegunn/vim-plug")
+require("packer").startup(function(use)
+  use({ "junegunn/vim-plug" })
 
-Plug("neovim/nvim-lspconfig")
-Plug("hrsh7th/nvim-cmp")
-Plug("hrsh7th/cmp-nvim-lsp")
-Plug("hrsh7th/cmp-buffer")
-Plug("hrsh7th/cmp-path")
-Plug("saadparwaiz1/cmp_luasnip")
+  use({ "neovim/nvim-lspconfig" })
+  use({ "hrsh7th/nvim-cmp" })
+  use({ "hrsh7th/cmp-nvim-lsp" })
+  use({ "hrsh7th/cmp-buffer" })
+  use({ "hrsh7th/cmp-path" })
+  use({ "saadparwaiz1/cmp_luasnip" })
 
-Plug("onsails/lspkind-nvim")
-Plug("nvim-lua/lsp_extensions.nvim")
+  use({ "onsails/lspkind-nvim" })
+  use({ "nvim-lua/lsp_extensions.nvim" })
 
--- Snippets
-Plug("L3MON4D3/LuaSnip")
-Plug("rafamadriz/friendly-snippets")
+  -- Snippets
+  use({ "L3MON4D3/LuaSnip" })
+  use({ "rafamadriz/friendly-snippets" })
 
--- Syntax
-Plug("nvim-treesitter/nvim-treesitter")
-Plug("nvim-treesitter/nvim-treesitter-textobjects")
+  -- Syntax
+  use({ "nvim-treesitter/nvim-treesitter" })
+  use({ "nvim-treesitter/nvim-treesitter-textobjects" })
 
--- Presentation
-Plug("kyazdani42/nvim-tree.lua")
-Plug("RRethy/vim-illuminate")
-Plug("tpope/vim-fugitive")
-Plug("nvim-lualine/lualine.nvim")
-Plug("lewis6991/gitsigns.nvim")
-Plug("alvarosevilla95/luatab.nvim")
+  -- Presentation
+  use({ "kyazdani42/nvim-tree.lua" })
+  use({ "RRethy/vim-illuminate" })
+  use({ "tpope/vim-fugitive" })
+  use({ "nvim-lualine/lualine.nvim" })
+  use({ "lewis6991/gitsigns.nvim" })
+  use({ "alvarosevilla95/luatab.nvim" })
 
--- General plugins
-Plug("godlygeek/tabular")
-Plug("tpope/vim-commentary")
-Plug("tpope/vim-surround")
-Plug("tpope/vim-endwise")
-Plug("jiangmiao/auto-pairs")
-Plug("mg979/vim-visual-multi", { branch = "master" })
-Plug("matze/vim-move")
-Plug("mbbill/undotree")
-Plug("andweeb/presence.nvim")
+  -- General plugins
+  use({ "godlygeek/tabular" })
+  use({ "tpope/vim-commentary" })
+  use({ "tpope/vim-surround" })
+  use({ "tpope/vim-endwise" })
+  use({ "jiangmiao/auto-pairs" })
+  use({ "mg979/vim-visual-multi", branch = "master" })
+  use({ "matze/vim-move" })
+  use({ "mbbill/undotree" })
+  use({ "andweeb/presence.nvim" })
 
--- Themes
-Plug("kyazdani42/nvim-web-devicons")
-Plug("gruvbox-community/gruvbox")
-Plug("karb94/neoscroll.nvim")
-Plug("startup-nvim/startup.nvim")
+  -- Themes
+  use({ "kyazdani42/nvim-web-devicons" })
+  use({ "gruvbox-community/gruvbox" })
+  use({ "karb94/neoscroll.nvim" })
+  use({ "startup-nvim/startup.nvim" })
 
--- Misc
-Plug("nvim-lua/popup.nvim")
-Plug("nvim-lua/plenary.nvim")
-Plug("nvim-telescope/telescope.nvim")
-Plug("nvim-telescope/telescope-fzy-native.nvim")
-Plug("nvim-telescope/telescope-project.nvim")
-Plug("nvim-telescope/telescope-file-browser.nvim")
-Plug("camgraff/telescope-tmux.nvim")
-Plug("ThePrimeagen/harpoon")
+  -- Misc
+  use({ "nvim-lua/popup.nvim" })
+  use({ "nvim-lua/plenary.nvim" })
+  use({ "nvim-telescope/telescope.nvim" })
+  use({ "nvim-telescope/telescope-fzy-native.nvim" })
+  use({ "nvim-telescope/telescope-project.nvim" })
+  use({ "nvim-telescope/telescope-file-browser.nvim" })
+  use({ "camgraff/telescope-tmux.nvim" })
+  use({ "ThePrimeagen/harpoon" })
 
-Plug("sbdchd/neoformat")
-Plug("christoomey/vim-tmux-navigator")
-Plug("vim-test/vim-test")
-
-vim.call("plug#end")
+  use({ "sbdchd/neoformat" })
+  use({ "christoomey/vim-tmux-navigator" })
+  use({ "vim-test/vim-test" })
+  use({ "lewis6991/impatient.nvim" })
+end)
 
 -- Config plugins
 require("plugins.telescope")

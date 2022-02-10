@@ -3,3 +3,5 @@
 /old/*
 
 rel/
+
+packer_compiled.lua
