@@ -9,4 +9,7 @@ files = { 'lua', 'init.lua' }
 -- Global objects defined by the C code
 globals = {
   "vim",
+  "P",
+  "R",
+  "RELOAD"
 }
