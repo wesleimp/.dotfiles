@@ -14,6 +14,8 @@ if require("first_load")() then
   return
 end
 
+require("globals")
+
 require("plugins")
 require("sets")
 require("colors")

@@ -2,7 +2,7 @@ vim.cmd([[packadd packer.nvim]])
 
 -- plugins
 require("packer").startup(function(use)
-  use({ "junegunn/vim-plug" })
+  use({ "wbthomason/packer.nvim" })
 
   use({ "neovim/nvim-lspconfig" })
   use({ "hrsh7th/nvim-cmp" })
