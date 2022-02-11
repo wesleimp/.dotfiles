@@ -2,8 +2,22 @@ vim.cmd([[packadd packer.nvim]])
 
 -- plugins
 require("packer").startup(function(use)
+  local local_use = function(path, opts)
+    opts = opts or {}
+    if vim.fn.isdirectory(vim.fn.expand("~/plugins/" .. path)) == 1 then
+      opts[1] = "~/plugins/" .. path
+      use(opts)
+    else
+      error(string.format("Local plugin %s was not found", path))
+    end
+  end
+
   use({ "wbthomason/packer.nvim" })
 
+  -- Local plugins
+  local_use("stylua.nvim")
+
+  -- Code completion
   use({ "hrsh7th/nvim-cmp" })
   use({ "hrsh7th/cmp-nvim-lsp" })
   use({ "hrsh7th/cmp-buffer" })
@@ -12,7 +26,6 @@ require("packer").startup(function(use)
 
   use({ "onsails/lspkind-nvim" })
   use({ "nvim-lua/lsp_extensions.nvim" })
-
   use({ "neovim/nvim-lspconfig" })
 
   use({ "j-hui/fidget.nvim" })
@@ -31,12 +44,9 @@ require("packer").startup(function(use)
 
   -- Presentation
   use({ "kyazdani42/nvim-tree.lua" })
-
   use({ "RRethy/vim-illuminate" })
   use({ "tpope/vim-fugitive" })
-
   use({ "nvim-lualine/lualine.nvim" })
-
   use({
     "lewis6991/gitsigns.nvim",
     config = function()
@@ -49,9 +59,12 @@ require("packer").startup(function(use)
   use({ "tpope/vim-commentary" })
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-endwise" })
-  use({ "windwp/nvim-autopairs", config = function()
-    require("nvim-autopairs").setup()
-  end})
+  use({
+    "windwp/nvim-autopairs",
+    config = function()
+      require("nvim-autopairs").setup()
+    end,
+  })
   use({ "mg979/vim-visual-multi", branch = "master" })
   use({ "matze/vim-move" })
   use({ "mbbill/undotree" })
@@ -72,7 +85,7 @@ require("packer").startup(function(use)
     end,
   })
 
-  -- Misc
+  -- Searching and navigation
   use({ "nvim-lua/popup.nvim" })
   use({ "nvim-lua/plenary.nvim" })
   use({ "nvim-telescope/telescope.nvim" })
