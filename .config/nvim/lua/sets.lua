@@ -45,7 +45,7 @@ opt.showmatch = true
 opt.hidden = true
 
 -- Make backspace a bit nicer
-opt.backspace = {"indent","start","eol"}
+opt.backspace = { "indent", "start", "eol" }
 
 -- Indentation
 opt.shiftwidth = 4

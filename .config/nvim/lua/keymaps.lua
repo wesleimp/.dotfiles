@@ -154,6 +154,12 @@ nmap(
 )
 
 --------------------------------------------------
+-- Focusing
+--------------------------------------------------
+nmap("<F3>", ":ZenMode<CR>", { noremap = true, silent = true })
+nmap("<F4>", ":Twilight<CR>", { noremap = true, silent = true })
+
+--------------------------------------------------
 -- Misc
 --------------------------------------------------
 nmap("<leader>u", ":UndotreeShow<CR>", { noremap = true })

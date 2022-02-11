@@ -78,12 +78,6 @@ require("packer").startup(function(use)
   -- Themes
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "gruvbox-community/gruvbox" })
-  use({
-    "karb94/neoscroll.nvim",
-    config = function()
-      require("neoscroll").setup()
-    end,
-  })
 
   -- Searching and navigation
   use({ "nvim-lua/popup.nvim" })
@@ -107,3 +101,4 @@ require("plugins.lualine")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.treesitter")
+require("plugins.zenmode")
