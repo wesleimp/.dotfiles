@@ -87,7 +87,6 @@ require("packer").startup(function(use)
   use({ "nvim-telescope/telescope-project.nvim" })
   use({ "nvim-telescope/telescope-file-browser.nvim" })
   use({ "camgraff/telescope-tmux.nvim" })
-  use({ "ThePrimeagen/harpoon" })
 
   use({ "sbdchd/neoformat" })
   use({ "christoomey/vim-tmux-navigator" })
