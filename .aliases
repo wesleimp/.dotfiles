@@ -47,3 +47,5 @@ alias ips="iex -S mix phx.server"
 # Docker
 alias d="docker"
 alias dc="docker compose"
+
+alias h="history | fzf"
