@@ -97,7 +97,7 @@ nmap(
 nmap(
   "<C-f>",
   ":lua require('telescope.builtin').live_grep({ hidden = true })<cr>",
-  { noremap = true, silent = true}
+  { noremap = true, silent = true }
 )
 nmap(
   "<C-b>",
@@ -107,7 +107,7 @@ nmap(
 nmap(
   "<leader>fs",
   ":lua require('telescope.builtin').grep_string({search = vim.fn.expand('<cword>')})<CR>",
-  { noremap = true, silent = true  }
+  { noremap = true, silent = true }
 )
 
 -- TMUX
