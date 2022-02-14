@@ -92,22 +92,22 @@ nmap("<Leader>tl", ":w|:TestLast<CR>", { silent = true })
 nmap(
   "<C-p>",
   ":lua require('telescope.builtin').find_files()<cr>",
-  { noremap = true }
+  { noremap = true, silent = true }
 )
 nmap(
   "<C-f>",
   ":lua require('telescope.builtin').live_grep({ hidden = true })<cr>",
-  { noremap = true }
+  { noremap = true, silent = true}
 )
 nmap(
   "<C-b>",
   ":lua require('telescope.builtin').buffers()<cr>",
-  { noremap = true }
+  { noremap = true, silent = true }
 )
 nmap(
   "<leader>fs",
   ":lua require('telescope.builtin').grep_string({search = vim.fn.expand('<cword>')})<CR>",
-  { noremap = true }
+  { noremap = true, silent = true  }
 )
 
 -- TMUX
