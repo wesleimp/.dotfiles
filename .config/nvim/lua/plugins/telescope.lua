@@ -95,6 +95,10 @@ telescope.setup({
       base_dirs = { "~/OSS", "~/workspace", "~/.dotfiles" },
       hidden_files = true,
     },
+    windowizer = {
+      hidden = true,
+      file_ignore_patterns = { ".git/" },
+    }
   },
 })
 
@@ -102,6 +106,7 @@ telescope.load_extension("fzy_native")
 telescope.load_extension("project")
 telescope.load_extension("tmux")
 telescope.load_extension("file_browser")
+telescope.load_extension("windowizer")
 
 local M = {}
 M.search_dotfiles = function()

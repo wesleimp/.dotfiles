@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# usage
+# tmux-windowizer /path/to/file
+
+window_name=$(basename "$1")
+clean_name=$(echo "$window_name" | tr "./" "__")
+session_name=$(tmux display-message -p '#S')
+target_name="$session_name:$clean_name"
+
+if ! tmux has-session -t "$target_name" 2> /dev/null; then
+    tmux neww -n "$clean_name" "nvim $*"
+fi

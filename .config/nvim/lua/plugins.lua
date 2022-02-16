@@ -16,6 +16,7 @@ require("packer").startup(function(use)
 
   -- Local plugins
   local_use("stylua.nvim")
+  local_use("telescope-windowizer.nvim")
 
   -- Code completion
   use({ "hrsh7th/nvim-cmp" })

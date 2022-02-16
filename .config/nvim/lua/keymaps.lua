@@ -112,6 +112,7 @@ nmap(
 
 -- TMUX
 nmap("<C-s>", ":Telescope tmux sessions<cr>", { noremap = true })
+nmap("<leader>w", ":Telescope windowizer<cr>", { noremap = true })
 
 map("<f12>", ":lua require('plugins.telescope').search_dotfiles()<cr>")
 

@@ -29,6 +29,7 @@ doties=(
 bins=(
     bin/tmux-cht.sh
     bin/tmux-sessionizer
+    bin/tmux-windowizer
 )
 
 echo "Creating symlinks from $dir to ~/"

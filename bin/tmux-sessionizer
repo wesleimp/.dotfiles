@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/OSS ~/workspace -mindepth 1 -maxdepth 2 -type d -exec test -e '{}/.git' ';' -print -prune | fzf)
+    selected=$(find ~/OSS ~/workspace ~/plugins -mindepth 1 -maxdepth 2 -type d -exec test -e '{}/.git' ';' -print -prune | fzf)
 fi
 
 if [[ -z "$selected" ]]; then
