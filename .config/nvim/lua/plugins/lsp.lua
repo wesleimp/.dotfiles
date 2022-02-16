@@ -40,10 +40,10 @@ cmp.setup({
       select = true,
     }),
     ["<Tab>"] = cmp.mapping(function(fallback)
-      if luasnip.expand_or_jumpable() then
-        luasnip.expand_or_jump()
-      elseif cmp.visible() then
+      if cmp.visible() then
         cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
       elseif has_words_before() then
         cmp.complete()
       else
@@ -209,5 +209,5 @@ end
 require("luasnip.loaders.from_vscode").lazy_load({
   paths = snippets_paths(),
   include = nil, -- Load all languages
-  exclude = {},
+  exclude = { "elixir" },
 })

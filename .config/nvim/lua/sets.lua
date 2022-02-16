@@ -28,7 +28,7 @@ opt.cursorline = true
 -- Line wrapping
 opt.wrap = false
 opt.linebreak = true
-opt.showbreak = "❯"
+opt.showbreak = "❯ "
 
 -- Auto indent what you can
 opt.autoindent = true

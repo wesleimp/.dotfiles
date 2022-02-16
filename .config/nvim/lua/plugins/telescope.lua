@@ -98,7 +98,7 @@ telescope.setup({
     windowizer = {
       hidden = true,
       file_ignore_patterns = { ".git/" },
-    }
+    },
   },
 })
 
