@@ -54,6 +54,7 @@ require("packer").startup(function(use)
       require("gitsigns").setup()
     end,
   })
+  use({ "lukas-reineke/indent-blankline.nvim" })
 
   -- General plugins
   use({ "godlygeek/tabular" })
@@ -98,6 +99,7 @@ end)
 require("plugins.fidget")
 require("plugins.lsp")
 require("plugins.lualine")
+require("plugins.indent-blankline")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.treesitter")
