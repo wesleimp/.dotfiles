@@ -61,12 +61,7 @@ require("packer").startup(function(use)
   use({ "tpope/vim-commentary" })
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-endwise" })
-  use({
-    "windwp/nvim-autopairs",
-    config = function()
-      require("nvim-autopairs").setup()
-    end,
-  })
+  use({ "jiangmiao/auto-pairs" })
   use({ "mg979/vim-visual-multi", branch = "master" })
   use({ "matze/vim-move" })
   use({ "mbbill/undotree" })
