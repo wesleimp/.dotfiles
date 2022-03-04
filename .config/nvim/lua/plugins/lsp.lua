@@ -189,6 +189,8 @@ lspconfig.omnisharp.setup({
   cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
 })
 
+lspconfig.gleam.setup(config())
+
 ------------------------------------------------------------
 -- Snippets
 ------------------------------------------------------------

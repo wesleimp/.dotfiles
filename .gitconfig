@@ -8,9 +8,20 @@
 [core]
 	editor = vim
 	excludesfile = /home/weslei/.globalgitignore
+    pager = delta
+
+[delta]
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
 
 [diff]
 	tool = vimdiff
+    colorMoved = default
 
 [github]
 	user = wesleimp

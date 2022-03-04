@@ -27,7 +27,8 @@ require("packer").startup(function(use)
 
   use({ "onsails/lspkind-nvim" })
   use({ "nvim-lua/lsp_extensions.nvim" })
-  use({ "neovim/nvim-lspconfig" })
+  -- use({ "neovim/nvim-lspconfig" })
+  local_use("nvim-lspconfig")
 
   use({ "j-hui/fidget.nvim" })
 
@@ -55,10 +56,16 @@ require("packer").startup(function(use)
     end,
   })
   use({ "lukas-reineke/indent-blankline.nvim" })
+  use({ "alvarosevilla95/luatab.nvim" })
 
   -- General plugins
   use({ "godlygeek/tabular" })
-  use({ "tpope/vim-commentary" })
+  use({
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  })
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-endwise" })
   use({ "jiangmiao/auto-pairs" })
@@ -94,6 +101,7 @@ end)
 require("plugins.fidget")
 require("plugins.lsp")
 require("plugins.lualine")
+require("plugins.luatab")
 require("plugins.indent-blankline")
 require("plugins.nvim-tree")
 require("plugins.telescope")

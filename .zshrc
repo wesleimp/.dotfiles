@@ -61,7 +61,7 @@ export EDITOR=nvim
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="kitty"
-export BROWSER="firefox"
+export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 
 source $HOME/.cargo/env

@@ -8,8 +8,6 @@ vim.api.nvim_set_keymap("n", "<leader>tr", ":NvimTreeRefresh<CR>", {
   silent = true,
 })
 
-vim.g.nvim_tree_quit_on_open = 1
-
 vim.g.nvim_tree_icons = {
   default = "",
 }
@@ -38,6 +36,11 @@ require("nvim-tree").setup({
           cb = ':lua require"nvim-tree".on_keypress("vsplit")<CR>',
         },
       },
+    },
+  },
+  actions = {
+    open_file = {
+      quit_on_open = true,
     },
   },
 })
