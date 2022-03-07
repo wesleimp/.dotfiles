@@ -30,7 +30,9 @@ require("packer").startup(function(use)
   -- use({ "neovim/nvim-lspconfig" })
   local_use("nvim-lspconfig")
 
+  -- Diagnostics
   use({ "j-hui/fidget.nvim" })
+  use({ "folke/lsp-trouble.nvim", cmd = "Trouble" })
 
   -- Focusing
   use({ "folke/zen-mode.nvim" })
@@ -106,4 +108,5 @@ require("plugins.indent-blankline")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.treesitter")
+require("plugins.trouble")
 require("plugins.zenmode")
