@@ -51,12 +51,7 @@ require("packer").startup(function(use)
   use({ "RRethy/vim-illuminate" })
   use({ "tpope/vim-fugitive" })
   use({ "nvim-lualine/lualine.nvim" })
-  use({
-    "lewis6991/gitsigns.nvim",
-    config = function()
-      require("gitsigns").setup()
-    end,
-  })
+  use({ "lewis6991/gitsigns.nvim" })
   use({ "lukas-reineke/indent-blankline.nvim" })
   use({ "alvarosevilla95/luatab.nvim" })
 
@@ -101,6 +96,7 @@ require("packer").startup(function(use)
 end)
 
 require("plugins.fidget")
+require("plugins.gitsigns")
 require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.luatab")

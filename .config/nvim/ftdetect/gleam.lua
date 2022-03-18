@@ -1,1 +1,1 @@
-vim.cmd "au BufRead,BufNewFile *.gleam set filetype=gleam"
+vim.cmd("au BufRead,BufNewFile *.gleam set filetype=gleam")

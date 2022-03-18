@@ -28,6 +28,12 @@ alias gor="go run"
 alias gob="go build"
 alias gof="go fmt"
 
+# Rust
+alias ct="cargo test"
+alias cr="cargo run"
+alias cb="cargo build"
+alias cfmt="cargo fmt"
+
 # Elixir
 alias m="mix"
 alias mt="mix test"
