@@ -159,9 +159,9 @@ lspconfig.gopls.setup(config({
   },
 }))
 
-lspconfig.elixirls.setup({
+lspconfig.elixirls.setup(config({
   cmd = { vim.fn.expand("~/elixir-ls/release/language_server.sh") },
-})
+}))
 
 lspconfig.rust_analyzer.setup(config())
 
@@ -185,9 +185,9 @@ lspconfig.sumneko_lua.setup(config({
 
 local pid = vim.fn.getpid()
 local omnisharp_bin = vim.fn.expand("~/.local/omnisharp/run")
-lspconfig.omnisharp.setup({
+lspconfig.omnisharp.setup(config({
   cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
-})
+}))
 
 lspconfig.gleam.setup(config())
 
