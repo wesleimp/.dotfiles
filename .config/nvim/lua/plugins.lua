@@ -17,6 +17,7 @@ require("packer").startup(function(use)
   -- Local plugins
   local_use("stylua.nvim")
   local_use("telescope-windowizer.nvim")
+  local_use("notes.nvim")
 
   -- Code completion
   use({ "hrsh7th/nvim-cmp" })
@@ -45,6 +46,7 @@ require("packer").startup(function(use)
   -- Syntax
   use({ "nvim-treesitter/nvim-treesitter-textobjects" })
   use({ "nvim-treesitter/nvim-treesitter" })
+  use({ "nvim-treesitter/playground" })
 
   -- Presentation
   use({ "kyazdani42/nvim-tree.lua" })

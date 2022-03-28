@@ -190,6 +190,7 @@ lspconfig.omnisharp.setup(config({
 }))
 
 lspconfig.gleam.setup(config())
+lspconfig.hls.setup(config())
 
 ------------------------------------------------------------
 -- Snippets

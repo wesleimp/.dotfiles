@@ -110,6 +110,12 @@ nmap(
   { noremap = true, silent = true }
 )
 
+nmap(
+  "<leader>ht",
+  ":lua require('telescope.builtin').help_tags()<CR>",
+  { noremap = true, silent = true }
+)
+
 -- TMUX
 nmap("<C-s>", ":Telescope tmux sessions<cr>", { noremap = true })
 nmap("<leader>w", ":Telescope windowizer<cr>", { noremap = true })
