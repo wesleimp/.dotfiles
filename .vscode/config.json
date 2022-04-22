@@ -1,21 +1,11 @@
 {
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.startupEditor": "newUntitledFile",
-  "workbench.editor.limit.enabled": true,
-  "workbench.editor.limit.value": 7,
-  "workbench.activityBar.visible": false,
-
-  // status bar
-  "workbench.colorCustomizations": {
-    "editor.functionForeground": "ff0000",
-  },
-
-  // reduce width of linum col (3 cols really)
-  "editor.folding": false,
-  "editor.glyphMargin": false,
+  "explorer.confirmDragAndDrop": false,
+  "git.confirmSync": false,
+  "breadcrumbs.enabled": false,
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  "terminal.integrated.fontSize": 14,
+  "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.parameterHints.enabled": false,
   "editor.suggest.showTypeParameters": false,
   "editor.quickSuggestions": {
@@ -24,30 +14,9 @@
     "strings": true
   },
   "editor.suggestSelection": "first",
-  "editor.renderWhitespace": "none",
-  "editor.hover.enabled": false,
-  "editor.renderIndentGuides": false,
-  "editor.highlightActiveIndentGuide": false,
-  "editor.minimap.enabled": false,
-  "editor.suggestOnTriggerCharacters": false,
-  "editor.wordBasedSuggestions": false,
-
-  "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false,
-  "breadcrumbs.enabled": false,
-
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.commandsToSkipShell": [
-    "-workbench.action.quickOpen",
-    "vscodeWorkspaceSwitcher.switchWorkspace",
-    "workbench.action.togglePanelPosition"
-  ],
-  "terminal.integrated.macOptionClickForcesSelection": true,
-
-  "javascript.updateImportsOnFileMove.enabled": "never",
-  "elixirLS.dialyzerEnabled": false,
-  "elixirLS.suggestSpecs": false,
-  "elixirLS.fetchDeps": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.editor.limit.enabled": true,
+  "workbench.editor.limit.value": 7,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
@@ -63,7 +32,7 @@
       ]
     }
   ],
-  "vim.leader": ",",
+  "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": [
@@ -176,7 +145,7 @@
     },
     {
       "before": [
-        "<leader>",
+        "g",
         "c",
         "c"
       ],
@@ -257,15 +226,15 @@
       "commands": [
         {
           "command": "workbench.action.closeActiveEditor",
-          "ags": []
+          "args": []
         }
       ]
     },
     {
       "before": [
-        "<leader>",
-        "m",
-        "f"
+        "g",
+        "c",
+        "c"
       ],
       "after": [],
       "commands": [
@@ -276,12 +245,30 @@
       ]
     }
   ],
+  "elixirLS.dialyzerEnabled": false,
+  "elixirLS.suggestSpecs": false,
+  "elixirLS.fetchDeps": false,
   "vim.ignorecase": false,
   "vim.visualstar": true,
+  "terminal.integrated.commandsToSkipShell": [
+    "-workbench.action.quickOpen",
+    "vscodeWorkspaceSwitcher.switchWorkspace",
+    "workbench.action.togglePanelPosition"
+  ],
+  // status bar
+  "workbench.colorCustomizations": {
+    "editor.functionForeground": "ff0000",
+  },
+  // reduce width of linum col (3 cols really)
+  "editor.folding": false,
+  "editor.glyphMargin": false,
+  "terminal.integrated.macOptionClickForcesSelection": true,
   "files.associations": {
     "*.leex": "html-eex"
   },
   "files.trimTrailingWhitespace": true,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.wordBasedSuggestions": false,
   "files.watcherExclude": {
     "**/.git": true,
     "**/tmp/**": true,
@@ -309,6 +296,7 @@
     "**/node_modules": true,
     "**/.elixir_ls": true
   },
+  "editor.hover.enabled": false,
   "emmet.triggerExpansionOnTab": true,
   "emmet.showExpandedAbbreviation": "never",
   "emmet.includeLanguages": {
@@ -318,5 +306,9 @@
   },
   "[elixir]": {
     "editor.defaultFormatter": "JakeBecker.elixir-ls"
-  }
-}
+  },
+  "editor.renderWhitespace": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "editor.minimap.renderCharacters": false
+} /*  */

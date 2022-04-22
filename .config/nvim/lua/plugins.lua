@@ -56,6 +56,12 @@ require("packer").startup(function(use)
   use({ "lewis6991/gitsigns.nvim" })
   use({ "lukas-reineke/indent-blankline.nvim" })
   use({ "alvarosevilla95/luatab.nvim" })
+  use({
+    "petertriho/nvim-scrollbar",
+    config = function()
+      require("scrollbar").setup()
+    end,
+  })
 
   -- General plugins
   use({ "godlygeek/tabular" })
