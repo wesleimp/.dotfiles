@@ -24,7 +24,7 @@ require("nvim-tree").setup({
     enable = false,
   },
   filters = {
-    custom = { ".git", "node_modules" },
+    custom = { ".git$", "node_modules" },
   },
   view = {
     auto_resize = true,

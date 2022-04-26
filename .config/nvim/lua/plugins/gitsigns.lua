@@ -1,6 +1,6 @@
 require("gitsigns").setup({
-  numhl = true,
-  linehl = true,
+  numhl = false,
+  linehl = false,
   on_attach = function(bufnr)
     local gs = package.loaded.gitsigns
 

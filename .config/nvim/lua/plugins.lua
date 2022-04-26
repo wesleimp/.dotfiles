@@ -28,8 +28,8 @@ require("packer").startup(function(use)
 
   use({ "onsails/lspkind-nvim" })
   use({ "nvim-lua/lsp_extensions.nvim" })
-  -- use({ "neovim/nvim-lspconfig" })
-  local_use("nvim-lspconfig")
+  use({ "neovim/nvim-lspconfig" })
+  -- local_use("nvim-lspconfig")
 
   -- Diagnostics
   use({ "j-hui/fidget.nvim" })
@@ -73,9 +73,9 @@ require("packer").startup(function(use)
   })
   use({ "tpope/vim-surround" })
   use({ "tpope/vim-endwise" })
-  use({ "jiangmiao/auto-pairs" })
   use({ "mg979/vim-visual-multi", branch = "master" })
   use({ "matze/vim-move" })
+  use({ "windwp/nvim-autopairs" })
   use({ "mbbill/undotree" })
   use({
     "andweeb/presence.nvim",
@@ -103,6 +103,7 @@ require("packer").startup(function(use)
   use({ "lewis6991/impatient.nvim" })
 end)
 
+require("plugins.autopairs")
 require("plugins.fidget")
 require("plugins.gitsigns")
 require("plugins.lsp")
