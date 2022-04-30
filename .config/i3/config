@@ -2,6 +2,7 @@ exec_always --no-startup-id ~/.dotfiles/bin/monitor
 exec_always --no-startup-id nitrogen --restore
 exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
+exec_always --no-startup-id xfce4-panel
 
 set $mod Mod4
 set $alt Mod1

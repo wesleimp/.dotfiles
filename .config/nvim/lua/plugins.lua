@@ -80,7 +80,10 @@ require("packer").startup(function(use)
   use({
     "andweeb/presence.nvim",
     config = function()
-      require("presence"):setup()
+      require("presence"):setup({
+        editing_text = "Editing some content",
+        workspace_text = "Working on some shit"
+      })
     end,
   })
 
