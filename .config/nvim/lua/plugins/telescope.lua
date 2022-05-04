@@ -34,7 +34,7 @@ telescope.setup({
     path_display = { "absolute", "truncate" },
     layout_strategy = "horizontal",
     layout_config = {
-      prompt_position = "top",
+      prompt_position = "bottom",
 
       horizontal = { preview_width = 0.45 },
     },
@@ -57,13 +57,11 @@ telescope.setup({
   pickers = {
     colorscheme = { enable_preview = true },
     find_files = {
-      theme = "ivy",
       hidden = true,
       file_ignore_patterns = { ".git/" },
       previewer = false,
     },
     live_grep = {
-      theme = "ivy",
       file_ignore_patterns = { ".git/" },
     },
     buffers = {
