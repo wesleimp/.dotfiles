@@ -27,7 +27,6 @@ require("nvim-tree").setup({
     custom = { ".git$", "node_modules" },
   },
   view = {
-    auto_resize = true,
     width = 35,
     mappings = {
       list = {

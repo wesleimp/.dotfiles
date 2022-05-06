@@ -82,7 +82,7 @@ require("packer").startup(function(use)
     config = function()
       require("presence"):setup({
         editing_text = "Editing some content",
-        workspace_text = "Working on some shit"
+        workspace_text = "Working on some shit",
       })
     end,
   })
@@ -90,6 +90,12 @@ require("packer").startup(function(use)
   -- Themes
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "gruvbox-community/gruvbox" })
+  use({
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("colorizer").setup()
+    end,
+  })
 
   -- Searching and navigation
   use({ "nvim-lua/popup.nvim" })
@@ -99,6 +105,7 @@ require("packer").startup(function(use)
   use({ "nvim-telescope/telescope-project.nvim" })
   use({ "nvim-telescope/telescope-file-browser.nvim" })
   use({ "camgraff/telescope-tmux.nvim" })
+  use({ "ThePrimeagen/harpoon" })
 
   use({ "sbdchd/neoformat" })
   use({ "christoomey/vim-tmux-navigator" })
