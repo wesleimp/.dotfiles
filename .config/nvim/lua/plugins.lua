@@ -56,6 +56,7 @@ require("packer").startup(function(use)
   use({ "lewis6991/gitsigns.nvim" })
   use({ "lukas-reineke/indent-blankline.nvim" })
   use({ "alvarosevilla95/luatab.nvim" })
+  use({ "karb94/neoscroll.nvim" })
   use({
     "petertriho/nvim-scrollbar",
     config = function()
@@ -80,11 +81,13 @@ require("packer").startup(function(use)
   use({
     "andweeb/presence.nvim",
     config = function()
-      require("presence"):setup({
-        editing_text = "Editing some content",
-        workspace_text = "Working on some shit",
-      })
+      require("presence"):setup()
     end,
+  })
+
+  use({
+    "prettier/vim-prettier",
+    run = "yarn install --frozen-lockfile --production",
   })
 
   -- Themes
@@ -120,6 +123,7 @@ require("plugins.lsp")
 require("plugins.lualine")
 require("plugins.luatab")
 require("plugins.indent-blankline")
+require("plugins.neoscroll")
 require("plugins.nvim-tree")
 require("plugins.telescope")
 require("plugins.treesitter")

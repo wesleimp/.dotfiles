@@ -140,6 +140,7 @@ end
 ------------------------------------------------------------
 -- Language servers
 ------------------------------------------------------------
+-- Capabilities and mappings
 local function config(_config)
   return vim.tbl_deep_extend("force", {
     on_attach = on_attach,
@@ -149,9 +150,25 @@ local function config(_config)
   }, _config or {})
 end
 
+-- Languages
 local lspconfig = require("lspconfig")
+
 lspconfig.tsserver.setup(config())
 lspconfig.cssls.setup(config())
+
+-- I'll uncomment this when I need it
+-- lspconfig.svelte.setup(config()) -- svelte
+-- lspconfig.gleam.setup(config())  -- gleam
+-- lspconfig.hls.setup(config())    -- haskell
+
+-- C#
+--
+-- local pid = vim.fn.getpid()
+-- local omnisharp_bin = vim.fn.expand("~/.local/omnisharp/run")
+-- lspconfig.omnisharp.setup(config({
+--   cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+-- }))
+
 lspconfig.gopls.setup(config({
   cmd = { "gopls", "serve" },
   settings = {
@@ -182,15 +199,6 @@ lspconfig.sumneko_lua.setup(config({
     },
   },
 }))
-
-local pid = vim.fn.getpid()
-local omnisharp_bin = vim.fn.expand("~/.local/omnisharp/run")
-lspconfig.omnisharp.setup(config({
-  cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
-}))
-
--- lspconfig.gleam.setup(config())
-lspconfig.hls.setup(config())
 
 ------------------------------------------------------------
 -- Snippets
