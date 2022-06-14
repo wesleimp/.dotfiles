@@ -29,7 +29,6 @@ require("packer").startup(function(use)
   use({ "onsails/lspkind-nvim" })
   use({ "nvim-lua/lsp_extensions.nvim" })
   use({ "neovim/nvim-lspconfig" })
-  -- local_use("nvim-lspconfig")
 
   -- Diagnostics
   use({ "j-hui/fidget.nvim" })
@@ -94,6 +93,10 @@ require("packer").startup(function(use)
   use({ "kyazdani42/nvim-web-devicons" })
   use({ "gruvbox-community/gruvbox" })
   use({
+    "catppuccin/nvim",
+    as = "catppuccin"
+  })
+  use({
     "norcalli/nvim-colorizer.lua",
     config = function()
       require("colorizer").setup()
@@ -116,6 +119,7 @@ require("packer").startup(function(use)
   use({ "lewis6991/impatient.nvim" })
 end)
 
+require("plugins.catppuccin")
 require("plugins.autopairs")
 require("plugins.fidget")
 require("plugins.gitsigns")

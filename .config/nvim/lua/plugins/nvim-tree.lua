@@ -8,10 +8,6 @@ vim.api.nvim_set_keymap("n", "<leader>tr", ":NvimTreeRefresh<CR>", {
   silent = true,
 })
 
-vim.g.nvim_tree_icons = {
-  default = "",
-}
-
 require("nvim-tree").setup({
   disable_netrw = false,
   update_focused_file = {
@@ -24,7 +20,7 @@ require("nvim-tree").setup({
     enable = false,
   },
   filters = {
-    custom = { ".git$", "node_modules" },
+    custom = { "^.git$", "node_modules" },
   },
   view = {
     width = 35,
@@ -42,4 +38,11 @@ require("nvim-tree").setup({
       quit_on_open = true,
     },
   },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+      }
+    }
+  }
 })

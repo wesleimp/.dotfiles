@@ -1,8 +1,9 @@
-vim.g.gruvbox_contrast_dark = "hard"
+-- vim.g.gruvbox_contrast_dark = "hard"
+vim.g.catppuccin_flavour = "macchiato"
 
 vim.cmd("syntax on")
 vim.opt.background = "dark"
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme catppuccin")
 
 vim.cmd([[
 highlight Bar cterm=italic,bold

@@ -76,65 +76,21 @@ cmp.setup({
 })
 
 local on_attach = function(_, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
-
   -- Mappings.
-  local opts = { noremap = true, silent = true }
+  local opts = { noremap = true, silent = true, buffer = bufnr }
 
-  buf_set_keymap(
-    "n",
-    "<leader>gD",
-    "<cmd>lua vim.lsp.buf.declaration()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>gd",
-    "<cmd>lua vim.lsp.buf.definition()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>gi",
-    "<cmd>lua vim.lsp.buf.implementation()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>gr",
-    "<cmd>lua vim.lsp.buf.references()<CR>",
-    opts
-  )
-  buf_set_keymap("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-  buf_set_keymap("n", "<leader>k", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-  buf_set_keymap(
-    "n",
-    "<leader>D",
-    "<cmd>lua vim.lsp.buf.type_definition()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>ca",
-    "<cmd>lua vim.lsp.buf.code_action()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>sd",
-    "<cmd>lua vim.diagnostic.open_float()<CR>",
-    opts
-  )
-  buf_set_keymap(
-    "n",
-    "<leader>f",
-    "<cmd>lua vim.lsp.buf.formatting()<CR>",
-    opts
-  )
-  buf_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-  buf_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+  vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, opts)
+  vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, opts)
+  vim.keymap.set("n", "<leader>gi", vim.lsp.buf.implementation, opts)
+  vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, opts)
+  vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+  vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, opts)
+  vim.keymap.set("n", "<leader>D", vim.lsp.buf.type_definition, opts)
+  vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+  vim.keymap.set("n", "<leader>sd", vim.diagnostic.open_float, opts)
+  vim.keymap.set("n", "<leader>f", vim.lsp.buf.formatting, opts)
+  vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+  vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 end
 
 ------------------------------------------------------------
@@ -162,15 +118,15 @@ lspconfig.cssls.setup(config())
 -- lspconfig.hls.setup(config())    -- haskell
 
 -- C#
---
--- local pid = vim.fn.getpid()
--- local omnisharp_bin = vim.fn.expand("~/.local/omnisharp/run")
--- lspconfig.omnisharp.setup(config({
---   cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
--- }))
+
+local pid = vim.fn.getpid()
+local omnisharp_bin = vim.fn.expand("~/.local/omnisharp/run")
+lspconfig.omnisharp.setup(config({
+  cmd = { omnisharp_bin, "--languageserver", "--hostPID", tostring(pid) },
+}))
 
 lspconfig.gopls.setup(config({
-  cmd = { "gopls", "serve" },
+  cmd = { "gopls" },
   settings = {
     gopls = { analyses = { unusedparams = true }, staticcheck = true },
   },

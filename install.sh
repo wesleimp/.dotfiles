@@ -24,6 +24,8 @@ doties=(
     .config/nvim
     .config/rofi
     .config/polybar
+
+    .tmux/themes
 )
 
 bins=(

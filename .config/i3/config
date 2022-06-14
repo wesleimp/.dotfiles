@@ -13,12 +13,6 @@ font pango:JetBrainsMono Nerd Font 10
 for_window [urgent=latest] focus
 for_window [class="^.*"] border pixel 2
 
-# enable window icons for all windows
-for_window [class="^.*"] title_window_icon on
-
-# enable window icons for all windows with extra horizontal padding
-for_window [class="^.*"] title_window_icon padding 3px
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
