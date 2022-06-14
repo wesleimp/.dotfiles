@@ -63,10 +63,10 @@ opt.wildignore:append(
 )
 
 -- filetype
-vim.cmd "filetype plugin indent on"
+vim.cmd("filetype plugin indent on")
 
 -- Special indentation for some files
-vim.cmd [[
+vim.cmd([[
 autocmd FileType html setl sw=2 ts=2
 autocmd FileType markdown setl sw=2 ts=2
 autocmd FileType *.js,*.ts,*.jsx,*.tsx setl sw=2 ts=2
@@ -77,4 +77,4 @@ autocmd FileType go setl sw=4 ts=4
 autocmd FileType lua setl sw=2 ts=2
 autocmd FileType elixir setl sw=2 ts=2
 autocmd FileType gleam setl sw=2 ts=2
-]]
+]])

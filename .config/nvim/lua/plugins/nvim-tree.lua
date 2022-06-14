@@ -42,7 +42,7 @@ require("nvim-tree").setup({
     icons = {
       glyphs = {
         default = "",
-      }
-    }
-  }
+      },
+    },
+  },
 })

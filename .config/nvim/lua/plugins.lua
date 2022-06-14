@@ -94,7 +94,7 @@ require("packer").startup(function(use)
   use({ "gruvbox-community/gruvbox" })
   use({
     "catppuccin/nvim",
-    as = "catppuccin"
+    as = "catppuccin",
   })
   use({
     "norcalli/nvim-colorizer.lua",
