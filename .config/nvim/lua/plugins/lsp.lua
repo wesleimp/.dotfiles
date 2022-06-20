@@ -97,13 +97,13 @@ end
 -- Language servers
 ------------------------------------------------------------
 -- Capabilities and mappings
-local function config(_config)
+local function config(conf)
   return vim.tbl_deep_extend("force", {
     on_attach = on_attach,
     capabilities = require("cmp_nvim_lsp").update_capabilities(
       vim.lsp.protocol.make_client_capabilities()
     ),
-  }, _config or {})
+  }, conf or {})
 end
 
 -- Languages
