@@ -26,9 +26,9 @@ require("packer").startup(function(use)
   use({ "hrsh7th/cmp-path" })
   use({ "saadparwaiz1/cmp_luasnip" })
 
-  use({ "onsails/lspkind-nvim" })
-  use({ "nvim-lua/lsp_extensions.nvim" })
   use({ "neovim/nvim-lspconfig" })
+  use({ "nvim-lua/lsp_extensions.nvim" })
+  use({ "onsails/lspkind-nvim" })
 
   -- Diagnostics
   use({ "j-hui/fidget.nvim" })
