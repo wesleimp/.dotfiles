@@ -15,13 +15,11 @@ doties=(
     .tmux-cht-languages
     .tmux.conf
     .zshrc
-    Brewfile
 
     # dirs
     .config/picom
     .config/i3
     .config/kitty
-    .config/nvim
     .config/rofi
     .config/polybar
 

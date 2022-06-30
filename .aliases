@@ -4,6 +4,7 @@ alias zshconfig='nvim ~/.zshrc'
 alias ohmyzsh='nvim ~/.oh-my-zsh'
 alias vimrc="nvim ~/.vimrc"
 alias dotfiles="nvim $DOTFILES"
+alias nvimconfg="nvim ~/nvim"
 
 alias grep='rg'
 alias :q='exit'
