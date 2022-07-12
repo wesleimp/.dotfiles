@@ -5,3 +5,4 @@
 rel/
 
 packer_compiled.lua
+.tmux/plugins
