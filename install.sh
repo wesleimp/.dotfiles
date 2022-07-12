@@ -4,7 +4,7 @@ dir=~/.dotfiles
 
 doties=(
     # files
-    .alacritty.yml
+    # .alacritty.yml
     .aliases
     .bashrc
     .curlrc
@@ -17,11 +17,11 @@ doties=(
     .zshrc
 
     # dirs
-    .config/picom
-    .config/i3
-    .config/kitty
-    .config/rofi
-    .config/polybar
+    # .config/picom
+    # .config/i3
+    # .config/kitty
+    # .config/rofi
+    # .config/polybar
 
     .tmux/themes
 )
@@ -37,11 +37,11 @@ echo
 
 # config files
 echo "Symlinking config files:"
-for dot in $doties; do
+for dot in $doties
+do
     echo "==> symlinking $dot"
     ln -s $dir/$dot ~/$dot
 done
-echo
 
 # bin files
 echo "Symlinking bin files"

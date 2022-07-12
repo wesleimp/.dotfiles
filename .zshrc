@@ -58,6 +58,7 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mix
 export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.ghcup/bin
+export PATH=$PATH:/opt/homebrew/bin
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
@@ -85,3 +86,10 @@ if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
+
+# bun completions
+[ -s "/Users/weslei/.bun/_bun" ] && source "/Users/weslei/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/weslei/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

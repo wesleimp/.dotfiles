@@ -1,0 +1,13 @@
+pane	OSS	0	1	:*	0	weslei@weslei-mac:~/OSS/bubbles	:/Users/weslei/OSS/bubbles	1	zsh	:
+pane	OSS	1	0	:-	0	weslei@weslei-mac:~/OSS/bubbles	:/Users/weslei/OSS/bubbles	1	zsh	:
+pane	_dotfiles	0	1	:*	0	catppuccin.conf.theme (~/.dotfiles/.tmux/themes) - NVIM	:/Users/weslei/.dotfiles	1	nvim	:nvim .
+pane	_dotfiles	1	0	:-	0	weslei@weslei-mac:~/.dotfiles	:/Users/weslei/.dotfiles	1	zsh	:
+pane	spawn-rust-sdk	0	1	:*	0	weslei@weslei-mac:~/OSS	:/Users/weslei/OSS	1	zsh	:
+pane	spawn-rust-sdk	1	0	:-	0	weslei@weslei-mac:~/OSS/miau	:/Users/weslei/OSS/miau	1	zsh	:
+window	OSS	0	:zsh	1	:*	da58,178x41,0,0,29	:
+window	OSS	1	:zsh	0	:-	5a51,178x41,0,0,31	:
+window	_dotfiles	0	:nvim	1	:*	b43f,178x41,0,0,2	:
+window	_dotfiles	1	:zsh	0	:-	b440,178x41,0,0,3	:
+window	spawn-rust-sdk	0	:zsh	1	:*	da54,178x41,0,0,25	:
+window	spawn-rust-sdk	1	:zsh	0	:-	da55,178x41,0,0,26	:
+state	_dotfiles	OSS
