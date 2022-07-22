@@ -10,11 +10,21 @@
 
 [core]
 	editor = vim
-	excludesfile = /home/weslei/.globalgitignore
+	excludesfile = ~/.globalgitignore
     pager = delta
 
 [delta]
     navigate = true
+    syntax-theme = gruvbox-dark
+    features = line-numbers decorations
+
+    file-modified-label = modified:
+
+[delta "decorations"]
+    commit-style = raw
+    commit-decoration-style = none
+    hunk-header-style = omit
+    hunk-header-decoration-style = none
 
 [interactive]
     diffFilter = delta --color-only
