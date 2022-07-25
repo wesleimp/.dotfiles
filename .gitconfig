@@ -15,7 +15,6 @@
 
 [delta]
     navigate = true
-    syntax-theme = gruvbox-dark
     features = line-numbers decorations
 
     file-modified-label = modified:

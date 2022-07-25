@@ -66,6 +66,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="kitty"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
+export NVIMCONF=$HOME/nvim
+export BAT_THEME=base16
 
 source $HOME/.cargo/env
 source ~/.aliases
@@ -86,10 +88,3 @@ if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
-
-# bun completions
-[ -s "/Users/weslei/.bun/_bun" ] && source "/Users/weslei/.bun/_bun"
-
-# Bun
-export BUN_INSTALL="/Users/weslei/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
