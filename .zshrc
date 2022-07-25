@@ -65,6 +65,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="kitty"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
+export NVIMCONF=$HOME/nvim
 
 source $HOME/.cargo/env
 source ~/.aliases
