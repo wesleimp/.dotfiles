@@ -59,6 +59,7 @@ export PATH=$PATH:$HOME/.mix
 export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.ghcup/bin
 export PATH=$PATH:/opt/homebrew/bin
+export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
@@ -67,9 +68,10 @@ export TERMINAL="kitty"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
-export BAT_THEME=base16
+export BAT_THEME=gruvbox-dark
 
 source $HOME/.cargo/env
+source $HOME/.cargo/bin
 source ~/.aliases
 
 # append completions to fpath
