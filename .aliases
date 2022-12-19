@@ -6,12 +6,9 @@ alias vimrc="nvim ~/.vimrc"
 alias dotfiles="nvim $DOTFILES"
 alias nvimconfg="nvim ~/nvim"
 
-alias grep='rg'
 alias :q='exit'
 alias v="nvim ."
 alias nv="nvim"
-alias cat="bat --plain"
-alias ls="exa"
 alias tree="exa -T"
 alias todos="rg --column --line-number --ignore-case --color=always -e '(TODO|FIXME)'"
 
