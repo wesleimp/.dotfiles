@@ -1,7 +1,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
-ZSH_DISABLE_COMPFIX="true"
+# ZSH_DISABLE_COMPFIX="true"
 
 plugins=(
     git
@@ -34,7 +34,7 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Env variables
-export GOPATH=~/go
+export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$GOPATH/bin
@@ -49,6 +49,14 @@ export TERMINAL="kitty"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
+
+export LD_LIBRARY_PATH=$HOME/opt/lib:$LD_LIBRARY_PATH
+export PATH="$PATH:/usr/local/ssl/bin"
+export LDFLAGS="-L/usr/local/ssl/lib $LDFLAGS"
+export CPPFLAGS="-I/usr/local/ssl/include $CPPFLAGS"
+export PKG_CONFIG_PATH="/usr/local/ssl/lib:$PKG_CONFIG_PATH"
+export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/ssl"
+export KERL_BUILD_DOCS=yes
 
 source $HOME/.cargo/env
 source ~/.aliases
@@ -69,3 +77,7 @@ if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
