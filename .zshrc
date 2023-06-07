@@ -55,8 +55,10 @@ export PATH="$PATH:/usr/local/ssl/bin"
 export LDFLAGS="-L/usr/local/ssl/lib $LDFLAGS"
 export CPPFLAGS="-I/usr/local/ssl/include $CPPFLAGS"
 export PKG_CONFIG_PATH="/usr/local/ssl/lib:$PKG_CONFIG_PATH"
-export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/ssl"
 export KERL_BUILD_DOCS=yes
+export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/openssl-1.1"
+export KERL_INSTALL_MANPAGES=yes
+export KERL_INSTALL_HTMLDOCS=yes
 
 source $HOME/.cargo/env
 source ~/.aliases
@@ -81,3 +83,5 @@ if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wesl
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"
