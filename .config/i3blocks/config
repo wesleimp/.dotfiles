@@ -1,0 +1,36 @@
+[time]
+command=date '+%d/%m/%Y %H:%M'
+label=SP:
+interval=5
+
+[time]
+instance=la
+command=TZ=America/Los_Angeles date '+%d/%m/%Y %H:%M'
+label=LA:
+interval=5
+
+[cpu_usage]
+command=~/.config/i3blocks/cpu_usage/cpu_usage
+label=CPU
+interval=1
+min_width=CPU 100.00%
+
+[disk]
+command=~/.config/i3blocks/disk_usage/disk_usage
+instance=/home
+interval=30
+
+[localip]
+command=hostname -i | awk '{ print "L:" $1 }'
+interval=3600
+color=#8ec07c
+
+[externalip]
+command=curl -Ss 'https://meuip.io' | awk '{ print "E:" $1 }'
+interval=3600
+color=#fe8019
+
+[wttr]
+command=curl -Ssl 'https://wttr.in/Blumenau?format=3'
+interval=3600
+

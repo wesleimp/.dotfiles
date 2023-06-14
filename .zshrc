@@ -60,6 +60,9 @@ export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=/usr/local/openssl-1.1
 export KERL_INSTALL_MANPAGES=yes
 export KERL_INSTALL_HTMLDOCS=yes
 
+export ODBCINI=~/.local/lib/odbc/conf/odbc.ini
+export ODBCINSTINI=~/.local/lib/odbc/conf/odbcinst.ini
+
 source $HOME/.cargo/env
 source ~/.aliases
 
