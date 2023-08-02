@@ -34,10 +34,10 @@ export LC_IDENTIFICATION="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # Env variables
-export GOPATH=$HOME/go
+export GOPATH=/usr/local/go
+export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mix/escripts
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.mix
 export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.ghcup/bin
