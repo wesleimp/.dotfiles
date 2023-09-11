@@ -6,9 +6,9 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-config.color_scheme = "Gruvbox dark, hard (base16)"
-config.font = wezterm.font("Iosevka Nerd Font")
-config.font_size = 13
+config.color_scheme = "Tokyo Night (Gogh)"
+config.font = wezterm.font("JetBrainsMono Nerd Font")
+config.font_size = 12
 config.hide_tab_bar_if_only_one_tab = true
 
 config.keys = {

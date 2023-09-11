@@ -7,5 +7,5 @@ disabled = true
 truncate_to_repo = false
 
 [character]
-success_symbol = '[➜](green) '
-error_symbol = '[✗](bold red) '
+success_symbol = '[󰧞](green) '
+error_symbol = '[󰧞](bold red) '
