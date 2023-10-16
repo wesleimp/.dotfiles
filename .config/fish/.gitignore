@@ -1,0 +1,9 @@
+fish_history
+fishd.*
+fish_read_history
+fish_variables
+functions/*
+
+# These files are managed by fisher, so let's ignore them
+conf.d/*
+completions/*
