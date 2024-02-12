@@ -23,4 +23,8 @@ set -x NVIMCONF $HOME/nvim
 # Aliases
 source $HOME/.config/fish/abbr.fish
 
+if test -f ~/.config/fish/config.local.fish
+    source ~/.config/fish/config.local.fish
+end
+
 starship init fish | source
