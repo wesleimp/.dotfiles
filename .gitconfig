@@ -11,12 +11,12 @@
 [core]
 	editor = vim
 	excludesfile = ~/.globalgitignore
-    pager = delta
+  pager = delta
 
 [delta]
+  dark = false
     navigate = true
     features = line-numbers decorations
-
     file-modified-label = modified:
 
 [delta "decorations"]
@@ -33,7 +33,7 @@
 
 [diff]
 	tool = vimdiff
-    colorMoved = default
+  colorMoved = default
 
 [github]
 	user = wesleimp
@@ -46,6 +46,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
 [pull]
 	rebase = false
 [init]
