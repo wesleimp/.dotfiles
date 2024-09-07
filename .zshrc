@@ -1,3 +1,4 @@
+source ~/.sh_helpers
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="muse"
@@ -52,9 +53,16 @@ export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
 export BAT_THEME=gruvbox-dark
 
+export KERL_BUILD_DOCS=yes
+export KERL_CONFIGURE_OPTIONS="--without-javac --disable-jit"
+export KERL_INSTALL_MANPAGES=yes
+export KERL_INSTALL_HTMLDOCS=yes
+
 source $HOME/.cargo/env
 source $HOME/.cargo/bin
 source ~/.aliases
+
+source ~/.hginsightsrc
 
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)

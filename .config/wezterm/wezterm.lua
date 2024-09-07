@@ -8,14 +8,14 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
-if theme == "light" then
-	config.color_scheme = "One Light (Gogh)"
-else
-	config.color_scheme = "Gruvbox Dark (Gogh)"
-end
+-- if theme == "light" then
+-- 	config.color_scheme = "One Light (Gogh)"
+-- else
+-- 	config.color_scheme = "Gruvbox Dark (Gogh)"
+-- end
 
-config.font = wezterm.font("IosevkaTerm Nerd Font")
-config.font_size = 16
+-- config.font = wezterm.font("IosevkaTerm Nerd Font")
+config.font_size = 14
 config.hide_tab_bar_if_only_one_tab = true
 
 config.keys = {

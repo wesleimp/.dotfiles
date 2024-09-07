@@ -1,0 +1,29 @@
+# Define color codes
+declare -A COLORS
+COLORS[black]="0;30"
+COLORS[red]="0;31"
+COLORS[green]="0;32"
+COLORS[yellow]="0;33"
+COLORS[blue]="0;34"
+COLORS[magenta]="0;35"
+COLORS[cyan]="0;36"
+COLORS[white]="0;37"
+COLORS[gray]="0;90"
+
+# Function to print colored text
+cprint() {
+    local text="$1"
+    local color="$2"
+
+    # Get color code from COLORS array
+    local color_code=${COLORS[$color]}
+
+    # Check if color code exists
+    if [[ -z "$color_code" ]]; then
+        echo "Error: Color '$color' not supported."
+        return 1
+    fi
+
+    # Print text with color
+    echo -e "\033[${color_code}m$text\033[0m"
+}
