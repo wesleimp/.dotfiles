@@ -1,7 +1,5 @@
 local wezterm = require("wezterm")
 
-local theme = "dark"
-
 local config = {}
 
 if wezterm.config_builder then
@@ -14,7 +12,11 @@ end
 -- 	config.color_scheme = "Gruvbox Dark (Gogh)"
 -- end
 
--- config.font = wezterm.font("IosevkaTerm Nerd Font")
+config.font = wezterm.font_with_fallback({
+	"Berkeley Mono",
+	"nonicons",
+})
+
 config.font_size = 14
 config.hide_tab_bar_if_only_one_tab = true
 

@@ -9,6 +9,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     asdf
+    virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -43,6 +44,7 @@ export PATH=$PATH:$HOME/.cabal/bin
 export PATH=$PATH:$HOME/.ghcup/bin
 export PATH=$PATH:/opt/homebrew/bin
 export PATH=$PATH:$HOME/Library/Python/3.8/bin
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
