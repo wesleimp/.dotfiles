@@ -49,7 +49,7 @@ export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export TERMINAL="kitty"
+export TERMINAL="wezterm"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
@@ -82,3 +82,5 @@ if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
+
+ eval "$(starship init zsh)"

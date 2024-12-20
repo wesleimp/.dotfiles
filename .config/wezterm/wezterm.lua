@@ -6,12 +6,12 @@ if wezterm.config_builder then
 	config = wezterm.config_builder()
 end
 
--- if theme == "light" then
--- 	config.color_scheme = "One Light (Gogh)"
--- else
--- 	config.color_scheme = "Gruvbox Dark (Gogh)"
--- end
+config.colors = {
+	background = "#191919",
+}
 
+-- config.color_scheme = "Mellifluous"
+config.color_scheme = "Default Dark (base16)"
 config.font = wezterm.font_with_fallback({
 	"Berkeley Mono",
 	"nonicons",

@@ -1,11 +1,22 @@
-add_newline = false
+"$schema" = 'https://starship.rs/config-schema.json'
 
-[line_break]
-disabled = true
+add_newline = false
 
 [directory]
 truncate_to_repo = false
 
 [character]
-success_symbol = '[󰧞](green) '
-error_symbol = '[󰧞](bold red) '
+success_symbol = '[󰘧](bold green) '
+error_symbol = '[󰘧](bold red) '
+
+[lua]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[buf]
+disabled = true
