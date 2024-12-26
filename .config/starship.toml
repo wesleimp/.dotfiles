@@ -15,8 +15,8 @@ symbol = " "
 [elixir]
 symbol = " "
 
-[git_branch]
-symbol = " "
+# [git_branch]
+# symbol = " "
 
 [buf]
 disabled = true
