@@ -54,3 +54,6 @@ alias dc="docker compose"
 
 alias h="history | fzf"
 alias tw="tmux-windowizer"
+
+# Git
+alias gs="git status"

@@ -1,53 +1,54 @@
 [user]
-	name = Weslei Juan Moser Pereira
-	email = wesleimsr@gmail.com
+  name = Weslei Juan Moser Pereira
+  email = wesleimsr@gmail.com
 
 [url "ssh://git@github.com/"]
-    insteadOf = https://github.com/
+  insteadOf = https://github.com/
 
 [url "https://github.com/rust-lang/crates.io-index"]
   insteadOf = https://github.com/rust-lang/crates.io-index
 
 [core]
-	editor = vim
-	excludesfile = ~/.globalgitignore
+  editor = vim
+  excludesfile = ~/.globalgitignore
   pager = delta
 
 [delta]
-  dark = false
-    navigate = true
-    features = line-numbers decorations
-    file-modified-label = modified:
+  dark = true
+  navigate = true
+  features = line-numbers decorations
+  file-modified-label = modified:
 
 [delta "decorations"]
-    commit-style = raw
-    commit-decoration-style = none
-    hunk-header-style = omit
-    hunk-header-decoration-style = none
+  commit-style = raw
+  commit-decoration-style = none
+  hunk-header-style = omit
+  hunk-header-decoration-style = none
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [merge]
-    conflictstyle = diff3
+  conflictstyle = diff3
 
 [diff]
-	tool = vimdiff
+  tool = vimdiff
   colorMoved = default
 
 [github]
-	user = wesleimp
+  user = wesleimp
 
 [commit]
-	gpgsign = false
+  gpgsign = false
 
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
 
 [pull]
-	rebase = false
+  rebase = false
+
 [init]
-	defaultBranch = main
+  defaultBranch = main

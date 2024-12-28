@@ -53,7 +53,6 @@ export TERMINAL="wezterm"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
-export BAT_THEME=gruvbox-dark
 
 export KERL_BUILD_DOCS=yes
 export KERL_CONFIGURE_OPTIONS="--without-javac --disable-jit"
