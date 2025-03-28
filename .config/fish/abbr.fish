@@ -4,13 +4,13 @@ abbr zshconfig 'nvim ~/.zshrc'
 abbr ohmyzsh 'nvim ~/.oh-my-zsh'
 abbr vimrc "nvim ~/.vimrc"
 abbr dotfiles "nvim $DOTFILES"
-abbr nvimconfg "nvim ~/nvim"
+abbr nvimconfg "nvim ~/nvim-config"
 
 abbr :q 'exit'
 abbr tree "exa -T"
 abbr todos "rg --column --line-number --ignore-case --color always -e '(TODO|FIXME)'"
 
-abbr oss "~/OSS"
+abbr oss "~/git"
 abbr workspace "~/workspace"
 
 # git
@@ -27,6 +27,7 @@ abbr gaa "git add -A";
 abbr gcm "git commit -sm";
 abbr gcam "git commit -sam";
 abbr gst "git status -sb";
+abbr gs "git status -sb";
 abbr glnext "git log --oneline (git describe --tags --abbrev0 @^)..@";
 
 # Kubernetes

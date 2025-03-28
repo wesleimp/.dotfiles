@@ -9,7 +9,6 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     asdf
-    virtualenv
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -49,13 +48,13 @@ export GO111MODULE=on
 export EDITOR=nvim
 export TERM=xterm-256color
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
-export TERMINAL="wezterm"
+export TERMINAL="ghostty"
 export BROWSER="brave-browser"
 export DOTFILES=$HOME/.dotfiles
 export NVIMCONF=$HOME/nvim
 
 export KERL_BUILD_DOCS=yes
-export KERL_CONFIGURE_OPTIONS="--without-javac --disable-jit"
+export KERL_CONFIGURE_OPTIONS="--without-javac"
 export KERL_INSTALL_MANPAGES=yes
 export KERL_INSTALL_HTMLDOCS=yes
 
@@ -83,3 +82,11 @@ if [ -f '/home/weslei/google-cloud-sdk/path.zsh.inc' ]; then . '/home/weslei/goo
 if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/weslei/google-cloud-sdk/completion.zsh.inc'; fi
 
  eval "$(starship init zsh)"
+
+# BEGIN opam configuration
+# This is useful if you're using opam as it adds:
+#   - the correct directories to the PATH
+#   - auto-completion for the opam binary
+# This section can be safely removed at any time if needed.
+[[ ! -r '/Users/weslei/.opam/opam-init/init.zsh' ]] || source '/Users/weslei/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
+# END opam configuration

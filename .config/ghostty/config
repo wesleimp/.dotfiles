@@ -1,6 +1,6 @@
-font-family = "Berkeley Mono"
-font-size = 14
+font-family = "JetBrains Mono"
+font-size = 16
+background-opacity = .92
 
 cursor-style = block
 mouse-scroll-multiplier = 2
-
