@@ -54,7 +54,8 @@ set -gx KERL_INSTALL_HTMLDOCS yes
 # Source additional configuration files
 source "$HOME/.cargo/env.fish"
 # source $HOME/.cargo/bin
-source ~/.aliases
+# source ~/.aliases
+source ~/.config/fish/abbr.fish
 source ~/.hgrc.fish
 
 # Google Cloud SDK configuration
