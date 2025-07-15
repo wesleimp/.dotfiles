@@ -22,6 +22,8 @@ set -gx LC_MEASUREMENT "en_US.UTF-8"
 set -gx LC_IDENTIFICATION "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 
+set -gx HG_PATH $HOME/workspace
+
 # Path configurations
 set -gx GOPATH ~/go
 fish_add_path $HOME/.mix/escripts
@@ -33,6 +35,7 @@ fish_add_path $HOME/.ghcup/bin
 fish_add_path /opt/homebrew/bin
 fish_add_path $HOME/Library/Python/3.8/bin
 fish_add_path (brew --prefix python)/libexec/bin
+fish_add_path $HG_PATH/hydra/cli
 
 # Additional environment variables
 set -gx GO111MODULE on

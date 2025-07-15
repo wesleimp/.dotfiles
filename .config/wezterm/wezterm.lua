@@ -10,10 +10,9 @@ config.colors = {
 	background = "#191919",
 }
 
--- config.color_scheme = "Mellifluous"
 config.color_scheme = "Default Dark (base16)"
 config.font = wezterm.font_with_fallback({
-	"Berkeley Mono",
+	"Berkeley Mono Condensed",
 	"nonicons",
 })
 

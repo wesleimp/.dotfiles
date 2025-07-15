@@ -57,3 +57,12 @@ alias tw="tmux-windowizer"
 
 # Git
 alias gs="git status"
+alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit -m "[WIP]: $(date)"'
+alias gpull='git pull'
+alias gpush='git push'
+alias gd='git diff'
+alias gpr='git pull --rebase'
+
+# Adding helpers
+alias gadd='git add .'
+alias gca='git add . && git commit -av'

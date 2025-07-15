@@ -1,5 +1,6 @@
 source ~/.sh_helpers
 export ZSH=$HOME/.oh-my-zsh
+export SHELL=$(which zsh)
 
 ZSH_THEME="muse"
 

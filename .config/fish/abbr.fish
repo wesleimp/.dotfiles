@@ -17,6 +17,7 @@ abbr workspace "~/workspace"
 abbr g "git";
 abbr glg "git log --graph --decorate --oneline --abbrev-commit";
 abbr ggpush "git push origin HEAD";
+abbr ggpull "git pull origin HEAD";
 abbr gd "git diff";
 abbr gc "git commit -s";
 abbr gca "git commit -sa";
