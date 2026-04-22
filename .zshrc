@@ -47,7 +47,7 @@ export PATH=$PATH:$HOME/Library/Python/3.8/bin
 export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export GO111MODULE=on
 export EDITOR=nvim
-export TERM=xterm-256color
+export TERM=xterm-ghostty
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export TERMINAL="ghostty"
 export BROWSER="brave-browser"
@@ -72,7 +72,7 @@ autoload -Uz compinit && compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-if [[ $TERM == xterm ]]; then TERM=xterm-256color; fi
+if [[ $TERM == xterm ]]; then TERM=xterm-ghostty; fi
 
 alias luamake=/home/weslei/lua-language-server/3rd/luamake/luamake
 
