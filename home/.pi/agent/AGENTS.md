@@ -1,5 +1,3 @@
-### Shell strategy
-
 # Shell Non-Interactive Strategy (Global)
 
 **Context:** OpenCode's shell environment is strictly **non-interactive**. It lacks a TTY/PTY, meaning any command that waits for user input, confirmation, or launches a UI (editor/pager) will hang indefinitely and timeout.
