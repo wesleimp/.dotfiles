@@ -1,0 +1,94 @@
+{
+  "$schema": "https://raw.githubusercontent.com/earendil-works/pi/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "one-dark-pi",
+  "vars": {
+    "gray1": "#abb2bf",
+    "gray2": "#7f848e",
+    "gray3": "#636d83",
+    "gray4": "#5c6370",
+    "gray5": "#383d47",
+    "gray6": "#2f2e3b",
+
+    "darkGreen": "#263328",
+    "darkRed": "#36282c",
+
+    "darkBlueGray": "#404858",
+    "blueGray": "#505968",
+    "softBlue": "#568bb8",
+    "softCyan": "#4da2b0",
+    "softPurple": "#b278ce",
+    "softRed": "#d46a73",
+
+    "blue": "#61afef",
+    "red": "#e06c75",
+    "green": "#98c379",
+    "yellow": "#e5c07b",
+    "purple": "#c678dd",
+    "cyan": "#56b6c2",
+    "orange": "#d19a66"
+  },
+  "colors": {
+    "accent": "cyan",
+    "border": "gray4",
+    "borderAccent": "blue",
+    "borderMuted": "gray4",
+    "success": "green",
+    "error": "red",
+    "warning": "yellow",
+    "muted": "gray2",
+    "dim": "gray3",
+    "text": "gray1",
+    "thinkingText": "gray1",
+
+    "selectedBg": "gray6",
+    "userMessageBg": "gray5",
+    "userMessageText": "gray1",
+    "customMessageBg": "gray6",
+    "customMessageText": "gray1",
+    "customMessageLabel": "purple",
+    "toolPendingBg": "gray6",
+    "toolSuccessBg": "darkGreen",
+    "toolErrorBg": "darkRed",
+    "toolTitle": "cyan",
+    "toolOutput": "gray2",
+
+    "mdHeading": "yellow",
+    "mdLink": "blue",
+    "mdLinkUrl": "gray3",
+    "mdCode": "orange",
+    "mdCodeBlock": "gray1",
+    "mdCodeBlockBorder": "gray4",
+    "mdQuote": "gray2",
+    "mdQuoteBorder": "gray4",
+    "mdHr": "gray4",
+    "mdListBullet": "cyan",
+
+    "toolDiffAdded": "green",
+    "toolDiffRemoved": "red",
+    "toolDiffContext": "gray3",
+
+    "syntaxComment": "gray4",
+    "syntaxKeyword": "purple",
+    "syntaxFunction": "blue",
+    "syntaxVariable": "red",
+    "syntaxString": "green",
+    "syntaxNumber": "orange",
+    "syntaxType": "yellow",
+    "syntaxOperator": "cyan",
+    "syntaxPunctuation": "gray1",
+
+    "thinkingOff": "darkBlueGray",
+    "thinkingMinimal": "blueGray",
+    "thinkingLow": "softBlue",
+    "thinkingMedium": "softCyan",
+    "thinkingHigh": "softPurple",
+    "thinkingXhigh": "softRed",
+
+    "bashMode": "green"
+  },
+  "export": {
+    "pageBg": "#21252b",
+    "cardBg": "#282c34",
+    "infoBg": "#3c3728"
+  }
+}

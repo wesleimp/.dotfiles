@@ -1,0 +1,20 @@
+{
+  "permission": {
+    "*": "allow",
+    "external_directory": {
+      "*": "ask",
+      "~/workspace/*": "allow",
+      "~/git/*": "allow",
+      "/tmp/*": "deny"
+    },
+    "bash": {
+      "*": "allow",
+      "sudo": "ask",
+      "chmod": "deny",
+      "git push": "deny",
+      "git commit": "ask",
+      "lsp": "allow",
+      "rm -rf *": "deny"
+    }
+  }
+}

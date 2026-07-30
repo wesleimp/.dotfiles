@@ -1,0 +1,16 @@
+{
+  "defaultModel": "claude-opus-4-6",
+  "defaultProvider": "anthropic",
+  "defaultThinkingLevel": "high",
+  "lastChangelogVersion": "0.83.0",
+  "packages": [
+    "npm:@plannotator/pi-extension",
+    "npm:@gotgenes/pi-permission-system",
+    "git:github.com/obra/superpowers",
+    "npm:pi-subagents",
+    "npm:pi-mcp-adapter",
+    "npm:@diegopetrucci/pi-notify",
+    "npm:pi-web-access"
+  ],
+  "theme": "catppuccin-macchiato"
+}

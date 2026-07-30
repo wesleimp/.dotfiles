@@ -1,0 +1,12 @@
+# === Downloaded binaries/dependencies (reinstallable, ~188MB) ===
+vendor/
+
+# === Runtime/transient state ===
+active/
+semantic-diff/
+drafts/
+migrations/
+
+# === Project-specific artifacts ===
+plans/
+history/

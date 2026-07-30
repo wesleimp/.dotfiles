@@ -1,0 +1,2 @@
+extras=yes
+model_invocable=plannotator-review,plannotator-annotate,plannotator-last,plannotator-compound,plannotator-setup-goal,plannotator-visual-explainer

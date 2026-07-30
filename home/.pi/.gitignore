@@ -1,0 +1,25 @@
+# === Sensitive (secrets/machine-specific) ===
+agent/auth.json
+agent/trust.json
+
+# === Transient/cache data ===
+agent/sessions/
+agent/run-history.jsonl
+agent/.extmgr-cache/
+agent/mcp-cache.json
+agent/models-store.json
+
+# === Dependencies (reinstallable) ===
+# npm/ and git/ have their own ignore-all .gitignore files,
+# but also ignore them here as a safety net
+agent/npm/node_modules/
+agent/npm/package-lock.json
+
+# === Extension runtime artifacts ===
+agent/extensions/pi-permission-system/logs/
+
+# === General ===
+node_modules/
+*.tgz
+.DS_Store
+.cache
