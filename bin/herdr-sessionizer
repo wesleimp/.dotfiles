@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+if [[ $# -eq 1 ]]; then
+    selected=$1
+else
+    selected=$(find ~/git ~/workspace ~/plugins -mindepth 1 -maxdepth 1 -type d | fzf)
+fi
+
+if [[ -z "$selected" ]]; then
+    exit 0
+fi
+
+selected_name=$(basename "$selected" | tr . _)
+
+# Make sure a server is up (in case this is invoked from a plain shell,
+# not from inside a running Herdr session)
+if ! herdr status server &>/dev/null; then
+    herdr server &>/dev/null &
+    for _ in $(seq 1 20); do
+        herdr status server &>/dev/null && break
+        sleep 0.1
+    done
+fi
+
+existing_id=$(herdr workspace list \
+    | jq -r --arg label "$selected_name" \
+        '.result.workspaces[] | select(.label == $label) | .workspace_id' \
+    | head -n1)
+
+if [[ -z "$existing_id" ]]; then
+    herdr workspace create --cwd "$selected" --label "$selected_name" --focus >/dev/null
+else
+    herdr workspace focus "$existing_id" >/dev/null
+fi
+
+# If we're not already attached to a Herdr client, attach now
+if [[ -z "$HERDR_ENV" ]]; then
+    exec herdr
+fi

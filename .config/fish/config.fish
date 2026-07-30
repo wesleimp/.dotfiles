@@ -47,6 +47,7 @@ set -gx TERMINAL "ghostty"
 set -gx BROWSER "brave-browser"
 set -gx DOTFILES $HOME/.dotfiles
 set -gx NVIMCONF $HOME/nvim
+set -gx MANPAGER 'nvim +Man!'
 
 # Erlang/OTP specific configurations
 set -gx KERL_BUILD_DOCS yes

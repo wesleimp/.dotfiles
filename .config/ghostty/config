@@ -1,18 +1,10 @@
-#font-family = "JetBrains Mono"
-#font-family = "Berkeley Mono Condensed"
-font-family = "IosevkaTerm Nerd Font Mono"
+font-family = "Berkeley Mono Condensed"
+# font-family = "IosevkaTerm Nerd Font Mono"
 font-size = 16
-background = "#111111"
+theme = Catppuccin Macchiato
 
 auto-update-channel = tip
 window-decoration = true
-window-theme = "dark"
-macos-titlebar-style = tabs
-window-save-state = always
-window-padding-balance = true
-# makes it maximizes the window
-window-height = 9999
-window-width = 9999
 confirm-close-surface = true
 macos-option-as-alt = true
 shell-integration = zsh
@@ -25,6 +17,4 @@ clipboard-read = "allow"
 clipboard-paste-protection = false
 window-inherit-working-directory=true
 unfocused-split-opacity = 0.75
-split-divider-color = #7e7e7e
-unfocused-split-fill = #1a1a1a
 mouse-scroll-multiplier = 2

@@ -9,7 +9,7 @@
   insteadOf = https://github.com/rust-lang/crates.io-index
 
 [core]
-  editor = vim
+  editor = nvim
   excludesfile = ~/.globalgitignore
   pager = delta
 

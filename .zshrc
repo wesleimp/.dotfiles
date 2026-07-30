@@ -1,6 +1,6 @@
 source ~/.sh_helpers
 export ZSH=$HOME/.oh-my-zsh
-export SHELL=$(which zsh)
+# export SHELL=$(which fish)
 
 ZSH_THEME="muse"
 
@@ -91,3 +91,6 @@ if [ -f '/home/weslei/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/wesl
 # This section can be safely removed at any time if needed.
 [[ ! -r '/Users/weslei/.opam/opam-init/init.zsh' ]] || source '/Users/weslei/.opam/opam-init/init.zsh' > /dev/null 2> /dev/null
 # END opam configuration
+
+eval "$(mise activate zsh)"
+eval "$(mise activate --shims)"

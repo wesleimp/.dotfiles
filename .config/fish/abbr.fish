@@ -27,9 +27,9 @@ abbr ga "git add";
 abbr gaa "git add -A";
 abbr gcm "git commit -sm";
 abbr gcam "git commit -sam";
-abbr gst "git status -sb";
-abbr gs "git status";
-abbr glnext "git log --oneline (git describe --tags --abbrev0 @^)..@";
+abbr gst "git status";
+abbr gs "git status -sb";
+abbr glnext "git log --oneline";
 
 # Kubernetes
 abbr k "kubectl"
