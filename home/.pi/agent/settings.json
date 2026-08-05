@@ -9,7 +9,6 @@
     "git:github.com/obra/superpowers",
     "npm:pi-subagents",
     "npm:pi-mcp-adapter",
-    "npm:@diegopetrucci/pi-notify",
     "npm:pi-web-access"
   ],
   "theme": "catppuccin-macchiato",
