@@ -6,3 +6,13 @@ rel/
 
 packer_compiled.lua
 .tmux/plugins
+
+
+# herdr runtime/state
+.config/herdr/*.log
+.config/herdr/session-history.json
+.config/herdr/session.json
+.config/herdr/release-notes.json
+.config/herdr/plugins.json
+.config/herdr/plugins/
+.config/herdr/.plugins.lock

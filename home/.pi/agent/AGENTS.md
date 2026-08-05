@@ -1,8 +1,8 @@
 # Shell Non-Interactive Strategy (Global)
 
-**Context:** OpenCode's shell environment is strictly **non-interactive**. It lacks a TTY/PTY, meaning any command that waits for user input, confirmation, or launches a UI (editor/pager) will hang indefinitely and timeout.
+**Context:** Pi's shell environment is strictly **non-interactive**. It lacks a TTY/PTY, meaning any command that waits for user input, confirmation, or launches a UI (editor/pager) will hang indefinitely and timeout.
 
-**Goal:** Achieve parity with Claude Code's shell capabilities through internalized knowledge of non-interactive flags and environment variables.
+**Goal:** Ensure all shell commands run non-interactively through internalized knowledge of non-interactive flags and environment variables.
 
 ## Cognitive & Behavioral Standards
 
@@ -32,7 +32,7 @@ To match the high-agency, autonomous capabilities of advanced models (like Claud
 1. **Assume `CI=true`**: Act as if running in a headless CI/CD pipeline.
 2. **No Editors/Pagers**: `vim`, `nano`, `less`, `more`, `man` are BANNED.
 3. **Force & Yes**: Always preemptively supply "yes" or "force" flags.
-4. **Use Tools**: Prefer `Read`/`Write`/`Edit` tools over shell manipulation (`sed`, `echo`, `cat`).
+4. **Use Tools**: Prefer `read`/`write`/`edit` tools over shell manipulation (`sed`, `echo`, `cat`).
 5. **No Interactive Modes**: Never use `-i` or `-p` flags that require user input.
 
 ## 2. Environment Variables (Auto-Set)
@@ -114,7 +114,37 @@ These environment variables help prevent interactive prompts:
 | **Node** | `node` | `node -e "code"` or `node script.js` |
 | **IPython** | `ipython` | Never use - always `python -c` |
 
-## 4. Banned Commands (Will Always Hang)
+## 4. File Operations with Pi Tools
+
+Prefer Pi's native `read`, `write`, and `edit` tools over shell commands for all file manipulation. They are safer, more precise, and avoid common pitfalls.
+
+### When to use each tool
+
+| Tool | Use when | Avoid when |
+|------|----------|------------|
+| **`read`** | Examining file contents, reviewing code | You only need a line count or file list (`bash` with `wc -l` or `ls` is better) |
+| **`edit`** | Making targeted changes to existing files | The file needs a complete rewrite (use `write`) |
+| **`write`** | Creating new files or fully rewriting existing ones | You only need to change a few lines (use `edit`) |
+| **`bash`** | File listing (`ls`, `find`), searching (`rg`), running commands | Reading file contents (use `read`) or modifying files (use `edit`/`write`) |
+
+### `edit` tool best practices
+
+| Pattern | BAD | GOOD |
+|---------|-----|------|
+| **Match size** | Large `oldText` spanning many unchanged lines | Minimal `oldText` — just enough to be unique in the file |
+| **Multiple changes** | Multiple `edit` calls to the same file | One `edit` call with multiple entries in `edits[]` |
+| **Overlap** | `edits[]` entries that overlap or nest | Merge nearby changes into a single `edits[]` entry |
+| **Matching basis** | Assuming `oldText` matches against incrementally modified content | Each `oldText` matches against the **original** file |
+| **File viewing** | `bash` with `cat`, `head`, `tail`, or `sed -n` | `read` with `offset`/`limit` for large files |
+| **File creation** | `bash` with `echo "..." > file` or `cat << EOF > file` | `write` tool directly |
+
+### `read` tool tips
+
+- Use `offset` and `limit` for large files instead of reading everything
+- Supports images (jpg, png, gif, webp, bmp) — they are sent as attachments
+- Output is truncated at 2000 lines or 50KB; continue with `offset` for the rest
+
+## 5. Banned Commands (Will Always Hang)
 
 These commands **will hang indefinitely** - never use them:
 
@@ -125,7 +155,7 @@ These commands **will hang indefinitely** - never use them:
 - **REPLs**: `python`, `node`, `irb`, `ghci` (without script/command)
 - **Interactive shells**: `bash -i`, `zsh -i`
 
-## 5. Handling Prompts
+## 6. Handling Prompts
 
 When a command doesn't have a non-interactive flag:
 
@@ -156,17 +186,17 @@ echo "password" | sudo -S command
 timeout 30 ./potentially_hanging_script.sh || echo "Timed out"
 ```
 
-## 6. Best Practices
+## 7. Best Practices
 
 1. **Always test commands** mentally for interactive prompts before running
 2. **Check man pages** (via web search) for `-y`, `--yes`, `--non-interactive`, `-f`, `--force` flags
 3. **Use `--help`** to discover non-interactive options: `cmd --help | grep -i "non-interactive\|force\|yes"`
-4. **Prefer OpenCode tools** over shell commands for file operations
+4. **Prefer Pi tools** (`read`/`write`/`edit`) over shell commands for file operations
 5. **Set timeout** for any command that might unexpectedly prompt
 
 ---
 
-## 7. Advanced Instruction Patterns (Cognitive Optimization)
+## 8. Advanced Instruction Patterns (Cognitive Optimization)
 
 ### The Problem: Implicit Constraints
 

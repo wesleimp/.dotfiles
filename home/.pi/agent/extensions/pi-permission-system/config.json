@@ -5,10 +5,13 @@
       "*": "ask",
       "~/workspace/*": "allow",
       "~/git/*": "allow",
+      "~/.pi/*": "allow",
+      "~/.plannator/*": "allow",
       "/tmp/*": "deny"
     },
     "bash": {
       "*": "allow",
+      "rtk": "allow",
       "sudo": "ask",
       "chmod": "deny",
       "git push": "deny",

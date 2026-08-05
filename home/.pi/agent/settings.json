@@ -1,7 +1,7 @@
 {
   "defaultModel": "claude-opus-4-6",
   "defaultProvider": "anthropic",
-  "defaultThinkingLevel": "high",
+  "defaultThinkingLevel": "medium",
   "lastChangelogVersion": "0.83.0",
   "packages": [
     "npm:@plannotator/pi-extension",
@@ -12,5 +12,6 @@
     "npm:@diegopetrucci/pi-notify",
     "npm:pi-web-access"
   ],
-  "theme": "catppuccin-macchiato"
+  "theme": "catppuccin-macchiato",
+  "hideThinkingBlock": true
 }
